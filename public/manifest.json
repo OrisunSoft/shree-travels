@@ -1,0 +1,16 @@
+{
+  "short_name": "Shree Travels",
+  "name": "Shree Travels | Force Urbania & Bus Rental in Pune",
+  "icons": [
+    {
+      "src": "img/Logo/shree.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff7700",
+  "background_color": "#ffffff"
+}

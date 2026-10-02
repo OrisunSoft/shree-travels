@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Global Body and Font Settings */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8f9fa;
+  color: #334155;
+}
+
+/* ============================================================
+   Card system — "Polished Journey" motif
+   Rationale: instead of a static decorative line, the card reacts on
+   hover with a glossy light sweep — like sunlight catching the paint
+   of a polished vehicle. One deliberate motion, not constant motion.
+   ============================================================ */
+
+.card {
+  --card-radius-top: 18px;
+  --card-radius-bottom: 6px;
+
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  border-radius: var(--card-radius-top) var(--card-radius-top) var(--card-radius-bottom) var(--card-radius-bottom);
+  background-color: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 12px 24px -10px rgba(15, 23, 42, 0.14);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The glossy sweep: a soft diagonal highlight parked just off-frame,
+   held in reserve until hover invites it across the card. */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.65) 48%,
+    rgba(255, 153, 51, 0.35) 58%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.card:hover::after {
+  left: 130%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.05),
+    0 26px 40px -14px rgba(255, 119, 0, 0.28),
+    0 0 0 1px rgba(255, 119, 0, 0.08);
+}
+
+.card-img-top {
+  border-radius: var(--card-radius-top) var(--card-radius-top) 0 0;
+}
+
+/* Image zoom on hover — a single, quieter motion than a bouncy scale */
+.card .card-img-top,
+.card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .card-img-top,
+.card:hover img {
+  transform: scale(1.04);
+}
+
+/* Respect motion preferences: disable the lift, sweep and zoom entirely */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::after,
+  .card .card-img-top,
+  .card img {
+    transition: none !important;
+  }
+  .card::after {
+    display: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+  .card:hover .card-img-top,
+  .card:hover img {
+    transform: none;
+  }
+}
+
+/* Visible keyboard focus, site-wide — previously missing */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid #ff7700;
+  outline-offset: 2px;
+}
+
+/* Prevent image blurring on scale and boost rendering sharpness */
+.hero-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Responsive Card Layout for Tables on Mobile Devices */
+@media (max-width: 768px) {
+  .responsive-fare-table thead {
+    display: none; /* Hide standard headers on mobile */
+  }
+  
+  .responsive-fare-table, 
+  .responsive-fare-table tbody, 
+  .responsive-fare-table tr, 
+  .responsive-fare-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-fare-table tr {
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px 14px 5px 5px;
+    box-shadow: 0 8px 16px -8px rgba(15, 23, 42, 0.12);
+    padding: 12px;
+  }
+
+  .responsive-fare-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right !important;
+    padding: 8px 4px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .responsive-fare-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Injects data-label as a title row for each value on mobile */
+  .responsive-fare-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    text-align: left;
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,22 @@
+# Shree Travels - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Allow important website resources
+Allow: /assets/
+Allow: /images/
+Allow: /static/
+Allow: /favicon.ico
+
+# Prevent crawling of technical/private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login/
+Disallow: /register/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /node_modules/
+
+# XML Sitemap
+Sitemap: https://shreetravels.in/sitemap.xml

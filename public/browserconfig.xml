@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square155x155logo src="%PUBLIC_URL%/img/Logo/shree.png"/>
+      <TileColor>#ff7700</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

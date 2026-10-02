@@ -1,0 +1,29 @@
+# ---------------------------------------------------------
+# ALLOW VIDEO STREAMING ON LIVE SERVER
+# ---------------------------------------------------------
+AddType video/mp4 .mp4
+AddType video/webm .webm
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ---------------------------------------------------------
+  # 1. SEO 301 REDIRECTS (Using RewriteRule to prevent conflicts)
+  # The [NC] flag makes these case-insensitive, so uppercase searches won't 404
+  # ---------------------------------------------------------
+  RewriteRule ^Bus-Rental-for-Tour-Packages-in-Pune/?$ /maharashtra-tour-vehicle-rental [R=301,L,NC]
+  RewriteRule ^Luxury-Bus-Rental-in-Pune/?$ /bus-rental-pune [R=301,L,NC]
+  
+  # Redirect 20-seater variations to the correct React route
+  RewriteRule ^20-seater-on-rent-in-pune/?$ /20-seater-bus-rental-pune [R=301,L,NC]
+  RewriteRule ^20-seater-on-rent-pune/?$ /20-seater-bus-rental-pune [R=301,L,NC]
+
+  # ---------------------------------------------------------
+  # 2. REACT ROUTER SPA CATCH-ALL (Stops 404 on page refresh)
+  # ---------------------------------------------------------
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.html [QSA,L]
+</IfModule>

@@ -1,0 +1,126 @@
+/* Deep premium slate background */
+.custom-footer {
+  background-color: #0f172a !important; /* Rich deep slate */
+  color: #e2e8f0; /* Crisp off-white for effortless reading */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  border-top: 3px solid #ff7700; /* Distinctive brand accent line */
+}
+
+/* Logo container styling */
+.footer-logo {
+  max-width: 175px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Column Headings */
+.footer-heading {
+  color: #ffffff !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 2px;
+  background-color: #ff7700; /* Warm accent underline */
+}
+
+/* Body & description text */
+.footer-text {
+  color: #cbd5e1 !important; /* High-contrast light gray */
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+/* Navigation Links */
+.footer-link {
+  color: #cbd5e1 !important; /* Clean readable silver */
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.footer-link:hover {
+  color: #ff9933 !important; /* Bright warm amber hover */
+  transform: translateX(6px); /* Subtle slide interaction */
+  text-decoration: none;
+}
+
+/* Inline links within a sentence (e.g. developer credit) shouldn't slide sideways */
+.footer-link-inline {
+  color: #cbd5e1 !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-link-inline:hover {
+  color: #ff9933 !important;
+  text-decoration: underline;
+}
+
+/* Contact info icons & items */
+.contact-item {
+  color: #e2e8f0 !important;
+  font-size: 0.95rem;
+}
+
+.contact-link {
+  color: #e2e8f0 !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-link:hover {
+  color: #ff7700 !important;
+}
+
+.contact-icon {
+  color: #ff7700; /* Bright orange icon indicator */
+  font-size: 1.1rem;
+  width: 22px;
+  flex-shrink: 0;
+}
+
+/* Social Media Buttons */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  background-color: #ff7700;
+  border-color: #ff7700;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 119, 0, 0.35);
+}
+
+/* Bottom copyright section */
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.copyright-text {
+  color: #94a3b8 !important;
+  font-size: 0.88rem;
+}
