@@ -1,50 +1,199 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import SEO from "../components/SEO";
 
-const CORPORATE={
-  "corporate-car-rental-pune":{h1:"Corporate Car Rental in Pune",title:"Corporate Car Rental in Pune | Shree Travels",description:"Chauffeur-driven corporate car rental in Pune for meetings, airport transfers, client visits and business travel."},
-  "corporate-bus-rental-pune":{h1:"Corporate Bus Rental in Pune",title:"Corporate Bus Rental in Pune | Shree Travels",description:"Corporate bus rental in Pune for employee movement, events, conferences, offsites and group transportation."},
-  "employee-transportation-pune":{h1:"Employee Transportation in Pune",title:"Employee Transportation in Pune | Shree Travels",description:"Employee transportation and corporate group travel solutions across Pune, including Hinjewadi, Kharadi, Baner and Hadapsar."}
+const CORPORATE = {
+  "corporate-car-rental-pune": {
+    h1: "Corporate Car & Urbania Rental in Pune",
+    title: "Corporate Car & Force Urbania Rental in Pune | Executive Chauffeur Service",
+    description: "Chauffeur-driven corporate car, Force Urbania @ ₹30/km, and executive van rental in Pune for client visits, airport transfers, and IT park meetings.",
+    image: "/img/Keyword Based Image/Keyword Based Image-41.jpg"
+  },
+  "corporate-bus-rental-pune": {
+    h1: "Corporate Bus Rental in Pune",
+    title: "Corporate Bus Rental in Pune | 20 to 50 Seater Staff & Event Coaches",
+    description: "Corporate bus rental in Pune for employee movement, events, conferences, offsites and group transportation across Hinjewadi, Kharadi, Magarpatta & Chakan.",
+    image: "/img/Keyword Based Image/Keyword Based Image-58.jpg"
+  },
+  "employee-transportation-pune": {
+    h1: "Employee Transportation Services in Pune",
+    title: "Employee Transportation in Pune | Monthly Contract Buses & Staff Shuttles",
+    description: "Daily and monthly employee transportation solutions across Pune IT parks and MIDC zones including Hinjewadi, Kharadi, Baner, Hadapsar, Chakan and Pimpri-Chinchwad.",
+    image: "/img/Keyword Based Image/Keyword Based Image-33.jpg"
+  },
+  "school-college-bus-rental-pune": {
+    h1: "School & College Bus Rental in Pune",
+    title: "School & College Bus Hire in Pune | Safe Educational Trip & Picnic Buses",
+    description: "RTO-compliant 32, 40, 45, and 50 seater buses on rent in Pune for school picnics, educational excursions, industrial visits, and college fests.",
+    image: "/img/Keyword Based Image/Keyword Based Image-19.jpg"
+  }
 };
 
-const CorporatePage=()=>{
-  const {slug="corporate-bus-rental-pune"}=useParams();
-  const data=CORPORATE[slug]||CORPORATE["corporate-bus-rental-pune"];
-  const faqs=[
-    ["Can you handle recurring corporate transportation?","Recurring requirements can be discussed based on routes, employee counts, pickup schedules and vehicle requirements."],
-    ["Can you provide vehicles for corporate events?","Yes. Cars, Tempo Travellers, Force Urbania and buses can be considered based on the size and format of the event."],
-    ["Do you provide airport transfers for business travellers?","Yes. Airport transfers can be arranged for individual executives or larger teams."],
-    ["How do we request a corporate quotation?","Share the route, dates, passenger count, pickup points and required vehicle category through the booking or enquiry channel."]
+const CorporatePage = () => {
+  const { slug: paramSlug } = useParams();
+  const location = useLocation();
+  const pathSlug = location.pathname.replace(/^\/+/, "");
+  const slug = paramSlug || pathSlug || "corporate-bus-rental-pune";
+  const data = CORPORATE[slug] || CORPORATE["corporate-bus-rental-pune"];
+
+  const faqs = [
+    ["Can you handle recurring monthly corporate transportation?", "Yes, we provide daily and monthly contract buses, Mini Buses, and Tempo Travellers with GPS tracking, dedicated route supervisors, and GST-compliant monthly billing."],
+    ["Can you provide vehicles for corporate events and team offsites?", "Yes. Force Urbania @ ₹30/km, 17-26 seater Tempo Travellers, and 32-50 seater AC luxury coaches are available for conferences and weekend offsites to Lonavala, Mahabaleshwar, and Goa."],
+    ["Do you provide Mumbai & Pune airport transfers for business travellers?", "Yes. 24/7 punctual airport transfers are arranged for individual executives and corporate delegations at Pune Airport (PNQ) and Mumbai Airport (BOM T2)."],
+    ["How do we request a corporate quotation?", "Call +91 7620411277 or WhatsApp +91 78757 74499 with your route, shift timings, or event dates to receive an instant commercial proposal."]
   ];
-  const schema=[
-    {"@context":"https://schema.org","@type":"Service","name":data.h1,"serviceType":"Corporate transportation","provider":{"@type":"LocalBusiness","name":"Shree Travels","telephone":"+91-7875774499","url":"https://shreetravels.in"},"areaServed":["Pune","Hinjewadi","Kharadi","Baner","Hadapsar","Pimpri-Chinchwad"],"url":`https://shreetravels.in/${slug}`},
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faqs.map(([q,a])=>({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}}))}
+
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": data.h1,
+      "serviceType": "Corporate transportation",
+      "provider": {
+        "@type": "AutoRental",
+        "name": "Shree Travels",
+        "telephone": "+917620411277",
+        "url": "https://shreetravels.in"
+      },
+      "areaServed": ["Pune", "Hinjewadi", "Kharadi", "Baner", "Hadapsar", "Pimpri-Chinchwad"],
+      "url": `https://shreetravels.in/${slug}`
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(([q, a]) => ({
+        "@type": "Question",
+        "name": q,
+        "acceptedAnswer": { "@type": "Answer", "text": a }
+      }))
+    }
   ];
-  return <>
-    <SEO title={data.title.replace(" | Shree Travels","")} description={data.description} path={`/${slug}`} keywords="corporate travel Pune, employee transportation Pune, corporate bus rental Pune, corporate car rental Pune" schema={schema} breadcrumbs={[{name:"Home",url:"/"},{name:"Corporate Travel",url:"/service"},{name:data.h1,url:`/${slug}`}]}/>
-    <main>
-      <section className="py-5 text-white" style={{background:"linear-gradient(135deg,#0f172a,#1e293b)"}}><div className="container py-5">
-        <p className="text-uppercase fw-bold" style={{color:"#ff7700"}}>Corporate Mobility • Pune</p><h1 className="display-5 fw-bold">{data.h1}</h1><p className="lead col-lg-8 mt-3">{data.description}</p>
-        <div className="mt-4 d-flex flex-wrap gap-2"><Link to="/booking" className="btn btn-lg text-white fw-bold" style={{background:"#ff7700"}}>Request Corporate Quote</Link><a href="tel:+917875774499" className="btn btn-lg btn-outline-light fw-bold">Call Corporate Team</a></div>
-      </div></section>
 
-      <section className="py-5"><div className="container"><h2 className="fw-bold text-center mb-4">Built Around Business Travel Requirements</h2><div className="row g-4">
-        {[["Scheduled employee movement","Plan recurring or one-time transportation around employee pickup points and office schedules."],["Client & executive travel","Use chauffeur-driven cars or premium group vehicles for meetings, airport transfers and business visits."],["Corporate events","Move teams between offices, hotels, venues, conferences and offsite destinations."],["Group capacity planning","Select a vehicle based on actual headcount instead of booking multiple smaller vehicles unnecessarily."],["Route coordination","Share pickup locations and destination details in advance so the trip plan is clear before travel."],["Single booking point","Coordinate vehicle requirement, date, route and passenger information through one enquiry."]].map(([t,d])=><div className="col-md-6 col-lg-4" key={t}><article className="h-100 border rounded-4 p-4 shadow-sm"><h2 className="h5 fw-bold">{t}</h2><p className="text-muted mb-0">{d}</p></article></div>)}
-      </div></div></section>
+  return (
+    <div style={{ overflowX: "hidden", maxWidth: "100%" }}>
+      <SEO
+        title={data.title}
+        description={data.description}
+        path={`/${slug}`}
+        image={data.image}
+        keywords={`${data.h1}, corporate travel Pune, employee transportation Pune, corporate bus rental Pune, school bus hire Pune`}
+        schema={schema}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/service" },
+          { name: data.h1, url: `/${slug}` }
+        ]}
+      />
+      <main>
+        <section className="py-5 text-white" style={{ background: "linear-gradient(135deg,#0f172a,#1e293b)" }}>
+          <div className="container py-4">
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <p className="text-uppercase fw-bold mb-2" style={{ color: "#ff7700" }}>Corporate & Institutional Mobility • Pune</p>
+                <h1 className="display-5 fw-bold text-white">{data.h1}</h1>
+                <p className="lead mt-3 text-light">{data.description}</p>
+                <div className="mt-4 d-flex flex-wrap gap-3">
+                  <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4" style={{ background: "#ff7700" }}>
+                    Call +91 76204 11277
+                  </a>
+                  <a
+                    href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I need a corporate quote for ${data.h1}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-lg text-white fw-bold px-4"
+                    style={{ background: "#25D366" }}
+                  >
+                    WhatsApp +91 78757 74499
+                  </a>
+                  <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold px-4">
+                    Request Quote
+                  </Link>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <img src={data.image} alt={data.h1} className="img-fluid rounded-4 shadow-lg w-100" style={{ maxHeight: "340px", objectFit: "cover" }} />
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section className="py-5 bg-light"><div className="container"><h2 className="fw-bold mb-3">Pune Corporate Travel Coverage</h2><p className="text-muted">Shree Travels can support corporate travel requirements across Pune and major business areas. Discuss your actual pickup and drop locations so the vehicle and schedule can be planned correctly.</p>
-        <div className="d-flex flex-wrap gap-2 mt-4">{["Hinjewadi","Kharadi","Baner","Wakad","Hadapsar","Kothrud","Pimpri-Chinchwad"].map(a=><Link key={a} to={`/vehicle-rental-${a.toLowerCase().replaceAll(" ","-")}`} className="badge rounded-pill text-bg-dark text-decoration-none p-3">{a}</Link>)}</div>
-      </div></section>
+        <section className="py-5 bg-white">
+          <div className="container">
+            <h2 className="fw-bold text-center mb-4">Built Around Business & Institutional Travel Requirements</h2>
+            <div className="row g-4">
+              {[
+                ["Scheduled employee movement", "Plan recurring monthly shifts or one-time transportation around employee pickup points and IT park schedules."],
+                ["Client & executive travel", "Use chauffeur-driven Force Urbania (@ ₹30/km) or luxury coaches for VIP delegations, airport transfers, and plant visits."],
+                ["Corporate events & offsites", "Move teams seamlessly between offices, 5-star hotels, convention halls, and Lonavala/Mahabaleshwar offsite resorts."],
+                ["GST & SLA compliance", "100% RTO-compliant commercial permits, speed governors, GPS tracking, and clean monthly GST invoicing."],
+                ["Multi-bus route coordination", "Dedicated on-ground transport supervisors for large 200 to 2,000+ attendee conferences and annual days."],
+                ["24/7 control desk backup", "Immediate standby replacement vehicle support from our Pimpri-Chinchwad, Hinjewadi, and Kharadi hubs."]
+              ].map(([t, d]) => (
+                <div className="col-md-6 col-lg-4" key={t}>
+                  <article className="h-100 border rounded-4 p-4 shadow-sm bg-light">
+                    <h3 className="h5 fw-bold">{t}</h3>
+                    <p className="text-muted mb-0">{d}</p>
+                  </article>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <section className="py-5"><div className="container"><div className="row g-4">
-        {[["Cars","/seater-cars"],["Tempo Travellers","/tempo-traveller"],["Force Urbania","/force-urbania-on-rent-pune"],["Buses","/bus-rental-pune"]].map(([n,h])=><div className="col-sm-6 col-lg-3" key={n}><Link to={h} className="d-block border rounded-4 p-4 h-100 text-decoration-none shadow-sm"><h2 className="h5 fw-bold">{n}</h2><span className="text-muted">Explore vehicle options →</span></Link></div>)}
-      </div></div></section>
+        <section className="py-5 bg-light border-top border-bottom">
+          <div className="container">
+            <h2 className="fw-bold mb-3">Pune Corporate & Industrial Hub Coverage</h2>
+            <p className="text-muted">
+              Shree Travels supports daily staff shuttles and corporate event transport across all major IT parks and MIDC industrial zones in Pune:
+            </p>
+            <div className="d-flex flex-wrap gap-2 mt-4">
+              {["Hinjewadi", "Kharadi", "Baner", "Wakad", "Hadapsar", "Kothrud", "Pimpri-Chinchwad"].map((a) => (
+                <Link
+                  key={a}
+                  to={`/vehicle-rental-${a.toLowerCase().replace(/ /g, "-")}`}
+                  className="badge rounded-pill text-bg-dark text-decoration-none p-3"
+                >
+                  {a}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <section className="py-5 bg-light"><div className="container" style={{maxWidth:"900px"}}><h2 className="fw-bold text-center mb-4">Corporate Travel FAQs</h2>
-        {faqs.map(([q,a])=><details className="border rounded-3 p-3 mb-3 bg-white" key={q}><summary className="fw-bold">{q}</summary><p className="text-muted mt-3 mb-0">{a}</p></details>)}
-      </div></section>
-    </main>
-  </>;
+        <section className="py-5 bg-white">
+          <div className="container">
+            <div className="row g-4">
+              {[
+                ["13–20 Seater Fleet", "/13-seater-on-rent-pune"],
+                ["Tempo Travellers", "/tempo-traveller-seater-hire-pune"],
+                ["Force Urbania (@ ₹30/km)", "/force-urbania-on-rent-pune"],
+                ["32–50 Seater Buses", "/bus-rental-pune"]
+              ].map(([n, h]) => (
+                <div className="col-sm-6 col-lg-3" key={n}>
+                  <Link to={h} className="d-block border rounded-4 p-4 h-100 text-decoration-none shadow-sm text-dark">
+                    <h3 className="h5 fw-bold" style={{ color: "#0f172a" }}>{n}</h3>
+                    <span style={{ color: "#ff7700", fontWeight: 600 }}>Explore vehicle options →</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-5 bg-light">
+          <div className="container" style={{ maxWidth: "900px" }}>
+            <h2 className="fw-bold text-center mb-4">Corporate Travel FAQs</h2>
+            {faqs.map(([q, a]) => (
+              <details className="border rounded-3 p-3 mb-3 bg-white" key={q}>
+                <summary className="fw-bold">{q}</summary>
+                <p className="text-muted mt-3 mb-0">{a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 };
+
 export default CorporatePage;

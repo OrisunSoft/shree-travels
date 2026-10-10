@@ -7,29 +7,31 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
   
   const seaterData = {
     '17': {
-      title: '17 Seater Tempo Traveller on Rent in Pune',
-      shortDesc: 'Premium 17 seater tempo traveller rental with AC, recliner seats',
-      fullDesc: 'Perfect for large groups! Our 17 seater tempo travellers are ideal for corporate tours, family reunions, and group travel. Spacious, comfortable, and affordable.',
-      localRate: '₹7,000-8,500',
-      fullDayRate: '₹10,000-11,500',
-      outstationRate: '₹18-20/km',
-      keywords: '17 seater on rent Pune, 17 seater tempo traveller Pune, 17 passenger bus rental, large group transport, AC tempo traveller hire',
+      h1: '17 Seater Tempo Traveller On Rent in Pune',
+      title: '17 Seater Tempo Traveller On Rent in Pune @ ₹22/km | AC & Non-AC Hire',
+      shortDesc: 'Premium 17 Seater Tempo Traveller On Rent in Pune with AC, pushback recliner seats & top carrier',
+      fullDesc: 'Perfect for 14–17 member groups! Our 17 Seater Tempo Traveller On Rent in Pune is ideal for corporate tours, family pilgrimages, Ashtavinayak Darshan, and weekend trips to Mahabaleshwar & Lonavala.',
+      localRate: '₹5,500',
+      fullDayRate: '₹7,500–9,600',
+      outstationRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      keywords: '17 Seater Tempo Traveller On Rent in Pune, 17 seater on rent Pune, 17 seater tempo traveller Pune, 17 passenger bus rental, AC tempo traveller hire',
       path: '/17-seater-on-rent-pune',
-      image: 'Img for Booking-05.png',
-      perPersonCost: '₹600',
+      image: '/img/Keyword Based Image/Keyword Based Image-06.jpg',
+      perPersonCost: '₹440',
       capacity: '17 Passengers'
     },
     '20': {
-      title: '20 Seater Bus on Rent in Pune | Large Group Transport',
-      shortDesc: 'Book 20 seater bus rental in Pune for large groups at best rates',
-      fullDesc: 'Largest tempo traveller option! Our 20 seater buses are perfect for large family groups, corporate events, and major tours. Ultimate comfort and capacity combined.',
-      localRate: '₹8,000-9,500',
-      fullDayRate: '₹11,000-12,500',
-      outstationRate: '₹19-21/km',
-      keywords: '20 seater bus on rent Pune, 20 seater bus rental, large group bus hire, charter bus Pune, big group transport',
+      h1: '20 Seater Bus On Rent in Pune',
+      title: '20 Seater Bus On Rent in Pune @ ₹28/km | Luxury Mini Bus Hire',
+      shortDesc: 'Book 20 Seater Bus On Rent in Pune for group tours, weddings & corporate events @ ₹28/km',
+      fullDesc: 'Our 20 Seater Bus On Rent in Pune offers a wide center aisle, high-back 2x1 pushback recliner seats, powerful dual-compressor AC, and generous rear & rooftop luggage space.',
+      localRate: '₹5,500–6,000',
+      fullDayRate: '₹8,100–10,200',
+      outstationRate: '₹28/km (Non-AC & AC)',
+      keywords: '20 Seater Bus On Rent in Pune, 20 seater bus rental Pune, 20 seater tempo traveller Pune, mini bus on rent Pune',
       path: '/20-seater-bus-rental-pune',
-      image: 'Img for Booking-06.png',
-      perPersonCost: '₹550',
+      image: '/img/Keyword Based Image/Keyword Based Image-08.jpg',
+      perPersonCost: '₹405',
       capacity: '20 Passengers'
     }
   };
@@ -39,12 +41,13 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
   const vehicleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Vehicle',
-    name: data.title,
+    name: data.h1,
     description: data.fullDesc,
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
-      priceRange: seaterType === '20' ? '₹8000-₹12500' : '₹7000-₹11500',
+      lowPrice: '5500',
+      highPrice: seaterType === '20' ? '15000' : '12000',
       availability: 'https://schema.org/InStock',
       url: `https://shreetravels.in${data.path}`
     }
@@ -96,16 +99,16 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
     <>
       <SEO
         title={data.title}
-        description={`Book ${seaterType} seater bus on rent in Pune. ${data.fullDesc} AC with recliner seats, experienced drivers, best rates for group travel across Hinjewadi, Kharadi, and all Pune areas.`}
+        description={`${data.fullDesc} Call +91 7620411277 or WhatsApp +91 78757 74499 for instant booking across Pune & PCMC.`}
         keywords={data.keywords}
         path={data.path}
-        image={`/img/Img for Booking/${data.image}`}
+        image={data.image}
         schema={vehicleSchema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Vehicles', url: '/our-fleet' },
           { name: 'Seater Vehicles', url: '/13-seater-on-rent-pune' },
-          { name: `${seaterType} Seater`, url: data.path }
+          { name: data.h1, url: data.path }
         ]}
       />
 
@@ -144,6 +147,7 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
           border-radius: 1rem;
           text-align: center;
           margin: 1rem 0;
+          height: 100%;
         }
 
         .pricing-card h5 {
@@ -153,7 +157,7 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
         }
 
         .price-amount {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           color: #ff7700;
           font-weight: 700;
           margin: 0.75rem 0;
@@ -218,31 +222,41 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
         <div className="container">
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold mb-3">
-                {seaterType} Seater Bus on Rent in <span style={{ color: '#ff7700' }}>Pune</span>
+              <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
+                Verified Tariff: {data.outstationRate}
+              </span>
+              <h1 className="display-5 fw-bold mb-3 text-white">
+                {data.h1}
               </h1>
               <p className="lead mb-4">
-                {data.fullDesc} Perfect for large corporate groups, wedding events, extended family gatherings, and multi-day tours. Affordable rates with premium comfort and experienced drivers.
+                {data.fullDesc}
               </p>
-              <div className="d-flex gap-3 flex-wrap mb-4">
-                <Link to="/book-taxi" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-calendar-check me-2"></i>Book Now
-                </Link>
-                <a href="tel:+917875774499" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  <i className="fas fa-phone me-2"></i>Call Now
+              <div className="d-flex gap-3 flex-wrap mb-3">
+                <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
+                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
                 </a>
+                <a
+                  href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want to book ${data.h1}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-lg fw-bold text-white"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                </a>
+                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
+                  Book Online
+                </Link>
               </div>
-              <div className="alert alert-light">
-                <i className="fas fa-star me-2" style={{ color: '#ff7700' }}></i>
-                <strong>Best Rate Guarantee:</strong> Lowest prices in Pune for {seaterType} seater vehicles
+              <div className="small text-light opacity-75">
+                <strong>24/7 Helplines:</strong> +91 7620411277 | +91 7875774499 | +91 9860256019 | +91 9145411005
               </div>
             </div>
             <div className="col-lg-6">
               <img 
-                src={`/img/Img for Booking/${data.image}`}
-                alt={`${seaterType} seater bus on rent in Pune - Large group transport with AC comfort`}
-                className="img-fluid rounded-3" 
-                loading="lazy"
+                src={data.image}
+                alt={data.h1}
+                className="img-fluid rounded-4 shadow-lg" 
               />
             </div>
           </div>
@@ -253,7 +267,7 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
       <section className="py-5 bg-light">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="fw-bold mb-2">Why Choose {seaterType} Seater <span style={{ color: '#ff7700' }}>Vehicles</span>?</h2>
+            <h2 className="fw-bold mb-2">Why Choose {data.h1}?</h2>
             <p className="text-muted">Premium comfort meets affordability for large groups</p>
           </div>
 
@@ -274,16 +288,16 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
       {/* Pricing Section */}
       <section className="py-5 bg-white">
         <div className="container">
-          <h2 className="fw-bold mb-4 text-center">{seaterType} Seater Bus Rental <span style={{ color: '#ff7700' }}>Pricing</span></h2>
-          <p className="text-center text-muted mb-4">Transparent pricing with no hidden charges</p>
+          <h2 className="fw-bold mb-4 text-center">{data.h1} <span style={{ color: '#ff7700' }}>Official Pricing</span></h2>
+          <p className="text-center text-muted mb-4">Transparent pricing from our official Packages.jsx rate card</p>
 
           <div className="row g-4">
             <div className="col-md-4">
               <div className="pricing-card">
-                <h5>4 Hour Local Trip</h5>
-                <p className="text-muted small">Within Pune city</p>
+                <h5>8 Hour / 80 KM Local</h5>
+                <p className="text-muted small">Within Pune & PCMC city limits</p>
                 <div className="price-amount">{data.localRate}</div>
-                <p className="small text-muted">Distance: 80-100 km</p>
+                <p className="small text-muted">Distance: 80 km / 8 Hours</p>
                 <p className="small fw-bold">Per person: <span style={{ color: '#ff7700' }}>{data.perPersonCost}</span></p>
                 <Link to="/book-taxi" className="btn btn-sm fw-bold text-white mt-3" style={{ backgroundColor: '#ff7700' }}>
                   Book Local Trip
@@ -293,24 +307,24 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
 
             <div className="col-md-4">
               <div className="pricing-card">
-                <h5>Full Day (24 Hours)</h5>
-                <p className="text-muted small">Single day rental</p>
+                <h5>Outstation 300 KM Pkg</h5>
+                <p className="text-muted small">Single day outstation package (Non-AC / AC)</p>
                 <div className="price-amount">{data.fullDayRate}</div>
-                <p className="small text-muted">Distance: 250 km</p>
-                <p className="small fw-bold">Per person: <span style={{ color: '#ff7700' }}>₹{Math.round(parseInt(data.fullDayRate.split('-')[1]) / parseInt(data.capacity))} approx</span></p>
+                <p className="small text-muted">Includes 300 km daily limit</p>
+                <p className="small fw-bold">Per person: <span style={{ color: '#ff7700' }}>{data.perPersonCost} approx</span></p>
                 <Link to="/book-taxi" className="btn btn-sm fw-bold text-white mt-3" style={{ backgroundColor: '#ff7700' }}>
-                  Book Full Day
+                  Book 300 KM Pkg
                 </Link>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="pricing-card">
-                <h5>Outstation Trip</h5>
+                <h5>Outstation Per KM</h5>
                 <p className="text-muted small">Multi-day tours & travel</p>
                 <div className="price-amount">{data.outstationRate}</div>
-                <p className="small text-muted">Unlimited distance</p>
-                <p className="small fw-bold">Driver accommodation included</p>
+                <p className="small text-muted">Minimum 300 km/day billing</p>
+                <p className="small fw-bold">Experienced highway driver</p>
                 <Link to="/book-taxi" className="btn btn-sm fw-bold text-white mt-3" style={{ backgroundColor: '#ff7700' }}>
                   Book Outstation
                 </Link>

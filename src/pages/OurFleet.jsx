@@ -55,7 +55,7 @@ const OurFleet = () => {
   return (
     <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       <SEO 
-        title="Tempo Traveller, Urbania & Bus Rental Pune | starting @35₹"
+        title="Tempo Traveller, Urbania & Bus Rental Pune | starting @30₹"
         description="View the Shree Travels fleet. We offer 13 to 26-seater Tempo Travellers, Luxury Force Urbania, and 32 to 50-seater AC buses on rent in Pune."
         keywords="Our Fleet, Tempo Traveller hire Pune, Force Urbania on rent, 50 seater bus rent"
         path="/our-fleet"

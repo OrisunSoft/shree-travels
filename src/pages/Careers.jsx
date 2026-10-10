@@ -72,7 +72,7 @@ const Careers = () => {
                 </p>
                 <div className="d-flex justify-content-center gap-3 flex-wrap">
                   <a
-                    href="mailto:booking@amrutatravel.com?subject=Job%20Application%20-%20Shree%20Travels"
+                    href="mailto:shreetravelspune5@gmail.com?subject=Job%20Application%20-%20Shree%20Travels"
                     className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm"
                     style={{ backgroundColor: '#ff7700' }}
                   >

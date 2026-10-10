@@ -3,28 +3,57 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Shree Travels';
 const SITE_URL = 'https://shreetravels.in';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`; 
+const DEFAULT_OG_IMAGE = `${SITE_URL}/img/force-ub.jpg`; 
 const DEFAULT_LOCALE = 'en_IN';
 
-// Massive, curated master list of top-ranking keywords categorized for local SEO dominance.
+// Core brand & high-intent keywords used when a page does not supply custom keywords
 const BASE_KEYWORDS = [
-  // 1. Force Urbania Keywords
-  'Force Urbania on rent in Pune', 'Luxury Force Urbania Pune', '13 seater Force Urbania rent Pune', '17 seater Urbania rent Pune', 'Force Urbania outstation Pune', 'Urbania per km rate Pune', 'Force Urbania 35 Rs per km', 'Urbania van rental Pune', 'Premium Urbania booking Pune', 'Urbania for airport drop Pune',
-  
-  // 2. Tempo Traveller Keywords
-  'Tempo traveller hire in Pune', 'Tempo traveller on rent in Pune', '13 seater tempo traveller Pune', '17 seater tempo traveller rent', '20 seater tempo traveller Pune', '26 seater tempo traveller hire', 'AC tempo traveller Pune', 'Luxury tempo traveller Pune', 'Tempo traveller outstation Pune', 'Tempo traveller per km rate Pune', 'Tempo traveller 25 Rs per km', 'Maharaja seat tempo traveller',
-  
-  // 3. Mini Bus & Standard Bus Keywords
-  'Bus on rent in Pune', 'Mini bus on rent in Pune', 'Luxury bus rental Pune', 'AC bus on rent Pune', 'Non AC bus rent Pune', '15 seater mini bus Pune', '20 seater bus on rent Pune', '25 seater bus hire Pune', '30 seater bus rent Pune', '32 seater bus on rent Pune', '35 seater bus rental Pune', '40 seater bus hire Pune', '45 seater bus on rent Pune', '49 seater bus on rent Pune', '50 seater bus booking Pune', 'Volvo bus rent in Pune', 'Scania bus hire Pune', 'Bus rent per km in Pune', 'Luxury coach rental Pune',
-  
-  // 4. Route-Specific Keywords (Outstation)
-  'Pune to Mumbai bus on rent', 'Pune to Mumbai tempo traveller', 'Pune to Mumbai cab', 'Pune to Mumbai airport drop', 'Pune to Lonavala tempo traveller', 'Pune to Lonavala bus hire', 'Pune to Mahabaleshwar bus rent', 'Pune to Mahabaleshwar tempo traveller', 'Pune to Shirdi bus darshan', 'Pune to Shirdi tempo traveller', 'Pune to Nashik cab', 'Pune to Nashik bus rent', 'Pune to Goa bus rental', 'Pune to Goa tempo traveller', 'Mumbai airport to Pune cab', 'Pune to Ashtavinayak darshan bus', 'Pune to Bhimashankar cab',
-  
-  // 5. Hyper-Local Pune Keywords
-  'Bus rental Hinjewadi', 'Tempo traveller Wakad', 'Force Urbania Baner', 'Bus on rent Kothrud', 'Mini bus Pimpri Chinchwad', 'Tempo traveller Kharadi', 'Bus hire Hadapsar', 'Cab service Viman Nagar', 'Travels in Koregaon Park', 'Outstation cab Shivaji Nagar', 'Bus booking Magarpatta',
-  
-  // 6. Use-Case & Intent Keywords
-  'Corporate bus transport Pune', 'Employee transport service Pune', 'Monthly bus contract Pune', 'Wedding bus on rent Pune', 'Marriage transport Pune', 'Picnic bus booking Pune', 'School trip bus rent Pune', 'Outstation vehicle rental Pune', 'Group tour bus hire Pune', 'Family trip tempo traveller', 'Airport transfer Pune', 'Corporate event bus hire'
+  'Urbania On Rent in Pune',
+  '13 Seater Urbania on Rent in Pune',
+  '17 Seater Urbania on Rent in Pune',
+  'Urbania Hire in Pune',
+  'Mini Bus On Rent Pune',
+  'Urbania On Rent in Mumbai',
+  'Urbania On Rent in Shirdi',
+  'Urbania On Rent in Nashik',
+  'Urbania Rent in Lonavala',
+  'Force Urbania On Rent in Pune',
+  'Tata Winger On Rent in Pune',
+  'Tempo Traveller On Rent in Pune',
+  '17 Seater Tempo Traveller On Rent in Pune',
+  'Luxury Tempo Traveller On Rent in Pune',
+  '13 Seater Tempo Traveller On Rent in Pune',
+  '32 Seater Bus On Rent in Pune',
+  'Mini Bus On Rent in Pune',
+  'Bus On Rent in Pune',
+  '20 Seater Bus On Rent in Pune',
+  '50 Seater Bus On Rent in Pune',
+  'Tempo Traveller On Rent Pune',
+  '25 Seater Bus On Rent in Pune',
+  '35 Seater Bus On Rent in Pune',
+  '40 seater bus on rent in pune',
+  '17 Seater Bus on Rent Pune',
+  'Purandar Airport Bus Hire Services Pune',
+  'Bus Hire in Pune',
+  'Bus Rental for Corporate Events',
+  '26 Seater Tempo Traveller On Rent in Pune',
+  'Pune Bus Hire',
+  'Volvo Bus On Rent in Pune',
+  'Pune to Mumbai Cab',
+  'Pune Airport Cab',
+  'Outstation Cab Service Pune',
+  'Bus on Rent in Mumbai',
+  'Bus on Rent in Shirdi',
+  'Bus on Rent in Nashik',
+  'Bus on Rent in Lonavala',
+  'Tempo Traveller on Rent in Mumbai',
+  'Tempo Traveller on Rent in Shirdi',
+  'Tempo Traveller on Rent in Nashik',
+  'Tempo Traveller on Rent in Lonavala',
+  'Mini Bus on Rent in Mumbai',
+  'Mini Bus on Rent in Shirdi',
+  'Mini Bus on Rent in Nashik',
+  'Mini Bus on Rent in Lonavala'
 ];
 
 const SEO = ({
@@ -41,48 +70,144 @@ const SEO = ({
 }) => {
   const canonicalUrl = `${SITE_URL}${path === '/' ? '' : path}`;
 
+  // Format title cleanly with brand name per SEO audit specification
   const finalTitle = title
-    ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} — Bus, Force Urbania & Tempo Traveller Rental in Pune`;
+    ? (title.toLowerCase().includes(SITE_NAME.toLowerCase())
+        ? title
+        : `${title} | ${SITE_NAME}`)
+    : `Shree Travels – Urbania on Rent in Pune | Tempo Traveller & Bus Rental`;
 
   const finalDescription =
     description ||
-    'Book Force Urbania, luxury buses (13 to 49 seater), tempo travellers and cars on rent in Pune. Reliable outstation and local rental service across Hinjewadi, Kharadi, Wakad and Baner.';
+    'Book Force Urbania on Rent in Pune (@ ₹32/km for 10, 13 & 17 seater), Tempo Traveller (13 to 26 seater @ ₹22/km), and luxury buses (32 to 50 seater). 24/7 dispatch across Pune, Mumbai, Shirdi, Nashik & Lonavala.';
 
-  // Combines page-specific keywords with the master list, filtering out duplicates
+  // Prioritize page-specific keywords when provided to prevent keyword cannibalization
   const finalKeywords = keywords
-    ? Array.from(new Set([...keywords.split(',').map(k => k.trim()), ...BASE_KEYWORDS])).join(', ')
+    ? Array.from(new Set([...keywords.split(',').map(k => k.trim()).filter(Boolean), 'Shree Travels Pune'])).join(', ')
     : BASE_KEYWORDS.join(', ');
 
   const defaultLocalBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `${SITE_URL}#organization`,
+    '@type': 'AutoRental',
+    '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
     image: DEFAULT_OG_IMAGE,
+    logo: `${SITE_URL}/img/Logo/shree.png`,
     url: SITE_URL,
-    telephone: '+91-7875774499',
+    telephone: '+91-7620411277',
+    email: 'shreetravelspune5@gmail.com',
     priceRange: '₹₹',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Office No. 2, Ground Floor, Wings H (Puram), Prayeja City, Phase-2, Vadgaon Budruk',
+      streetAddress: 'Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud',
       addressLocality: 'Pune',
       addressRegion: 'Maharashtra',
-      postalCode: '411041',
+      postalCode: '411038',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 18.5204,
-      longitude: 73.8567,
+      latitude: 18.5018,
+      longitude: 73.8077,
     },
-    areaServed: [
-      'Pune', 'Hinjewadi', 'Kharadi', 'Wakad', 'Baner', 'Pimpri-Chinchwad',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-7620411277',
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Marathi', 'Hindi']
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-7875774499',
+        contactType: 'reservations',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Marathi', 'Hindi']
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-9860256019',
+        contactType: 'customer support',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Marathi', 'Hindi']
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-9145411005',
+        contactType: 'sales',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Marathi', 'Hindi']
+      }
     ],
+    areaServed: [
+      'Pune', 'Hinjewadi', 'Kharadi', 'Wakad', 'Baner', 'Hadapsar', 'Pimpri-Chinchwad', 'Kothrud', 'Mumbai', 'Lonavala', 'Shirdi', 'Nashik', 'Maharashtra'
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '348',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59'
+      }
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Pune, Mumbai, Shirdi, Nashik & Lonavala Vehicle Rental Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Force Urbania on Rent in Pune',
+            description: 'Luxury 10, 13 & 17 seater Force Urbania hire in Pune, Mumbai, Shirdi, Nashik & Lonavala at ₹32/km'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: '13 Seater & 17 Seater Urbania on Rent in Pune',
+            description: 'Dedicated 13 Seater and 17 Seater Force Urbania AC luxury vans on rent in Pune starting at ₹32/km'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Tempo Traveller on Rent in Pune',
+            description: '13, 17, 20 & 26 seater AC & Non-AC Tempo Traveller hire in Pune, Mumbai, Shirdi, Nashik & Lonavala starting at ₹22/km'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Bus on Rent in Pune (32, 40 & 50 Seater)',
+            description: '20, 25, 32, 35, 40, 45 & 50 seater AC & Non-AC luxury bus hire in Pune starting at ₹28/km'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Pune to Mumbai Cab, Pune Airport Cab & Outstation Cab Service Pune',
+            description: '24/7 Swift Dzire, Ertiga, Innova Crysta & Force Urbania airport transfers and outstation cabs from Pune starting at ₹12/km'
+          }
+        }
+      ]
+    },
     sameAs: [
-      'https://www.facebook.com/people/Shree-travels/61567052876581/',
-      'https://www.instagram.com/amruta_travels_/',
-      'https://share.google/gtBZ4nroQ0YOjdmUT',
+      'https://www.facebook.com/profile.php?id=100063648079773',
+      'https://www.instagram.com/shreetravelspune10/',
+      'https://share.google/p6WieDC55DgKtuLN6',
     ],
   };
 

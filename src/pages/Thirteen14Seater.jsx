@@ -38,11 +38,11 @@ const Thirteen14Seater = () => {
   return (
     <>
       <SEO
-        title="14 Seater Tempo Traveller on Rent in Pune | Premium Group Transport"
-        description="Book 14 seater tempo traveller in Pune for affordable group travel. AC with pushback seats, experienced drivers, best rates for weddings, tours, and corporate events across Hinjewadi, Kharadi, and all Pune areas."
-        keywords="14 seater on rent Pune, 14 seater tempo traveller Pune, 14 passenger bus rental, group transport Pune, AC tempo traveller hire, wedding transport Pune, tour vehicle rental, affordable group bus"
+        title="14 Seater Tempo Traveller On Rent in Pune @ ₹22/km | Group Transport"
+        description="Book 14 Seater Tempo Traveller On Rent in Pune starting @ ₹22/km (Non-AC) & ₹25/km (AC). Pushback seats, experienced drivers, best rates for weddings, tours, and corporate events. Call +91 7620411277 or WhatsApp +91 78757 74499."
+        keywords="14 seater on rent Pune, 14 seater tempo traveller Pune, 14 passenger bus rental, group transport Pune, AC tempo traveller hire, wedding transport Pune"
         path="/14-seater-on-rent-pune"
-        image="/img/Img for Booking/Img for Booking-04.png"
+        image="/img/Keyword Based Image/Keyword Based Image-05.jpg"
         schema={fourteenSeaterSchema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -167,27 +167,41 @@ const Thirteen14Seater = () => {
         <div className="container">
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold mb-3">
-                14 Seater Tempo Traveller on Rent in <span style={{ color: '#ff7700' }}>Pune</span>
+              <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
+                Starting @ ₹22/km (Non-AC) & ₹25/km (AC)
+              </span>
+              <h1 className="display-5 fw-bold mb-3 text-white">
+                14 Seater Tempo Traveller On Rent in Pune
               </h1>
               <p className="lead mb-4">
-                Perfect solution for medium-sized groups! Our 14 seater tempo travellers offer the ideal balance of comfort and affordability. Ideal for weddings, group tours, corporate events, and family celebrations with air-conditioning and premium seating.
+                Perfect solution for medium-sized groups! Our 14 seater tempo travellers offer the ideal balance of comfort and affordability. Ideal for weddings, group tours, corporate events, and family celebrations with air-conditioning and pushback seating.
               </p>
-              <div className="d-flex gap-3 flex-wrap mb-4">
-                <Link to="/book-taxi" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-calendar-check me-2"></i>Book Now
-                </Link>
-                <a href="tel:+917875774499" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  <i className="fas fa-phone me-2"></i>Call +91 7875774499
+              <div className="d-flex gap-3 flex-wrap mb-3">
+                <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
+                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
                 </a>
+                <a
+                  href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%2014%20Seater%20Tempo%20Traveller%20On%20Rent%20in%20Pune."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-lg fw-bold text-white"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                </a>
+                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
+                  Book Online
+                </Link>
+              </div>
+              <div className="small text-light opacity-75">
+                <strong>24/7 Helplines:</strong> +91 7620411277 | +91 7875774499 | +91 9860256019 | +91 9145411005
               </div>
             </div>
             <div className="col-lg-6">
               <img 
-                src="/img/Img for Booking/Img for Booking-04.png" 
-                alt="14 seater tempo traveller with AC pushback seats on rent in Pune - premium comfort group transport" 
-                className="img-fluid rounded-3" 
-                loading="lazy"
+                src="/img/Keyword Based Image/Keyword Based Image-05.jpg" 
+                alt="14 Seater Tempo Traveller On Rent in Pune - AC Pushback Seats" 
+                className="img-fluid rounded-4 shadow-lg" 
               />
             </div>
           </div>
@@ -258,28 +272,28 @@ const Thirteen14Seater = () => {
         <div className="container">
           <div className="pricing-section">
             <h2 className="fw-bold mb-1">Transparent 14 Seater Tempo Traveller <span style={{ color: '#ff7700' }}>Pricing</span></h2>
-            <p className="text-muted mb-4">Best rates in Pune, no hidden charges guaranteed</p>
+            <p className="text-muted mb-4">Official Packages.jsx rates in Pune, no hidden charges guaranteed</p>
 
             <div className="pricing-box">
               <div className="price-item">
-                <h5>4 Hour Local</h5>
+                <h5>8 Hour / 80 KM Local</h5>
                 <p className="text-muted small">Within Pune city</p>
-                <div className="price-amount">₹6,500</div>
+                <div className="price-amount">₹5,500</div>
                 <p className="small" style={{ color: '#666' }}>Distance: 80 km</p>
               </div>
 
               <div className="price-item">
-                <h5>Full Day (24h)</h5>
-                <p className="text-muted small">Single day rental</p>
-                <div className="price-amount">₹10,000</div>
-                <p className="small" style={{ color: '#666' }}>Distance: 250 km</p>
+                <h5>Outstation 300 KM Pkg</h5>
+                <p className="text-muted small">Single day outstation</p>
+                <div className="price-amount">₹8,100–9,000</div>
+                <p className="small" style={{ color: '#666' }}>Distance: 300 km</p>
               </div>
 
               <div className="price-item">
-                <h5>Outstation</h5>
+                <h5>Outstation Per KM</h5>
                 <p className="text-muted small">Multi-day & tours</p>
-                <div className="price-amount">₹17/km</div>
-                <p className="small" style={{ color: '#666' }}>Unlimited distance</p>
+                <div className="price-amount">₹22–25/km</div>
+                <p className="small" style={{ color: '#666' }}>Minimum 300 km/day</p>
               </div>
             </div>
 

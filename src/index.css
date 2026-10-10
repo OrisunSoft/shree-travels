@@ -1,21 +1,101 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main,
+section,
+header,
+footer {
+  max-width: 100%;
+}
+
+video,
+iframe {
+  max-width: 100%;
+}
+
+.badge {
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+}
+
+/* Ensure headings and text inside navy blue / dark sections are always crisp white */
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.hero-section-urbania h1,
+.hero-section-urbania h2,
+.tempo-hero h1,
+.tempo-hero h2,
+.seater-hero h1,
+.seater-hero h2,
+.hero-14seater h1,
+.hero-14seater h2,
+.hero-large-seater h1,
+.hero-large-seater h2 {
+  color: #ffffff;
+}
+
+.bg-white.text-dark h1,
+.bg-white.text-dark h2,
+.bg-white.text-dark h3,
+.bg-white.text-dark h4,
+.bg-white.text-dark h5,
+.bg-white.text-dark h6,
+.card:not(.bg-dark):not(.text-white) h1,
+.card:not(.bg-dark):not(.text-white) h2,
+.card:not(.bg-dark):not(.text-white) h3,
+.card:not(.bg-dark):not(.text-white) h4,
+.card:not(.bg-dark):not(.text-white) h5,
+.card:not(.bg-dark):not(.text-white) h6 {
+  color: #0f172a;
+}
+
+/* Fix Bootstrap 5.3 table header cells (th) inside navy blue (#0f172a), orange (#ff7700), or dark thead */
+.table > thead.text-white > tr > th,
+.table > thead.bg-dark > tr > th,
+.table > thead[style*="background"] > tr > th {
+  background-color: inherit !important;
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-/* Global Body and Font Settings */
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background-color: #f8f9fa;
-  color: #334155;
 }
 
 /* ============================================================
@@ -27,18 +107,38 @@ body {
 
 .card {
   --card-radius-top: 18px;
-  --card-radius-bottom: 6px;
+  --card-radius-bottom: 10px;
 
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+  border: 1px solid rgba(15, 23, 42, 0.07) !important;
   border-radius: var(--card-radius-top) var(--card-radius-top) var(--card-radius-bottom) var(--card-radius-bottom);
   background-color: #ffffff;
   box-shadow:
     0 1px 2px rgba(15, 23, 42, 0.04),
     0 12px 24px -10px rgba(15, 23, 42, 0.14);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+/* Sliding bottom accent bar on hover */
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff7700 0%, #ffb347 50%, #ff7700 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
 }
 
 /* The glossy sweep: a soft diagonal highlight parked just off-frame,
@@ -47,13 +147,13 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: -60%;
-  width: 45%;
+  left: -65%;
+  width: 48%;
   height: 100%;
   background: linear-gradient(
     115deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.65) 48%,
+    rgba(255, 255, 255, 0.68) 48%,
     rgba(255, 153, 51, 0.35) 58%,
     transparent 100%
   );
@@ -64,22 +164,23 @@ body {
 }
 
 .card:hover::after {
-  left: 130%;
+  left: 135%;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  border-color: rgba(255, 119, 0, 0.35) !important;
   box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.05),
-    0 26px 40px -14px rgba(255, 119, 0, 0.28),
-    0 0 0 1px rgba(255, 119, 0, 0.08);
+    0 4px 8px rgba(15, 23, 42, 0.06),
+    0 28px 44px -14px rgba(255, 119, 0, 0.30),
+    0 0 0 1px rgba(255, 119, 0, 0.14);
 }
 
 .card-img-top {
   border-radius: var(--card-radius-top) var(--card-radius-top) 0 0;
 }
 
-/* Image zoom on hover — a single, quieter motion than a bouncy scale */
+/* Image zoom on hover */
 .card .card-img-top,
 .card img {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -87,17 +188,38 @@ body {
 
 .card:hover .card-img-top,
 .card:hover img {
-  transform: scale(1.04);
+  transform: scale(1.06);
+}
+
+/* Related micro-effects inside cards on hover */
+.card .rounded-circle,
+.card .icon-box {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, color 0.35s ease;
+}
+
+.card:hover .rounded-circle,
+.card:hover .icon-box {
+  transform: scale(1.1) translateY(-2px);
+}
+
+.card .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .btn {
+  transform: translateY(-1px);
 }
 
 /* Respect motion preferences: disable the lift, sweep and zoom entirely */
 @media (prefers-reduced-motion: reduce) {
   .card,
+  .card::before,
   .card::after,
   .card .card-img-top,
   .card img {
     transition: none !important;
   }
+  .card::before,
   .card::after {
     display: none;
   }
@@ -126,48 +248,768 @@ button:focus-visible,
   transform: translateZ(0);
 }
 
-/* Responsive Card Layout for Tables on Mobile Devices */
-@media (max-width: 768px) {
-  .responsive-fare-table thead {
-    display: none; /* Hide standard headers on mobile */
-  }
-  
-  .responsive-fare-table, 
-  .responsive-fare-table tbody, 
-  .responsive-fare-table tr, 
-  .responsive-fare-table td {
-    display: block;
-    width: 100%;
+/* Smooth Horizontal Touch Scrolling & Mobile Visibility for Pricing & Tariff Tables */
+.table-responsive,
+.table-responsive.overflow-hidden {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x pan-y !important;
+  scrollbar-width: thin;
+  scrollbar-color: #ff7700 #f1f5f9;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 999px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ff7700;
+  border-radius: 999px;
+}
+
+.table-responsive > .table {
+  min-width: 640px;
+  margin-bottom: 0;
+}
+
+.table-responsive > .table th,
+.table-responsive > .table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+@media (max-width: 767.98px) {
+  .table-responsive > .table {
+    min-width: 480px;
+    font-size: 0.78rem !important;
   }
 
-  .responsive-fare-table tr {
-    margin-bottom: 1rem;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px 14px 5px 5px;
-    box-shadow: 0 8px 16px -8px rgba(15, 23, 42, 0.12);
-    padding: 12px;
+  .table-responsive > .table th,
+  .table-responsive > .table td {
+    padding: 0.5rem 0.45rem !important;
+    font-size: 0.78rem !important;
   }
 
-  .responsive-fare-table td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: right !important;
-    padding: 8px 4px;
-    border-bottom: 1px solid #f1f5f9;
+  /* Allow the vehicle name / first column to wrap cleanly on mobile so prices are visible right next to it */
+  .table-responsive > .table th:first-child,
+  .table-responsive > .table td:first-child,
+  .table-responsive > .table td:nth-child(2) {
+    white-space: normal !important;
+    min-width: 105px;
+    max-width: 145px;
+    line-height: 1.28;
   }
 
-  .responsive-fare-table td:last-child {
-    border-bottom: none;
+  /* If first column is a short SR.NO column, keep it narrow */
+  .table-responsive > .table td:first-child:has(strong:only-child) {
+    min-width: 36px;
+    max-width: 48px;
+    text-align: center;
   }
 
-  /* Injects data-label as a title row for each value on mobile */
-  .responsive-fare-table td::before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #64748b;
-    text-align: left;
-    padding-right: 15px;
+  .table-responsive > .table .btn {
+    padding: 0.28rem 0.65rem !important;
+    font-size: 0.74rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* Compact submit button & modal height on mobile view */
+  .booking-submit-btn {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 42px !important;
+    padding: 0 14px !important;
+    font-size: 0.85rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .shree-booking-modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .shree-booking-modal-dialog {
+    max-height: 95vh;
+    border-radius: 14px;
+  }
+}
+
+/* ============================================================
+   Mobile Horizontal Swipe Carousel (.mobile-swipe-row)
+   On mobile (< 768px), multi-card showcases scroll horizontally
+   with smooth snap alignment instead of stacking 15+ cards vertically.
+   On tablet/desktop (>= 768px), behaves as a standard Bootstrap grid row.
+   ============================================================ */
+@media (max-width: 767.98px) {
+  .mobile-swipe-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  .mobile-swipe-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-swipe-row > [class*="col-"] {
+    flex: 0 0 84% !important;
+    max-width: 84% !important;
+    scroll-snap-align: center;
+  }
+}
+
+/* Interactive Route & Area Cards */
+.corporate-feature-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.corporate-feature-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff7700, #ffb347, #ff7700);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.corporate-feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 119, 0, 0.45);
+  box-shadow: 0 20px 34px -12px rgba(255, 119, 0, 0.22), 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.corporate-feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.route-grid-link {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.route-grid-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #ff7700;
+  transform: scaleY(0);
+  transition: transform 0.28s ease;
+}
+
+.route-grid-link:hover {
+  background-color: #fff3e6;
+  border-color: #ff7700;
+  color: #0f172a;
+  transform: translateY(-3px) translateX(3px);
+  box-shadow: 0 10px 22px -8px rgba(255, 119, 0, 0.25);
+}
+
+.route-grid-link:hover::before {
+  transform: scaleY(1);
+}
+
+.area-grid-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.area-grid-card:hover {
+  background-color: #ff7700;
+  border-color: #ff7700;
+  color: #ffffff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(255, 119, 0, 0.38);
+}
+
+.area-grid-card:hover .area-icon {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   Interactive CardSlider Component Styles
+   ============================================================ */
+.card-slider-wrapper {
+  width: 100%;
+  padding: 0.25rem 0;
+}
+
+.card-slider-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.75rem 0.35rem 1.35rem;
+}
+
+.card-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.card-slider-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-slider-cols-4 {
+  width: calc(25% - 0.95rem);
+}
+
+.card-slider-cols-3 {
+  width: calc(33.333% - 0.85rem);
+}
+
+.card-slider-cols-2 {
+  width: calc(50% - 0.65rem);
+}
+
+@media (max-width: 991.98px) {
+  .card-slider-cols-4,
+  .card-slider-cols-3 {
+    width: calc(50% - 0.65rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-slider-cols-4,
+  .card-slider-cols-3,
+  .card-slider-cols-2 {
+    width: 85%;
+    scroll-snap-align: center;
+  }
+}
+
+.card-slider-nav-btn {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ff7700;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.32);
+  transition: all 0.25s ease;
+}
+
+.card-slider-nav-btn:hover {
+  background-color: #ff7700;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 10px 24px rgba(255, 119, 0, 0.45);
+}
+
+.card-slider-prev {
+  left: -8px;
+}
+
+.card-slider-next {
+  right: -8px;
+}
+
+@media (max-width: 575.98px) {
+  .card-slider-nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .card-slider-prev {
+    left: 2px;
+  }
+  .card-slider-next {
+    right: 2px;
+  }
+}
+
+.card-slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background-color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-slider-dot.active {
+  width: 26px;
+  background-color: #ff7700;
+}
+
+.card-slider-dot:hover {
+  background-color: #ff9933;
+}
+
+/* ============================================================
+   Transformation Keyframes & Fade-In / Fade-Out Card Animations
+   ============================================================ */
+@keyframes cardFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  60% {
+    opacity: 0.92;
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardFadePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.14);
+  }
+  50% {
+    opacity: 0.94;
+    transform: translateY(-4px) scale(1.012);
+    box-shadow: 0 20px 32px -12px rgba(255, 119, 0, 0.22);
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.04);
+  }
+}
+
+@keyframes iconTransformPop {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.18) rotate(-6deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+@keyframes heroRevealSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Fade-In + Transform Entrance to Cards & Grid Links */
+.card,
+.corporate-feature-card,
+.route-grid-link,
+.area-grid-card {
+  animation: cardFadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered animation delays for multi-card rows & sliders */
+.row > [class*="col-"]:nth-child(1) .card,
+.card-slider-item:nth-child(1) .card {
+  animation-delay: 0.05s;
+}
+.row > [class*="col-"]:nth-child(2) .card,
+.card-slider-item:nth-child(2) .card {
+  animation-delay: 0.14s;
+}
+.row > [class*="col-"]:nth-child(3) .card,
+.card-slider-item:nth-child(3) .card {
+  animation-delay: 0.22s;
+}
+.row > [class*="col-"]:nth-child(4) .card,
+.card-slider-item:nth-child(4) .card {
+  animation-delay: 0.30s;
+}
+.row > [class*="col-"]:nth-child(5) .card,
+.card-slider-item:nth-child(5) .card {
+  animation-delay: 0.38s;
+}
+.row > [class*="col-"]:nth-child(6) .card,
+.card-slider-item:nth-child(6) .card {
+  animation-delay: 0.45s;
+}
+
+/* Fade-in / Fade-out & Scale Transition on Slider Items */
+.card-slider-item {
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-slider-item.slider-item-fading {
+  opacity: 0.72;
+  transform: scale(0.96);
+}
+
+.card-slider-item.slider-item-active .card {
+  border-color: rgba(255, 119, 0, 0.32) !important;
+  box-shadow: 0 18px 34px -12px rgba(255, 119, 0, 0.22);
+}
+
+/* Comfort Cards Continuous Subtle Breathing Pulse & Hover 3D Lift */
+.comfort-card {
+  animation: cardFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both,
+             cardFadePulse 5s ease-in-out infinite 1s;
+}
+
+.comfort-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Floating Badge Animation inside Cards */
+.card .position-absolute .badge {
+  animation: badgeFloat 3.4s ease-in-out infinite;
+}
+
+/* Icon Keyframe Pop on Card Hover */
+.card:hover .rounded-circle,
+.card:hover .rounded-3 {
+  animation: iconTransformPop 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hero Section Text Reveal Keyframe */
+section h1 {
+  animation: heroRevealSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Interactive Clickable Keyword Links inside Services Cards */
+.service-keyword-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 3px 6px;
+  margin-left: -6px;
+  border-radius: 8px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.25s ease,
+              background-color 0.25s ease;
+}
+
+.service-keyword-link:hover {
+  color: #ff7700 !important;
+  background-color: rgba(255, 119, 0, 0.09);
+  transform: translateX(6px);
+}
+
+.text-white .service-keyword-link:hover,
+.bg-dark .service-keyword-link:hover {
+  color: #ffb347 !important;
+  background-color: rgba(255, 119, 0, 0.18);
+}
+
+/* Local SEO Focus Keyword Pill with Hover Transform */
+.focus-keyword-pill {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 0.48rem 0.95rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.28s ease;
+}
+
+.focus-keyword-pill:hover {
+  background-color: #ff7700;
+  color: #ffffff !important;
+  border-color: #ff7700;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px -6px rgba(255, 119, 0, 0.4);
+}
+
+/* ============================================================
+   Full-Image Display + CSS Corner Cover for "Amruta Travels" Logo
+   - Shows 100% of the full image (1280x826 native aspect ratio, NO zoom/crop)
+   - Covers ONLY the bottom-right corner (21.5% x 23.5%) where the logo is
+     with a branded "✓ SHREE TRAVELS" badge
+   ============================================================ */
+.amruta-logo-crop,
+.card .amruta-logo-crop,
+.card .card-img-top.amruta-logo-crop {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 1280 / 826;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  clip-path: none !important;
+  transition: filter 0.35s ease !important;
+}
+
+.card:hover .amruta-logo-crop,
+.card:hover .card-img-top.amruta-logo-crop,
+.amruta-logo-mask:hover .amruta-logo-crop {
+  transform: none !important;
+  filter: contrast(1.03) saturate(1.05);
+}
+
+.amruta-logo-mask {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.amruta-logo-mask::after,
+.shree-direct-img-cover {
+  content: '✓ SHREE TRAVELS';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 21.5%;
+  min-width: 96px;
+  max-width: 185px;
+  height: 23.5%;
+  min-height: 36px;
+  max-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+  border-top-left-radius: 10px;
+  border-top: 2px solid #ff7700;
+  border-left: 2px solid #ff7700;
+  box-shadow: -4px -4px 14px rgba(15, 23, 42, 0.38);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ============================================================
+   WhatsApp Booking Popup Modal Styles
+   ============================================================ */
+.shree-booking-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.68);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10050;
+  animation: modalBackdropFadeIn 0.22s ease-out forwards;
+}
+
+.shree-booking-modal-dialog {
+  width: 100%;
+  max-width: 540px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.48);
+  animation: modalDialogPopIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes modalBackdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalDialogPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================================
+   Scroll-Triggered Both-Side Slide-In & Pop-Up Animations
+   Cards and content blocks start hidden off-screen on both left & right
+   sides and pop onto the screen as the user scrolls down.
+   ============================================================ */
+.scroll-effect-section {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.scroll-reveal-item {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  transition:
+    opacity 0.68s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-stagger, 0ms),
+    transform 0.78s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-stagger, 0ms),
+    filter 0.55s ease var(--scroll-stagger, 0ms);
+}
+
+/* Odd Cards / Columns: Slide & Pop In from LEFT side of screen */
+.scroll-reveal-item.scroll-reveal-left {
+  transform: translate3d(-95px, 48px, 0) scale(0.86) rotate(-2.5deg);
+  filter: blur(4px);
+}
+
+/* Even Cards / Columns: Slide & Pop In from RIGHT side of screen */
+.scroll-reveal-item.scroll-reveal-right {
+  transform: translate3d(95px, 48px, 0) scale(0.86) rotate(2.5deg);
+  filter: blur(4px);
+}
+
+/* Section Headings & Subtitles: Center 3D Spring Pop-Up */
+.scroll-reveal-item.scroll-reveal-pop {
+  transform: translate3d(0, 52px, 0) scale(0.82);
+  filter: blur(3px);
+}
+
+/* Tables & Feature Containers: 3D Perspective Flip Pop-Up */
+.scroll-reveal-item.scroll-reveal-flip {
+  transform: perspective(900px) translate3d(0, 56px, -30px) rotateX(14deg) scale(0.88);
+  filter: blur(3px);
+}
+
+/* Smooth, high-performance slide-in entry on mobile viewports */
+@media (max-width: 767.98px) {
+  .scroll-reveal-item.scroll-reveal-left {
+    transform: translate3d(-28px, 24px, 0) scale(0.95);
+    filter: blur(2px);
+  }
+
+  .scroll-reveal-item.scroll-reveal-right {
+    transform: translate3d(28px, 24px, 0) scale(0.95);
+    filter: blur(2px);
+  }
+
+  .scroll-reveal-item.scroll-reveal-pop {
+    transform: translate3d(0, 24px, 0) scale(0.95);
+    filter: blur(2px);
+  }
+}
+
+/* Ensure Areas We Serve in Pune section is ALWAYS 100% visible on mobile */
+.areas-we-serve-grid,
+.areas-we-serve-grid [class*="col-"],
+.area-grid-card {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  visibility: visible !important;
+}
+.area-grid-card:hover {
+  transform: translateY(-4px) !important;
+}
+
+/* Revealed State When Scrolled Into Viewport */
+.scroll-reveal-item.scroll-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg) rotateX(0deg) !important;
+  filter: blur(0px) !important;
+}
+
+@keyframes scrollCardPopGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  }
+  55% {
+    box-shadow: 0 22px 38px -10px rgba(255, 119, 0, 0.34), 0 0 0 2px rgba(255, 119, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 24px -10px rgba(15, 23, 42, 0.14);
+  }
+}
+
+.scroll-reveal-item.scroll-revealed .card,
+.scroll-reveal-item.scroll-revealed .corporate-feature-card {
+  animation: scrollCardPopGlow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-item,
+  .scroll-reveal-item.scroll-reveal-left,
+  .scroll-reveal-item.scroll-reveal-right,
+  .scroll-reveal-item.scroll-reveal-pop,
+  .scroll-reveal-item.scroll-reveal-flip {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
   }
 }

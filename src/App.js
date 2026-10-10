@@ -6,6 +6,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollAndImageEffects from './components/ScrollAndImageEffects';
+import BookingPopupModal from './components/BookingPopupModal';
 import FloatingButtons from './components/FloatingButtons';
 
 // All Page Components
@@ -44,17 +46,20 @@ import OutOfCityRentals from './pages/OutOfCityRentals';
 
 // NEW: Combined City & Capacity Fleet Page for targeted local searches
 import CityFleetPage from './pages/CityFleetPage';
+import TourPackagePage from './pages/TourPackagePage';
+import KeywordLandingPage, { KEYWORD_PAGES_DATA } from './pages/KeywordLandingPage';
 
 const App = () => {
   return (
     <HelmetProvider>
       <Router>
         <ScrollToTop />
+        <ScrollAndImageEffects />
         
-        <div className="d-flex flex-column min-vh-100">
+        <div className="d-flex flex-column min-vh-100" style={{ overflowX: 'hidden', maxWidth: '100%' }}>
           <Navbar />
           
-          <main className="flex-grow-1">
+          <main className="flex-grow-1" style={{ overflowX: 'hidden', maxWidth: '100%' }}>
             <Routes>
               {/* Home & Main Pages */}
               <Route path="/" element={<Home />} />
@@ -77,7 +82,7 @@ const App = () => {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/careers" element={<Careers />} />
 
-              {/* NEW: Dedicated High-Intent Search URLs (City + Vehicle) */}
+              {/* Dedicated High-Intent Search URLs (City + Vehicle) */}
               <Route path="/rent/:city/:vehicle" element={<CityFleetPage />} />
 
               {/* Base Vehicle Routes */}
@@ -95,6 +100,26 @@ const App = () => {
               <Route path="/20-seater-on-rent-pune" element={<Navigate to="/20-seater-bus-rental-pune" replace />} />
 
               <Route path="/15-seater-on-rent-pune" element={<SeaterCars seaterType="15" />} />
+
+              {/* 8 Dedicated Outstation & Pilgrimage Tour Package Pages */}
+              <Route path="/pune-to-mahabaleshwar-bus-hire" element={<TourPackagePage />} />
+              <Route path="/pune-to-lonavala-bus-hire" element={<TourPackagePage />} />
+              <Route path="/pune-to-goa-bus-hire" element={<TourPackagePage />} />
+              <Route path="/pune-to-konkan-darshan" element={<TourPackagePage />} />
+              <Route path="/pune-to-mumbai-darshan" element={<TourPackagePage />} />
+              <Route path="/ashtavinayak-darshan-bus-hire-pune" element={<TourPackagePage />} />
+              <Route path="/bhimashankar-5-jyotirlinga-darshan-pune" element={<TourPackagePage />} />
+              <Route path="/sade-teen-shakti-peeth-darshan-pune" element={<TourPackagePage />} />
+              <Route path="/pune-to-konkan-darshan-bus-hire" element={<Navigate to="/pune-to-konkan-darshan" replace />} />
+
+              {/* All 93 Dedicated Footer Keyword Vehicle & Route Landing Pages */}
+              {Object.keys(KEYWORD_PAGES_DATA).map((slug) => (
+                <Route
+                  key={slug}
+                  path={`/${slug}`}
+                  element={<KeywordLandingPage keywordKey={slug} />}
+                />
+              ))}
               
               {/* Travel Guides Route */}
               <Route path="/travel-guides/:slug" element={<RoutePage />} />
@@ -110,6 +135,14 @@ const App = () => {
               {/* Tours & Location Routes */}
               <Route path="/maharashtra-tour-vehicle-rental" element={<LocationPage />} />
               <Route path="/pune-tour-vehicle-rental" element={<LocationPage />} />
+              <Route path="/vehicle-rental-hinjewadi" element={<LocationPage />} />
+              <Route path="/vehicle-rental-kharadi" element={<LocationPage />} />
+              <Route path="/vehicle-rental-baner" element={<LocationPage />} />
+              <Route path="/vehicle-rental-wakad" element={<LocationPage />} />
+              <Route path="/vehicle-rental-koregaon-park" element={<LocationPage />} />
+              <Route path="/vehicle-rental-hadapsar" element={<LocationPage />} />
+              <Route path="/vehicle-rental-kothrud" element={<LocationPage />} />
+              <Route path="/vehicle-rental-pimpri-chinchwad" element={<LocationPage />} />
               <Route path="/maharashtra-network" element={<OutOfCityRentals />} />
 
               {/* Airport Transfer Routes */}
@@ -126,6 +159,7 @@ const App = () => {
           </main>
 
           <Footer />
+          <BookingPopupModal />
           <FloatingButtons />
         </div>
       </Router>

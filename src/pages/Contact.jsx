@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 
-const GOOGLE_BUSINESS_PROFILE = "https://share.google/gfkP38ghwwQu9J5TJ";
-const GOOGLE_MAPS_LINK = "https://share.google/gfkP38ghwwQu9J5TJ";
+const GOOGLE_BUSINESS_PROFILE = "https://share.google/p6WieDC55DgKtuLN6";
+const GOOGLE_MAPS_LINK = "https://share.google/p6WieDC55DgKtuLN6";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -43,12 +43,12 @@ const Contact = () => {
           "mainEntity": {
             "@type": "LocalBusiness",
             "name": "Shree Travels",
-            "telephone": ["+91-7620411277", "+91-7875774499"],
+            "telephone": ["+91-7620411277", "+91-7875774499", "+91-9860256019", "+91-9145411005"],
             "email": "shreetravelspune5@gmail.com",
             "hasMap": GOOGLE_MAPS_LINK,
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Office no 202, 2nd floor, Dodke Palazzo, road, near wonder futura, Mahatma Society, Kothrud",
+              "streetAddress": "Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud",
               "addressLocality": "Pune",
               "addressRegion": "Maharashtra",
               "postalCode": "411038",
@@ -90,9 +90,9 @@ const Contact = () => {
                   <div>
                     <h5 className="fw-bold mb-1 fs-6">Office Address</h5>
                     <p className="text-muted small mb-0" style={{ lineHeight: '1.6' }}>
-                      Office No 202, 2nd Floor,<br />
-                      Dodke Palazzo, Road,<br />
-                      Near Wonder Futura, Mahatma Society,<br />
+                      Office no 201, Dodke Palazzo,<br />
+                      Near Mahatma Society,<br />
+                      Pramathesh Housing Society, Jijai Nagar,<br />
                       Kothrud, Pune,<br />
                       Maharashtra 411038
                     </p>
@@ -105,13 +105,19 @@ const Contact = () => {
                     <i className="fas fa-phone-alt fs-5"></i>
                   </div>
                   <div>
-                    <h5 className="fw-bold mb-1 fs-6">Contact Numbers</h5>
+                    <h5 className="fw-bold mb-1 fs-6">Contact Numbers (24/7 Dispatch)</h5>
                     <div className="d-flex flex-column gap-2 mt-2">
                       <a href="tel:+917620411277" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 7620411277
+                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 76204 11277
                       </a>
                       <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fab fa-whatsapp me-2" style={{ color: '#25D366', fontSize: '1.1rem' }}></i> +91 7875774499
+                        <i className="fab fa-whatsapp me-2" style={{ color: '#25D366', fontSize: '1.1rem' }}></i> +91 78757 74499 (WhatsApp &amp; Call)
+                      </a>
+                      <a href="tel:+919860256019" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
+                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 98602 56019
+                      </a>
+                      <a href="tel:+919145411005" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
+                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 91454 11005
                       </a>
                     </div>
                   </div>
@@ -194,13 +200,14 @@ const Contact = () => {
                           placeholder="Tell us about your trip dates, vehicle preference, or destination..."
                         ></textarea>
                       </div>
-                      <div className="col-12 mt-4">
+                      <div className="col-12 mt-3">
                         <button 
                           type="submit" 
-                          className="btn text-white fw-bold px-5 py-3 w-100 rounded-pill shadow-sm d-flex align-items-center justify-content-center" 
-                          style={{ backgroundColor: '#25D366' }}
+                          className="btn text-white fw-bold px-3 py-2 w-100 rounded-pill shadow-sm d-flex align-items-center justify-content-center gap-2 booking-submit-btn" 
+                          style={{ backgroundColor: '#25D366', height: '44px', fontSize: '0.92rem', whiteSpace: 'nowrap' }}
                         >
-                          <i className="fab fa-whatsapp fs-5 me-2"></i> Send via WhatsApp
+                          <i className="fab fa-whatsapp fs-5"></i>
+                          <span>Send via WhatsApp</span>
                         </button>
                       </div>
                     </div>

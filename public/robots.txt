@@ -1,15 +1,60 @@
 # Shree Travels - Robots.txt
+# Optimized for Global Search Engines & Generative AI Search Crawlers (GEO / AIO)
 
+# ==============================================================================
+# 1. AI Search Crawlers & LLMs (Full Access Permitted for AI Citations & Answers)
+# ==============================================================================
+
+# OpenAI (ChatGPT, SearchGPT, Real-time Web Search)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI (Conversational Search Engine)
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI & Gemini (AI Overviews, Gemini Live Search)
+User-agent: Google-Extended
+User-agent: GoogleOther
+Allow: /
+
+# Anthropic (Claude Assistant & Web Search)
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+Allow: /
+
+# Apple Intelligence (Siri & Apple Search)
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI (Llama Search & Web Citations)
+User-agent: Meta-ExternalAgent
+User-agent: FacebookBot
+Allow: /
+
+# Other Foundational LLM & AI Knowledge Crawlers
+User-agent: CCBot
+User-agent: cohere-ai
+User-agent: Bytespider
+Allow: /
+
+# ==============================================================================
+# 2. General Search Engines (Google, Bing, Yahoo, DuckDuckGo, Yandex)
+# ==============================================================================
 User-agent: *
 Allow: /
 
-# Allow important website resources
-Allow: /assets/
-Allow: /images/
+# Explicitly permit crawling of media assets for Google Images & rich snippets
+Allow: /img/
 Allow: /static/
+Allow: /assets/
 Allow: /favicon.ico
+Allow: /manifest.json
 
-# Prevent crawling of technical/private areas
+# Disallow non-public technical paths
 Disallow: /admin/
 Disallow: /api/
 Disallow: /login/
@@ -18,5 +63,7 @@ Disallow: /dashboard/
 Disallow: /private/
 Disallow: /node_modules/
 
-# XML Sitemap
+# ==============================================================================
+# 3. XML Sitemap Location
+# ==============================================================================
 Sitemap: https://shreetravels.in/sitemap.xml

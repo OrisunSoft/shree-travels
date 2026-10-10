@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
               </p>
               <p className="text-muted mb-5" style={{ lineHeight: '1.8' }}>
                 This policy explains what personal information Shree Travels collects through
-                amrutatravel.com, why we collect it, and how it is used. By using our website or
+                shreetravels.in, why we collect it, and how it is used. By using our website or
                 submitting a booking or contact enquiry, you agree to the practices described here.
               </p>
 
@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
                 <h2 className="h5 fw-bold mb-2">Questions about your data?</h2>
                 <p className="text-muted mb-0">
                   Contact us at{' '}
-                  <a href="mailto:booking@amrutatravel.com" style={{ color: '#ff7700' }}>booking@amrutatravel.com</a>
+                  <a href="mailto:shreetravelspune5@gmail.com" style={{ color: '#ff7700' }}>shreetravelspune5@gmail.com</a>
                   {' '}or call{' '}
                   <a href="tel:+917875774499" style={{ color: '#ff7700' }}>+91 7875774499</a>.
                 </p>

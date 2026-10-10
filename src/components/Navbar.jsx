@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,18 +100,28 @@ const Navbar = () => {
           white-space: nowrap;
         }
 
-        /* Desktop Specific Mega Menu Styles */
+        /* Desktop Specific Mega Menu Styles — Centered in Viewport */
         @media (min-width: 992px) {
+          .glass-nav > .container-xl {
+            position: relative;
+          }
+          .nav-item-with-dropdown {
+            position: static;
+          }
           .navbar-dropdown {
-            width: 800px;
+            width: min(880px, calc(100vw - 32px));
+            max-width: calc(100vw - 32px);
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
             left: 50%;
+            right: auto;
             transform: translate(-50%, 0);
-            padding: 1.5rem;
+            padding: 1.35rem 1.5rem;
           }
           .mega-menu-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
           }
         }
 
@@ -213,7 +224,7 @@ const Navbar = () => {
                 <i className="fab fa-facebook fs-5" style={{ color: '#1877F2' }}></i>
               </a>
               {/* Updated Instagram Link */}
-              <a href="https://www.instagram.com/amrutatravel.in/" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                 <i className="fab fa-instagram fs-5 insta-gradient"></i>
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -249,7 +260,9 @@ const Navbar = () => {
                 aria-expanded={dropdownOpen.vehicles}
               >
                 Vehicles & Rates
-                <span className={`dropdown-toggle-icon ${dropdownOpen.vehicles ? 'open' : ''}`}>▼</span>
+                <span className={`dropdown-toggle-icon ${dropdownOpen.vehicles ? 'open' : ''} d-inline-flex align-items-center`}>
+                  <FaChevronDown size={10} />
+                </span>
               </span>
               
               {/* HORIZONTAL MEGA MENU */}
@@ -258,52 +271,62 @@ const Navbar = () => {
                   
                   {/* Column 1: Mini Bus & Standard Bus */}
                   <div className="mega-menu-col">
-                    <h6 className="dropdown-header">Mini Bus on Rent</h6>
+                    <h6 className="dropdown-header">Mini Bus on Rent (₹22–38/km)</h6>
                     <Link to="/rent/pune/mini-bus" className="dropdown-item" onClick={closeNavbar}>Mini Bus in Pune</Link>
                     <Link to="/rent/mumbai/mini-bus" className="dropdown-item" onClick={closeNavbar}>Mini Bus in Mumbai</Link>
                     <Link to="/rent/shirdi/mini-bus" className="dropdown-item" onClick={closeNavbar}>Mini Bus for Shirdi</Link>
                     <Link to="/rent/lonavala/mini-bus" className="dropdown-item" onClick={closeNavbar}>Mini Bus for Lonavala</Link>
                     <Link to="/rent/nashik/mini-bus" className="dropdown-item" onClick={closeNavbar}>Mini Bus for Nashik</Link>
                     
-                    <h6 className="dropdown-header mt-4">Bus on Rent (30-50 Seater)</h6>
-                    <Link to="/bus-rental-pune" className="dropdown-item" onClick={closeNavbar}>Bus Rental in Pune</Link>
+                    <h6 className="dropdown-header mt-3">Bus on Rent (30–50 Seater)</h6>
+                    <Link to="/rent/pune/bus" className="dropdown-item" onClick={closeNavbar}>Bus Rental in Pune</Link>
                     <Link to="/rent/mumbai/bus" className="dropdown-item" onClick={closeNavbar}>Bus Rental in Mumbai</Link>
                     <Link to="/rent/shirdi/bus" className="dropdown-item" onClick={closeNavbar}>Bus for Shirdi</Link>
                     <Link to="/rent/lonavala/bus" className="dropdown-item" onClick={closeNavbar}>Bus for Lonavala</Link>
                     <Link to="/rent/nashik/bus" className="dropdown-item" onClick={closeNavbar}>Bus for Nashik</Link>
+
+                    <h6 className="dropdown-header mt-3">Volvo Bus (@ ₹80–90/km)</h6>
+                    <Link to="/rent/pune/volvo-bus" className="dropdown-item" onClick={closeNavbar}>Volvo Bus in Pune</Link>
+                    <Link to="/rent/mumbai/volvo-bus" className="dropdown-item" onClick={closeNavbar}>Volvo Bus in Mumbai</Link>
+                    <Link to="/rent/nashik/volvo-bus" className="dropdown-item" onClick={closeNavbar}>Volvo Bus in Nashik & Shirdi</Link>
                   </div>
 
-                  {/* Column 2: Tempo Traveller & Urbania */}
+                  {/* Column 2: Tempo Traveller, Urbania & Tata Winger */}
                   <div className="mega-menu-col">
-                    <h6 className="dropdown-header">Tempo Traveller</h6>
-                    <Link to="/tempo-traveller-seater-hire-pune" className="dropdown-item" onClick={closeNavbar}>Traveller in Pune</Link>
+                    <h6 className="dropdown-header">Tempo Traveller (₹22–28/km)</h6>
+                    <Link to="/rent/pune/tempo-traveller" className="dropdown-item" onClick={closeNavbar}>Traveller in Pune</Link>
                     <Link to="/rent/mumbai/tempo-traveller" className="dropdown-item" onClick={closeNavbar}>Traveller in Mumbai</Link>
                     <Link to="/rent/shirdi/tempo-traveller" className="dropdown-item" onClick={closeNavbar}>Traveller for Shirdi</Link>
                     <Link to="/rent/lonavala/tempo-traveller" className="dropdown-item" onClick={closeNavbar}>Traveller for Lonavala</Link>
                     <Link to="/rent/nashik/tempo-traveller" className="dropdown-item" onClick={closeNavbar}>Traveller for Nashik</Link>
                     
-                    <h6 className="dropdown-header mt-4">Force Urbania (Luxury)</h6>
-                    <Link to="/force-urbania-on-rent-pune" className="dropdown-item" onClick={closeNavbar}>Urbania in Pune</Link>
+                    <h6 className="dropdown-header mt-3">Force Urbania (@ ₹32/km)</h6>
+                    <Link to="/rent/pune/force-urbania" className="dropdown-item" onClick={closeNavbar}>Urbania in Pune</Link>
                     <Link to="/rent/mumbai/force-urbania" className="dropdown-item" onClick={closeNavbar}>Urbania in Mumbai</Link>
                     <Link to="/rent/shirdi/force-urbania" className="dropdown-item" onClick={closeNavbar}>Urbania for Shirdi</Link>
                     <Link to="/rent/lonavala/force-urbania" className="dropdown-item" onClick={closeNavbar}>Urbania for Lonavala</Link>
                     <Link to="/rent/nashik/force-urbania" className="dropdown-item" onClick={closeNavbar}>Urbania for Nashik</Link>
+
+                    <h6 className="dropdown-header mt-3">Tata Winger (@ ₹20–25/km)</h6>
+                    <Link to="/rent/pune/tata-winger" className="dropdown-item" onClick={closeNavbar}>Tata Winger in Pune</Link>
+                    <Link to="/rent/mumbai/tata-winger" className="dropdown-item" onClick={closeNavbar}>Tata Winger in Mumbai</Link>
+                    <Link to="/rent/lonavala/tata-winger" className="dropdown-item" onClick={closeNavbar}>Tata Winger in Lonavala & Shirdi</Link>
                   </div>
 
-                  {/* Column 3: Outstation, Pricing & Highlight */}
-                  <div className="mega-menu-col bg-light rounded-4 p-3 p-lg-4 border">
-                    <h6 className="dropdown-header mb-3">Outstation & Guides</h6>
+                  {/* Column 3: Outstation Tour Packages & Pricing */}
+                  <div className="mega-menu-col bg-light rounded-4 p-3 border">
+                    <h6 className="dropdown-header mb-2">Popular Tour Packages</h6>
                     <Link to="/packages" className="dropdown-item bg-white shadow-sm mb-2 fw-bold" style={{ color: '#ff7700' }} onClick={closeNavbar}>
-                      <i className="fas fa-tag me-2"></i>Complete Fare Packages
+                      <i className="fas fa-tag me-2"></i>All Vehicle Tariff & Packages
                     </Link>
-                    <Link to="/travel-guides/pune-to-mumbai" className="dropdown-item" onClick={closeNavbar}>Pune to Mumbai Guide</Link>
-                    <Link to="/travel-guides/pune-to-lonavala" className="dropdown-item" onClick={closeNavbar}>Pune to Lonavala Guide</Link>
-                    <Link to="/travel-guides/bus-rental-price-pune" className="dropdown-item" onClick={closeNavbar}>Bus Rental Rates per KM</Link>
-                    
-                    <div className="mt-4 text-center d-none d-lg-block">
-                      <img src="/img/Bus-on-rent-in-pune.jpeg" alt="Bus Rental" className="img-fluid rounded-3 shadow-sm mb-3" style={{ maxHeight: '100px', objectFit: 'cover' }} />
-                      <p className="small text-muted mb-0" style={{ lineHeight: '1.4' }}>Premium vehicles for outstation trips with instant booking.</p>
-                    </div>
+                    <Link to="/pune-to-mahabaleshwar-bus-hire" className="dropdown-item" onClick={closeNavbar}>Pune to Mahabaleshwar</Link>
+                    <Link to="/pune-to-lonavala-bus-hire" className="dropdown-item" onClick={closeNavbar}>Pune to Lonavala</Link>
+                    <Link to="/pune-to-goa-bus-hire" className="dropdown-item" onClick={closeNavbar}>Pune to Goa Tour</Link>
+                    <Link to="/pune-to-konkan-darshan" className="dropdown-item" onClick={closeNavbar}>Pune to Konkan Darshan</Link>
+                    <Link to="/pune-to-mumbai-darshan" className="dropdown-item" onClick={closeNavbar}>Pune to Mumbai Darshan</Link>
+                    <Link to="/ashtavinayak-darshan-bus-hire-pune" className="dropdown-item" onClick={closeNavbar}>Ashtavinayak Darshan</Link>
+                    <Link to="/bhimashankar-5-jyotirlinga-darshan-pune" className="dropdown-item" onClick={closeNavbar}>Bhimashankar & 5 Jyotirlinga</Link>
+                    <Link to="/sade-teen-shakti-peeth-darshan-pune" className="dropdown-item" onClick={closeNavbar}>Sade Teen Shakti Peeth</Link>
                   </div>
 
                 </div>

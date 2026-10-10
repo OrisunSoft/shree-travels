@@ -243,7 +243,7 @@ const BlogDetail = () => {
       title: "Travel Insights & Vehicle Rental Guides",
       date: "September 15, 2026", 
       author: "Shree Travels",
-      image: "/img/bus-luxury.jpeg",
+      image: "/img/bus-luxury.jpg",
       category: "Travel Guide",
       seoTitle: "Travel Blog | Shree Travels Pune",
       seoDescription: "Read the latest tips on booking outstation cabs, tempo travellers, and bus rentals in Pune and Maharashtra.",
@@ -338,7 +338,7 @@ const BlogDetail = () => {
               src={post.image} 
               alt={post.title} 
               className="w-100 h-100 object-fit-cover"
-              onError={(e) => { e.target.src = '/img/bus-luxury.jpeg'; }}
+              onError={(e) => { e.target.src = '/img/bus-luxury.jpg'; }}
             />
           </div>
         </div>

@@ -118,7 +118,7 @@ const TermsConditions = () => {
                 <h2 className="h5 fw-bold mb-2">Questions about these terms?</h2>
                 <p className="text-muted mb-0">
                   Contact us at{' '}
-                  <a href="mailto:booking@amrutatravel.com" style={{ color: '#ff7700' }}>booking@amrutatravel.com</a>
+                  <a href="mailto:shreetravelspune5@gmail.com" style={{ color: '#ff7700' }}>shreetravelspune5@gmail.com</a>
                   {' '}or call{' '}
                   <a href="tel:+917875774499" style={{ color: '#ff7700' }}>+91 7875774499</a>.
                 </p>

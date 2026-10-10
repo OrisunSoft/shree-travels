@@ -22,8 +22,8 @@ const Booking = () => {
       `*Vehicle Selected:* ${formData.vehicle}%0A` +
       `*Destination/Route:* ${formData.destination}`;
 
-    // 2. Open WhatsApp with your business number (7620411277)
-    window.open(`https://wa.me/917620411277?text=${whatsappMessage}`, '_blank');
+    // 2. Open WhatsApp with your business number (7875774499)
+    window.open(`https://wa.me/917875774499?text=${whatsappMessage}`, '_blank');
     
     // 3. Show success message on the website
     setSubmitted(true);
@@ -35,10 +35,10 @@ const Booking = () => {
   };
 
   return (
-    <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
+    <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <SEO 
         title="Book a Bus on Rent in Pune | Mini & Luxury Bus Hire"
-        description="Book your next ride with Shree Travels. Fill out our quick booking form for Tempo Travellers, Urbania, and luxury buses."
+        description="Book your next ride with Shree Travels. Fill out our quick booking form for Tempo Travellers, Force Urbania @ ₹30/km, and luxury buses."
         keywords="book bus online Pune, Force Urbania booking, tempo traveller booking Pune"
         path="/book-taxi"
         breadcrumbs={[
@@ -50,7 +50,7 @@ const Booking = () => {
       {/* Hero Section */}
       <section 
         className="py-5 position-relative" 
-        style={{ backgroundImage: 'url("/img/pricing-bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: 'url("/img/Keyword Based Image/Keyword Based Image-01.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(15, 23, 42, 0.85)' }}></div>
         <div className="container py-5 position-relative z-index-1 text-center text-white">
@@ -125,9 +125,20 @@ const Booking = () => {
                         <input type="text" name="destination" value={formData.destination} onChange={handleChange} className="form-control bg-light py-2.5 rounded-3 border-0" placeholder="e.g. Pune to Mahabaleshwar" required />
                       </div>
                       
-                      <div className="col-12 mt-5">
-                        <button type="submit" className="btn btn-lg text-white fw-bold px-5 py-3 w-100 rounded-pill shadow-sm d-flex align-items-center justify-content-center gap-2 btn-hover-animate" style={{ backgroundColor: '#25D366', transition: 'all 0.3s' }}>
-                          <i className="fab fa-whatsapp fs-4"></i> Send Booking via WhatsApp
+                      <div className="col-12 mt-4">
+                        <button
+                          type="submit"
+                          className="btn text-white fw-bold px-3 py-2 w-100 rounded-pill shadow-sm d-flex align-items-center justify-content-center gap-2 btn-hover-animate booking-submit-btn"
+                          style={{
+                            backgroundColor: '#25D366',
+                            height: '44px',
+                            fontSize: '0.92rem',
+                            whiteSpace: 'nowrap',
+                            transition: 'all 0.3s'
+                          }}
+                        >
+                          <i className="fab fa-whatsapp fs-5"></i>
+                          <span>Send Booking via WhatsApp</span>
                         </button>
                       </div>
                     </div>

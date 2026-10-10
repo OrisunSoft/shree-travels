@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
-const GOOGLE_BUSINESS_PROFILE = "https://share.google/gfkP38ghwwQu9J5TJ";
+const GOOGLE_BUSINESS_PROFILE = "https://share.google/p6WieDC55DgKtuLN6";
 
 const Reviews = () => {
   const reviewsSchema = {
@@ -26,7 +26,7 @@ const Reviews = () => {
       "hasMap": GOOGLE_BUSINESS_PROFILE,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Office no 202, 2nd floor, Dodke Palazzo, road, near wonder futura, Mahatma Society, Kothrud",
+        "streetAddress": "Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud",
         "addressLocality": "Pune",
         "addressRegion": "Maharashtra",
         "postalCode": "411038",

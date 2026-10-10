@@ -4,13 +4,33 @@
 AddType video/mp4 .mp4
 AddType video/webm .webm
 
+# ---------------------------------------------------------
+# ENABLE GZIP COMPRESSION FOR FASTER CORE WEB VITALS
+# ---------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------
+# BROWSER CACHING FOR STATIC ASSETS (LCP / SPEED BOOST)
+# ---------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
   # ---------------------------------------------------------
-  # 1. SEO 301 REDIRECTS (Using RewriteRule to prevent conflicts)
-  # The [NC] flag makes these case-insensitive, so uppercase searches won't 404
+  # 1. SEO 301 REDIRECTS (Case-Insensitive)
   # ---------------------------------------------------------
   RewriteRule ^Bus-Rental-for-Tour-Packages-in-Pune/?$ /maharashtra-tour-vehicle-rental [R=301,L,NC]
   RewriteRule ^Luxury-Bus-Rental-in-Pune/?$ /bus-rental-pune [R=301,L,NC]
@@ -20,8 +40,9 @@ AddType video/webm .webm
   RewriteRule ^20-seater-on-rent-pune/?$ /20-seater-bus-rental-pune [R=301,L,NC]
 
   # ---------------------------------------------------------
-  # 2. REACT ROUTER SPA CATCH-ALL (Stops 404 on page refresh)
+  # 2. PRE-RENDERED STATIC ROUTE HTML + REACT ROUTER CATCH-ALL
   # ---------------------------------------------------------
+  DirectoryIndex index.html
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

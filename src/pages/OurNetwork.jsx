@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaPhoneAlt, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
-const OurNetwork = () => {
+const OurNetwork = ({ isEmbedded = false }) => {
   const cities = [
     {
       name: "Delhi",
@@ -51,33 +52,39 @@ const OurNetwork = () => {
     }
   ];
 
+  const HeadingTag = isEmbedded ? 'h2' : 'h1';
+
   return (
     <>
-      <SEO 
-        title="Bus & Force Urbania Rent in Pune @ 35 Rs/Km"
-        description="Explore Shree Travels' nationwide network across Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Jaipur, and Ahmedabad. Reliable vehicle rentals everywhere."
-        keywords="Shree Travels network, Nationwide bus rental India, Delhi Mumbai Bangalore bus hire, Pune travel agency network"
-        path="/our-network"
-        breadcrumbs={[
-          { name: "Home", url: "/" },
-          { name: "Our Network", url: "/our-network" }
-        ]}
-      />
+      {!isEmbedded && (
+        <SEO 
+          title="Bus & Force Urbania Rent in Pune @ 30 Rs/Km"
+          description="Explore Shree Travels' nationwide network across Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Jaipur, and Ahmedabad. Reliable vehicle rentals everywhere."
+          keywords="Shree Travels network, Nationwide bus rental India, Delhi Mumbai Bangalore bus hire, Pune travel agency network"
+          path="/our-network"
+          breadcrumbs={[
+            { name: "Home", url: "/" },
+            { name: "Our Network", url: "/our-network" }
+          ]}
+        />
+      )}
 
       {/* Page Header */}
-      <section className="bg-light py-5">
-        <div className="container py-4 text-center px-3">
-          <h1 className="fw-bold mb-3 display-5 fs-3 fs-md-1">Our Nationwide <span style={{ color: '#ff7700' }}>Network</span></h1>
-          <p className="text-muted lead fs-6 fs-md-5 max-w-75 mx-auto">
+      <section className={`${isEmbedded ? 'bg-light pt-5 pb-3 border-top' : 'bg-light py-5'}`}>
+        <div className="container py-3 text-center px-3">
+          <HeadingTag className={`fw-bold mb-3 ${isEmbedded ? 'h3' : 'display-5 fs-3 fs-md-1'}`}>
+            Our Nationwide <span style={{ color: '#ff7700' }}>Network</span>
+          </HeadingTag>
+          <p className="text-muted lead fs-6 fs-md-5 max-w-75 mx-auto mb-0">
             Providing reliable transport services and vehicle rentals across major metropolitan cities and cultural hubs in India.
           </p>
         </div>
       </section>
 
       {/* City Network Grid Section */}
-      <section className="py-5 bg-white">
-        <div className="container py-4">
-          <div className="row g-4">
+      <section className={`${isEmbedded ? 'pb-5 pt-2 bg-light' : 'py-5 bg-white'}`}>
+        <div className="container py-3">
+          <div className={`row g-4 ${isEmbedded ? 'mobile-swipe-row' : ''}`}>
             {cities.map((city, index) => (
               <div className="col-lg-4 col-md-6" key={index}>
                 <div className="card h-100 rounded-4 overflow-hidden border-0 shadow-sm bg-white d-flex flex-column justify-content-between">
@@ -91,10 +98,10 @@ const OurNetwork = () => {
                       onError={(e) => { e.target.src = '/img/bus-luxury.jpeg'; }}
                     />
                     <span 
-                      className="position-absolute bottom-0 start-0 m-3 px-3 py-1 text-white small fw-bold rounded-pill shadow-sm"
+                      className="position-absolute bottom-0 start-0 m-3 px-3 py-1 text-white small fw-bold rounded-pill shadow-sm d-inline-flex align-items-center"
                       style={{ backgroundColor: '#ff7700', fontSize: '0.75rem' }}
                     >
-                      {city.name} Hub
+                      <FaMapMarkerAlt className="me-1" /> {city.name} Hub
                     </span>
                   </div>
 
@@ -109,9 +116,9 @@ const OurNetwork = () => {
                     
                     <Link 
                       to="/book-taxi" 
-                      className="btn btn-outline-dark w-100 fw-semibold rounded-pill py-2 text-decoration-none"
+                      className="btn btn-outline-dark w-100 fw-semibold rounded-pill py-2 text-decoration-none d-inline-flex align-items-center justify-content-center"
                     >
-                      Book in {city.name}
+                      Book in {city.name} <FaArrowRight className="ms-2" size={12} />
                     </Link>
                   </div>
 
@@ -122,23 +129,25 @@ const OurNetwork = () => {
         </div>
       </section>
 
-      {/* Call to Action Banner */}
-      <section className="py-5 text-white text-center" style={{ backgroundColor: '#0f172a' }}>
-        <div className="container py-4">
-          <h2 className="fw-bold mb-3">Ready to Travel Across India?</h2>
-          <p className="text-light opacity-75 mb-4 max-w-75 mx-auto">
-            Get instant confirmation for your bus, Force Urbania, or Tempo Traveller rentals across any of our operating cities.
-          </p>
-          <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="tel:+917875774499" className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm" style={{ backgroundColor: '#ff7700' }}>
-              <i className="fas fa-phone-alt me-2"></i> Call: 7875774499
-            </a>
-            <Link to="/contact" className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill">
-              Contact Office
-            </Link>
+      {/* Call to Action Banner - Rendered only on standalone OurNetwork page */}
+      {!isEmbedded && (
+        <section className="py-5 text-white text-center" style={{ backgroundColor: '#0f172a' }}>
+          <div className="container py-4">
+            <h2 className="fw-bold mb-3 text-white">Ready to Travel Across India?</h2>
+            <p className="text-light opacity-75 mb-4 max-w-75 mx-auto">
+              Get instant confirmation for your bus, Force Urbania, or Tempo Traveller rentals across any of our operating cities.
+            </p>
+            <div className="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="tel:+917875774499" className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center" style={{ backgroundColor: '#ff7700' }}>
+                <FaPhoneAlt className="me-2" /> Call: 7875774499
+              </a>
+              <Link to="/contact" className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill">
+                Contact Office
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };

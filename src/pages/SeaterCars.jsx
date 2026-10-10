@@ -5,13 +5,14 @@ import SEO from '../components/SEO';
 const SeaterCars = () => {
   const seaterSchema = {
     '@context': 'https://schema.org',
-    '@type': 'VehicleRentalService',
-    name: 'Multi-Seater Tempo Traveller & Group Vehicles Rental',
-    description: 'Affordable 13, 14, 17, 20 seater tempo traveller and group vehicle rentals in Pune',
+    '@type': 'AutoRental',
+    name: '13 Seater Tempo Traveller On Rent in Pune',
+    description: 'Affordable 13, 14, 17, 20 seater tempo traveller and group vehicle rentals in Pune starting @ ₹22/km',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
-      priceRange: '₹5000-₹10000',
+      lowPrice: '5500',
+      highPrice: '15000',
       availability: 'https://schema.org/InStock',
       url: 'https://shreetravels.in/13-seater-on-rent-pune'
     }
@@ -22,40 +23,40 @@ const SeaterCars = () => {
       seater: '13 Seater',
       capacity: '13 Passengers',
       features: ['AC Pushback Seats', 'Music System', 'Wide Leg Space', 'Power Steering'],
-      localRate: '₹6,000-7,500',
-      fullDayRate: '₹9,000-10,000',
-      outstationRate: '₹16-18/km',
-      image: 'Img for Booking-03.png',
+      localRate: '₹5,500',
+      fullDayRate: '₹7,200 (Non-AC) | ₹8,100 (AC)',
+      outstationRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      image: '/img/Keyword Based Image/Keyword Based Image-01.jpg',
       bestFor: 'Family trips, small tours, office outings'
     },
     {
-      seater: '14 Seater',
-      capacity: '14 Passengers',
+      seater: '14 / 15 Seater',
+      capacity: '14-15 Passengers',
       features: ['AC with Heater', 'LCD Display', 'Music System', 'ABS Brakes'],
-      localRate: '₹6,500-8,000',
-      fullDayRate: '₹9,500-10,500',
-      outstationRate: '₹17-19/km',
-      image: 'Img for Booking-04.png',
+      localRate: '₹5,500',
+      fullDayRate: '₹9,000 (AC)',
+      outstationRate: '₹25–30/km (AC)',
+      image: '/img/Keyword Based Image/Keyword Based Image-05.jpg',
       bestFor: 'Medium groups, wedding transport, school trips'
     },
     {
       seater: '17 Seater',
       capacity: '17 Passengers',
       features: ['Full AC System', 'Recliner Seats', 'Music System', 'LCD Display'],
-      localRate: '₹7,000-8,500',
-      fullDayRate: '₹10,000-11,500',
-      outstationRate: '₹18-20/km',
-      image: 'Img for Booking-05.png',
+      localRate: '₹5,500',
+      fullDayRate: '₹7,500 (Non-AC) | ₹9,600 (AC)',
+      outstationRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      image: '/img/Keyword Based Image/Keyword Based Image-06.jpg',
       bestFor: 'Large groups, tour groups, corporate events'
     },
     {
       seater: '20 Seater',
       capacity: '20 Passengers',
       features: ['Premium AC', 'Push Back Seats', 'Music & LCD', 'Power Windows'],
-      localRate: '₹8,000-9,500',
-      fullDayRate: '₹11,000-12,500',
-      outstationRate: '₹19-21/km',
-      image: 'Img for Booking-06.png',
+      localRate: '₹5,500–6,000',
+      fullDayRate: '₹8,100 (Non-AC) | ₹10,200 (AC)',
+      outstationRate: '₹28/km (Non-AC & AC)',
+      image: '/img/Keyword Based Image/Keyword Based Image-08.jpg',
       bestFor: 'Large family groups, charter tours, events'
     }
   ];
@@ -63,16 +64,16 @@ const SeaterCars = () => {
   return (
     <>
       <SEO
-        title="13, 14, 17, 20 Seater Tempo Traveller on Rent in Pune | Affordable Group Transport"
-        description="Book affordable 13-20 seater tempo travellers in Pune. Perfect for group travel, tours, weddings, and family outings. AC vehicles with experienced drivers, best rates for local and outstation trips."
-        keywords="13 seater on rent Pune, 14 seater tempo traveller Pune, 17 seater bus rental Pune, 20 seater on rent Pune, tempo traveller hire Pune, group vehicle rental, affordable bus on rent, AC tempo traveller Pune, family group transport"
+        title="13 Seater Tempo Traveller On Rent in Pune @ ₹22/km | 13–20 Seater Hire"
+        description="Book 13 Seater Tempo Traveller On Rent in Pune starting @ ₹22/km (Non-AC) & ₹25/km (AC). Verified pushback seats, experienced drivers, local 8Hr/80KM @ ₹5,500. Call +91 7620411277 or WhatsApp +91 78757 74499."
+        keywords="13 Seater Tempo Traveller On Rent in Pune, 13 seater on rent Pune, 14 seater tempo traveller Pune, 17 seater bus rental Pune, 20 seater on rent Pune, tempo traveller hire Pune"
         path="/13-seater-on-rent-pune"
-        image="/img/Img for Booking/Img for Booking-03.png"
+        image="/img/Keyword Based Image/Keyword Based Image-01.jpg"
         schema={seaterSchema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'Vehicles', url: '/our-fleet' },
-          { name: 'Seater Vehicles', url: '/13-seater-on-rent-pune' }
+          { name: '13 Seater Tempo Traveller On Rent in Pune', url: '/13-seater-on-rent-pune' }
         ]}
       />
 
@@ -99,8 +100,9 @@ const SeaterCars = () => {
 
         .seater-card img {
           width: 100%;
-          height: 200px;
-          object-fit: cover;
+          height: auto;
+          aspect-ratio: 1280 / 826;
+          display: block;
         }
 
         .seater-badge {
@@ -155,7 +157,7 @@ const SeaterCars = () => {
 
         .rate-box p {
           color: #ff7700;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: 700;
           margin: 0;
         }
@@ -166,33 +168,6 @@ const SeaterCars = () => {
           padding: 1.5rem;
           border-radius: 0.5rem;
           margin: 2rem 0;
-        }
-
-        .comparison-table {
-          margin-top: 2rem;
-        }
-
-        .vehicle-type-toggle {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-          gap: 1rem;
-          margin-bottom: 2rem;
-        }
-
-        .toggle-btn {
-          padding: 1rem;
-          border: 2px solid #ddd;
-          background: white;
-          border-radius: 0.75rem;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          font-weight: 600;
-        }
-
-        .toggle-btn.active {
-          background: #ff7700;
-          color: white;
-          border-color: #ff7700;
         }
 
         @media (max-width: 768px) {
@@ -207,28 +182,44 @@ const SeaterCars = () => {
         <div className="container">
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
-              <h1 className="display-5 fw-bold mb-3">
-                13 to 20 Seater Tempo Traveller on Rent in <span style={{ color: '#ff7700' }}>Pune</span>
+              <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
+                Starting @ ₹22/km (Non-AC) & ₹25/km (AC)
+              </span>
+              <h1 className="display-5 fw-bold mb-3 text-white">
+                13 Seater Tempo Traveller On Rent in Pune
               </h1>
               <p className="lead mb-4">
-                Affordable group vehicle rentals for family trips, tours, and celebrations. Choose from 13, 14, 17, or 20 seater options with experienced drivers and best rates across Pune.
+                Book our popular 13 Seater AC & Non-AC Tempo Traveller on rent in Pune (plus 14, 17, and 20 seater options) for family pilgrimages, weekend tours to Mahabaleshwar & Lonavala, and corporate outings.
               </p>
-              <div className="d-flex gap-3 flex-wrap mb-4">
-                <Link to="/book-taxi" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-calendar-check me-2"></i>Book Your Vehicle
-                </Link>
-                <a href="tel:+917875774499" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  <i className="fas fa-phone me-2"></i>Call Now
+              <div className="d-flex gap-3 flex-wrap mb-3">
+                <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
+                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
                 </a>
+                <a
+                  href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%2013%20Seater%20Tempo%20Traveller%20On%20Rent%20in%20Pune."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-lg fw-bold text-white"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                </a>
+                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
+                  Book Online
+                </Link>
+              </div>
+              <div className="small text-light opacity-75">
+                <strong>24/7 Helplines:</strong> +91 7620411277 | +91 7875774499 | +91 9860256019 | +91 9145411005
               </div>
             </div>
             <div className="col-lg-6">
-              <img 
-                src="/img/Img for Booking/Img for Booking-03.png" 
-                alt="13 seater tempo traveller on rent in Pune - AC with pushback seats" 
-                className="img-fluid rounded-3" 
-                loading="lazy"
-              />
+              <div className="position-relative overflow-hidden rounded-4 shadow-lg">
+                <img 
+                  src="/img/Keyword Based Image/Keyword Based Image-01.jpg" 
+                  alt="13 Seater Tempo Traveller On Rent in Pune - AC Pushback Seats" 
+                  className="img-fluid w-100 d-block" 
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -246,11 +237,13 @@ const SeaterCars = () => {
             {seaterTypes.map((type, idx) => (
               <div key={idx} className="col-md-6 col-lg-3">
                 <div className="seater-card">
-                  <img 
-                    src={`/img/Img for Booking/${type.image}`}
-                    alt={`${type.seater} tempo traveller on rent in Pune - AC comfort seating`}
-                    loading="lazy"
-                  />
+                  <div className="position-relative overflow-hidden">
+                    <img 
+                      src={type.image}
+                      alt={`${type.seater} Tempo Traveller On Rent in Pune`}
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="p-3">
                     <div className="seater-badge">{type.seater}</div>
                     <p className="text-muted small mb-2">{type.capacity}</p>
@@ -266,13 +259,13 @@ const SeaterCars = () => {
                     </ul>
 
                     <div className="rate-box mt-3">
-                      <h6>Local Trip</h6>
-                      <p>{type.localRate}/4hrs</p>
+                      <h6>8Hr / 80KM Local</h6>
+                      <p>{type.localRate}</p>
                     </div>
 
-                    <Link to="/book-taxi" className="btn btn-sm fw-bold text-white w-100" style={{ backgroundColor: '#ff7700' }}>
+                    <button type="button" className="btn btn-sm fw-bold text-white w-100 open-booking-popup-btn" style={{ backgroundColor: '#ff7700' }} data-vehicle={`${type.seater} Tempo Traveller`} data-ac="AC" data-place="13 Seater Tempo Traveller On Rent in Pune">
                       Book Now
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -287,13 +280,14 @@ const SeaterCars = () => {
           <h2 className="fw-bold mb-4">Transparent <span style={{ color: '#ff7700' }}>Pricing</span> for All Seater Types</h2>
 
           <div className="table-responsive">
-            <table className="table table-hover text-center">
-              <thead style={{ backgroundColor: '#ff7700', color: 'white' }}>
+            <table className="table table-hover text-center align-middle">
+              <thead style={{ backgroundColor: '#0f172a', color: 'white' }}>
                 <tr>
-                  <th className="text-start">Vehicle Type</th>
-                  <th>4 Hour Local</th>
-                  <th>Full Day (24h)</th>
-                  <th>Outstation</th>
+                  <th className="text-start text-white" style={{ backgroundColor: '#0f172a' }}>Vehicle Type</th>
+                  <th className="text-white" style={{ backgroundColor: '#0f172a' }}>8Hr / 80KM Local</th>
+                  <th className="text-white" style={{ backgroundColor: '#0f172a' }}>300 KM Outstation Pkg</th>
+                  <th className="text-white" style={{ backgroundColor: '#0f172a' }}>Per KM Rate</th>
+                  <th className="text-white" style={{ backgroundColor: '#0f172a' }}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -303,6 +297,11 @@ const SeaterCars = () => {
                     <td>{type.localRate}</td>
                     <td>{type.fullDayRate}</td>
                     <td>{type.outstationRate}</td>
+                    <td>
+                      <button type="button" className="btn btn-sm fw-bold text-white rounded-pill px-3 open-booking-popup-btn" style={{ backgroundColor: '#ff7700' }} data-vehicle={`${type.seater} Tempo Traveller`} data-ac="AC" data-place="Pune">
+                        Book Now
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
