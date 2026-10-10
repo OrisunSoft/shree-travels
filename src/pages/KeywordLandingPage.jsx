@@ -275,8 +275,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'luxury-force-urbania-on-rent-in-pune',
     h1: 'Luxury Force Urbania On Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
-    rate: 'Official Rate: ₹30/Km | ₹9,000 (13 Seater) / ₹11,000 (17 Seater)',
+    img: '/img/urbania/ub-2.jpeg',
+    rate: 'Official Rate: ₹32/Km | ₹9,600 (13 Seater) / ₹11,200 (17 Seater)',
     cap: '10, 13 & 17 Seater European-Styled Recliner Vans',
     focus: 'business-class executive travel, Mumbai airport VIP pickups, and luxury family vacations from Pune',
     spotKey: 'mahabaleshwar'
@@ -285,8 +285,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'force-urbania-luxury-mini-bus-on-rent',
     h1: 'Force Urbania Luxury Mini Bus On Rent',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-39.jpg',
-    rate: '₹30/Km Outstation | ₹6,000–₹7,000 Local 8 Hrs / 80 Km',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km Outstation | ₹6,000–₹7,000 Local 8 Hrs / 80 Km',
     cap: '13 & 17 Seater Monocoque Luxury Mini Coaches',
     focus: 'high-roof stand-up cabin comfort, triple-zone AC cooling, and whisper-quiet highway cruising across Maharashtra',
     spotKey: 'lonavala'
@@ -335,7 +335,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '25-seater-tempo-traveller-on-rent-in-pune',
     h1: '25 Seater Tempo Traveller on Rent in Pune',
     cat: 'minibus',
-    img: '/img/Keyword Based Image/Keyword Based Image-09.jpg',
+    img: '/img/25-seater-tempo/tt-1.jpeg',
     rate: '₹38/Km | ₹11,000 (300 Km Outstation) | ₹8,000 (Local 8/80)',
     cap: '25 Seater Long-Wheelbase Luxury Tempo Traveller / Coach',
     focus: '22–25 member joint family holidays, corporate offsites, and Ashtavinayak/Jyotirlinga group yatras',
@@ -355,8 +355,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'force-urbania-on-rent-for-ashtavinayak-darshan',
     h1: 'Force Urbania On Rent for Ashtavinayak Darshan',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-17.jpg',
-    rate: '₹30/Km Official Urbania Rate | 2-Day & 3-Day Ashtavinayak Packages',
+    img: '/img/urbania/ub-2.jpeg',
+    rate: '₹32/Km Official Urbania Rate | 2-Day & 3-Day Ashtavinayak Packages',
     cap: '13 & 17 Seater Luxury Recliner Force Urbania Vans',
     focus: 'fatigue-free senior-citizen-friendly darshan of all 8 Swayambhu Ashtavinayak Ganpati temples from Pune',
     spotKey: 'ashtavinayak'
@@ -365,8 +365,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'pune-to-mahabaleshwar-urbania-on-rent',
     h1: 'Pune to Mahabaleshwar Urbania On Rent',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-44.jpg',
-    rate: '₹30/Km | ₹12,000 (13 Seater) & ₹14,000 (17 Seater) Mahabaleshwar Pkg',
+    img: '/img/urbania/ub-3.jpeg',
+    rate: '₹32/Km | ₹12,000 (13 Seater) & ₹14,000 (17 Seater) Mahabaleshwar Pkg',
     cap: '13 & 17 Seater Monocoque Hill-Hold Force Urbania',
     focus: 'zero-body-roll luxury ghat travel from Pune to Panchgani, Mahabaleshwar, Pratapgad Fort, and Tapola',
     spotKey: 'mahabaleshwar'
@@ -385,8 +385,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-on-rent-in-pune',
     h1: 'Urbania On Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
-    rate: '₹30/Km (Outstation) | ₹6,000 (Local 8/80) | ₹9,000 (300 Km Pkg)',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km (Outstation) | ₹6,000 (Local 8/80) | ₹9,600 (300 Km Pkg)',
     cap: '10, 13 & 17 Seater Luxury AC Force Urbania',
     focus: 'corporate delegations, Mumbai airport VIP pickups, destination weddings, and family tours from Pune',
     spotKey: 'mahabaleshwar'
@@ -395,8 +395,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-hire-in-pune',
     h1: 'Urbania Hire in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-39.jpg',
-    rate: '₹30/Km Official Tariff | ₹9,000–₹11,000 (300 Km Package)',
+    img: '/img/urbania/ub-3.jpeg',
+    rate: '₹32/Km Official Tariff | ₹9,600–₹11,200 (300 Km Package)',
     cap: '13 & 17 Seater Chauffeur-Driven Executive Vans',
     focus: 'all-in-one group travel replacing multiple SUVs on Pune–Mumbai, Lonavala, Shirdi, and Mahabaleshwar routes',
     spotKey: 'lonavala'
@@ -415,8 +415,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'force-urbania-on-rent-in-pune',
     h1: 'Force Urbania On Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
-    rate: '₹30/Km | ₹9,000 (13 Seater) & ₹11,000 (17 Seater) 300 Km Pkg',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km | ₹9,600 (13 Seater) & ₹11,200 (17 Seater) 300 Km Pkg',
     cap: '13 & 17 Seater Next-Gen Force Urbania Luxury Fleet',
     focus: 'panoramic window luxury travel, individual AC vents, USB-C ports, and monocoque stability across Pune & Maharashtra',
     spotKey: 'mahabaleshwar'
@@ -607,8 +607,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-on-rent-in-mumbai',
     h1: 'Urbania On Rent in Mumbai',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
-    rate: '₹30/Km Outstation | ₹12,000–₹14,000 Mumbai–Pune / Airport Package',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km Outstation | ₹12,000–₹14,000 Mumbai–Pune / Airport Package',
     cap: '10, 13 & 17 Seater Luxury Force Urbania Vans in Mumbai & Navi Mumbai',
     focus: 'CSMIA T2 international airport transfers, corporate delegations in BKC/Andheri/Powai, Mumbai Darshan, and Mumbai to Shirdi/Lonavala/Pune trips',
     spotKey: 'mumbai'
@@ -717,7 +717,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '25-seater-bus-on-rent-in-pune',
     h1: '25 Seater Bus On Rent in Pune',
     cat: 'minibus',
-    img: '/img/Keyword Based Image/Keyword Based Image-09.jpg',
+    img: '/img/25-seater-tempo/tt-1.jpeg',
     rate: '₹38/Km | ₹11,000 (300 Km Outstation) | ₹8,000 (Local 8 Hrs / 80 Km)',
     cap: '24 & 25 Seater 2x1 / 2x2 Pushback Luxury Mini Coach',
     focus: '20–25 passenger wedding groups, corporate resort outings, and hill-station/coastal ghat tours from Pune',
@@ -819,8 +819,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-rent-in-lonavala',
     h1: 'Urbania Rent in Lonavala',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-44.jpg',
-    rate: '₹30/Km Official Tariff | ₹9,000 (13 Seater) & ₹11,000 (17 Seater) Package',
+    img: '/img/urbania/ub-2.jpeg',
+    rate: '₹32/Km Official Tariff | ₹9,600 (13 Seater) & ₹11,200 (17 Seater) Package',
     cap: '13 & 17 Seater Luxury Force Urbania Vans for Lonavala & Khandala',
     focus: 'luxury villa stays, Della/Amby Valley corporate retreats, Bhushi Dam, Tiger Point, Karla Caves, and Mumbai/Pune airport transfers',
     spotKey: 'lonavala'
@@ -889,8 +889,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'pune-to-mumbai-urbania-on-rent',
     h1: 'Pune to Mumbai Urbania on Rent',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
-    rate: '₹30/Km | ₹12,000 (13 Seater) & ₹14,000 (17 Seater) Pune–Mumbai Package',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km | ₹12,000 (13 Seater) & ₹14,000 (17 Seater) Pune–Mumbai Package',
     cap: '10, 13 & 17 Seater Luxury Force Urbania Vans',
     focus: 'Pune to Mumbai International Airport (T1/T2) group pickups/drops, corporate BKC meetings, cruise terminal transfers, and Mumbai Darshan',
     spotKey: 'mumbai'
@@ -899,8 +899,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'pune-to-ujjain-urbania-on-rent',
     h1: 'Pune to Ujjain Urbania on Rent',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-39.jpg',
-    rate: '₹30/Km Official Urbania Rate | 4-Day Pune–Ujjain–Omkareshwar–Indore Package',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km Official Urbania Rate | 4-Day Pune–Ujjain–Omkareshwar–Indore Package',
     cap: '13 & 17 Seater Recliner Force Urbania with Dual Highway Chauffeurs',
     focus: 'ultra-comfortable highway travel from Pune to Shri Mahakaleshwar Jyotirlinga (Mahakal Lok Corridor), Omkareshwar, Mamleshwar, and Indore',
     spotKey: 'allIndia'
@@ -919,7 +919,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '26-seater-tempo-traveller-on-rent',
     h1: '26 Seater Tempo Traveller On Rent',
     cat: 'tempo',
-    img: '/img/Keyword Based Image/Keyword Based Image-09.jpg',
+    img: '/img/25-seater-tempo/tt-1.jpeg',
     rate: '₹38/Km | ₹11,000 (300 Km Outstation Package) | ₹8,000 Local 8/80',
     cap: '26+1 Seater Long-Wheelbase AC Pushback Tempo Traveller',
     focus: '22–26 passenger extended family vacations, wedding guest hospitality, and multi-day Maharashtra darshan tours',
@@ -929,7 +929,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'tempo-traveller-on-rent-in-lonavala',
     h1: 'Tempo Traveller on Rent in Lonavala',
     cat: 'tempo',
-    img: '/img/Keyword Based Image/Keyword Based Image-02.jpg',
+    img: '/img/Keyword Based Image/Keyword Based Image-26.jpg',
     rate: '₹22/Km (Non-AC) & ₹25/Km (AC) | Local Lonavala Sightseeing & Resort Drops',
     cap: '13, 17, 20 & 26 Seater Tempo Travellers in Lonavala & Khandala',
     focus: 'villa transfers, Bhushi Dam, Tiger Point, Karla-Bhaja Caves, Pawna Lake camping, Wet’nJoy, and Lonavala to Pune/Mumbai Airport drops',
@@ -939,8 +939,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'force-urbania-on-rent-in-nashik',
     h1: 'Force Urbania on Rent in Nashik',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-17.jpg',
-    rate: '₹30/Km Official Tariff | ₹9,000 (13 Seater) & ₹11,000 (17 Seater) 300 Km Pkg',
+    img: '/img/urbania/ub-3.jpeg',
+    rate: '₹32/Km Official Tariff | ₹9,600 (13 Seater) & ₹11,200 (17 Seater) 300 Km Pkg',
     cap: '13 & 17 Seater Luxury Force Urbania Vans for Nashik, Trimbakeshwar & Sula',
     focus: 'Trimbakeshwar Jyotirlinga darshan, Sula & York Vineyard wine tours, Vani Saptashrungi Devi, and Nashik–Shirdi–Pune luxury transfers',
     spotKey: 'jyotirlinga'
@@ -959,8 +959,8 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-on-rent-in-shirdi',
     h1: 'Urbania on Rent in Shirdi',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-17.jpg',
-    rate: '₹30/Km | ₹11,000 (13 Seater) & ₹13,000 (17 Seater) Shirdi Package',
+    img: '/img/urbania/ub-1.jpeg',
+    rate: '₹32/Km | ₹11,000 (13 Seater) & ₹13,000 (17 Seater) Shirdi Package',
     cap: '13 & 17 Seater Luxury Recliner Force Urbania Vans',
     focus: 'VIP Shirdi Sai Baba darshan, Shirdi Airport pickups, Shani Shingnapur, and Shirdi to Trimbakeshwar/Ellora/Pune luxury travel',
     spotKey: 'shirdi'
@@ -1029,7 +1029,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '26-seater-tempo-traveller-on-rent-in-pune',
     h1: '26 Seater Tempo Traveller On Rent in Pune',
     cat: 'tempo',
-    img: '/img/Keyword Based Image/Keyword Based Image-09.jpg',
+    img: '/img/25-seater-tempo/tt-1.jpeg',
     rate: '₹38/Km | ₹11,000 (300 Km Outstation) | ₹8,000 (Local 8 Hrs / 80 Km)',
     cap: '26+1 Seater Long-Wheelbase AC Luxury Tempo Traveller',
     focus: '22–26 passenger family holidays, wedding transfers, and Ashtavinayak/Jyotirlinga yatras from Pune',
@@ -1060,7 +1060,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '13-seater-urbania-on-rent-pune',
     h1: '13 Seater Urbania on Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
+    img: '/img/urbania/ub-2.jpeg',
     rate: '₹32/Km | ₹9,600 Outstation (300 Km) | ₹6,000 Local 8 Hrs/80 Km',
     cap: '13 Seater Luxury Force Urbania AC Van with Individual Recliner Seats',
     focus: 'corporate executive delegations, VIP airport pickups, family trips to Mahabaleshwar & Lonavala, and Ashtavinayak Darshan from Pune',
@@ -1070,7 +1070,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: '17-seater-urbania-on-rent-pune',
     h1: '17 Seater Urbania on Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-39.jpg',
+    img: '/img/urbania/ub-1.jpeg',
     rate: '₹32/Km | ₹11,200 Outstation (300 Km) | ₹7,000 Local 8 Hrs/80 Km',
     cap: '17 Seater Long-Wheelbase Force Urbania AC Luxury Van',
     focus: '14–17 passenger luxury family vacations, wedding VIP guest transfers, Shirdi & 5 Jyotirlinga yatras, and corporate offsites',
@@ -1200,7 +1200,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-on-rent-in-nashik',
     h1: 'Urbania On Rent in Nashik',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-57.jpg',
+    img: '/img/urbania/ub-3.jpeg',
     rate: '₹32/Km (Flat Outstation Rate)',
     cap: '10, 13 & 17 Seater Force Urbania Luxury Fleet',
     focus: 'Trimbakeshwar Jyotirlinga, Sula Vineyards wine tours, Panchavati, Shirdi trips, and Nashik to Pune/Mumbai executive transfers',
@@ -1280,7 +1280,7 @@ const RAW_KEYWORD_ENTRIES = [
     slug: 'urbania-on-rent-pune',
     h1: 'Urbania On Rent in Pune',
     cat: 'urbania',
-    img: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
+    img: '/img/urbania/ub-1.jpeg',
     rate: '₹32/Km (Flat Outstation Rate)',
     cap: '10, 13 & 17 Seater Force Urbania Luxury Fleet',
     focus: 'executive luxury van travel, outstation family trips, VIP weddings, and corporate delegates in Pune',
@@ -1339,12 +1339,43 @@ export const KEYWORD_PAGES_DATA = RAW_KEYWORD_ENTRIES.reduce((acc, item) => {
           .replace(/₹11,000/g, '₹11,200')
       : item.rate.replace(/₹30\/Km \(Force Urbania\)/gi, '₹32/Km (Force Urbania)');
 
-  const defaultGallery = [
-    { src: item.img, label: `${item.h1} – Verified Shree Travels Fleet` },
-    { src: '/img/Keyword Based Image/comfort-1.jpeg', label: 'Plush Reclining Pushback Cabin & Mood Lighting' },
-    { src: '/img/Keyword Based Image/comfort-2.jpeg', label: 'Executive Interior with LED TV & Surround Audio' },
-    { src: '/img/Keyword Based Image/comfort-4.jpeg', label: 'Individual AC Vents, Armrests & Charging Sockets' }
-  ];
+  let defaultGallery = [];
+  if (item.cat === 'urbania') {
+    defaultGallery = [
+      { src: item.img, label: `${item.h1} – Luxury Force Urbania` },
+      { src: '/img/urbania/ub-1.jpeg', label: 'Force Urbania Executive Fleet' },
+      { src: '/img/urbania/ub-2.jpeg', label: 'White Luxury Urbania Showroom Fleet' },
+      { src: '/img/urbania/ub-3.jpeg', label: 'Grey Metallic Urbania Passenger Cabin' },
+      { src: '/img/Keyword Based Image/comfort-1.jpeg', label: 'VIP Reclining Captain Seats & Ambient Light' }
+    ];
+  } else if (item.slug.includes('25-seater') || item.slug.includes('26-seater')) {
+    defaultGallery = [
+      { src: '/img/25-seater-tempo/tt-1.jpeg', label: `${item.h1} – Luxury Pushback Cabin` },
+      { src: '/img/25-seater-tempo/tt-2.jpeg', label: 'Force Traveller Long Wheelbase Exterior' },
+      { src: '/img/25-seater-tempo/tt-3.jpeg', label: 'Force Traveller Front Highway Profile' },
+      { src: '/img/25-seater-tempo/tt-4.jpeg', label: 'Aisle View with Headrest Cushions & Curtains' }
+    ];
+  } else {
+    defaultGallery = [
+      { src: item.img, label: `${item.h1} – Verified Shree Travels Fleet` },
+      { src: '/img/Keyword Based Image/comfort-1.jpeg', label: 'Plush Reclining Pushback Cabin & Mood Lighting' },
+      { src: '/img/Keyword Based Image/comfort-2.jpeg', label: 'Executive Interior with LED TV & Surround Audio' },
+      { src: '/img/Keyword Based Image/comfort-4.jpeg', label: 'Individual AC Vents, Armrests & Charging Sockets' }
+    ];
+  }
+
+  // Add dedicated destination scenery card if matching destination
+  if (item.spotKey === 'shirdi' || item.slug.includes('shirdi')) {
+    defaultGallery.push({ src: '/img/Keyword Based Image/Keyword Based Image-07.jpg', label: 'Pune to Shirdi Sai Baba Temple Darshan' });
+  } else if (item.spotKey === 'lonavala' || item.slug.includes('lonavala')) {
+    defaultGallery.push({ src: '/img/Keyword Based Image/Keyword Based Image-26.jpg', label: 'Pune to Lonavala Ghat & Hill Station Route' });
+  } else if (item.spotKey === 'mahabaleshwar' || item.slug.includes('mahabaleshwar')) {
+    defaultGallery.push({ src: '/img/Keyword Based Image/Keyword Based Image-02.jpg', label: 'Pune to Mahabaleshwar & Panchgani Ghat Route' });
+  } else if (item.spotKey === 'ashtavinayak' || item.slug.includes('ashtavinayak')) {
+    defaultGallery.push({ src: '/img/Keyword Based Image/Keyword Based Image-29.jpg', label: 'Pune to Ashtavinayak 8 Ganpati Temple Circuit' });
+  } else if (item.spotKey === 'mumbai' || item.slug.includes('mumbai')) {
+    defaultGallery.push({ src: '/img/Keyword Based Image/Keyword Based Image-27.jpg', label: 'Pune to Mumbai Darshan & Sea Link Route' });
+  }
 
   acc[item.slug] = {
     slug: item.slug,
@@ -1408,7 +1439,7 @@ const FEATURED_RELATED_CARDS = [
     title: 'Force Urbania On Rent in Pune',
     subtitle: '13 & 17 Seater European Luxury Van',
     rate: '₹32 / Km',
-    image: '/img/Keyword Based Image/Keyword Based Image-16.jpg',
+    image: '/img/urbania/ub-1.jpeg',
     path: '/force-urbania-on-rent-in-pune'
   },
   {
@@ -1774,10 +1805,8 @@ const KeywordLandingPage = ({ keywordKey }) => {
                 </p>
                 <div className="row g-2 mb-4">
                   {[
-                    { phone: '+91 76204 11277', href: 'tel:+917620411277', tag: 'Primary Booking Desk' },
-                    { phone: '+91 78757 74499', href: 'https://wa.me/917875774499', tag: '24/7 WhatsApp & Call', isWa: true },
-                    { phone: '+91 98602 56019', href: 'tel:+919860256019', tag: 'Fleet Coordinator' },
-                    { phone: '+91 91454 11005', href: 'tel:+919145411005', tag: 'Outstation Support' }
+                    { phone: '+91 76204 11277', href: 'tel:+917620411277', tag: 'Primary Calling & Booking Desk' },
+                    { phone: '+91 78757 74499', href: 'https://wa.me/917875774499', tag: '24/7 WhatsApp & Support Desk', isWa: true }
                   ].map((item, idx) => (
                     <div className="col-sm-6" key={idx}>
                       <a

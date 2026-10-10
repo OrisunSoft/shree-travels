@@ -935,7 +935,7 @@ const TourPackagePage = ({ tourSlug }) => {
                   </li>
                   <li className="mb-0 d-flex align-items-start">
                     <FaCheckCircle className="me-2 mt-1 flex-shrink-0" style={{ color: '#ff7700' }} />
-                    <span className="small text-light"><strong>24/7 Multi-Number Support Desk:</strong> Call +91 7620411277, +91 7875774499, +91 9860256019, or +91 9145411005 anytime.</span>
+                    <span className="small text-light"><strong>24/7 Pune Dispatch &amp; Support Desk:</strong> Call +91 76204 11277 or WhatsApp +91 78757 74499 anytime.</span>
                   </li>
                 </ul>
                 <button

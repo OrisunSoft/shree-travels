@@ -8,7 +8,7 @@ const OurFleet = () => {
       name: 'Premium Force Urbania', 
       capacity: '10 to 17 Seater', 
       desc: 'Premium luxury seating, perfect for VIP travel and corporate executives.', 
-      img: '/img/force-ub.jpg',
+      img: '/img/urbania/ub-1.jpeg',
       link: '/force-urbania-on-rent-pune',
       tag: 'Ultra Luxury'
     },

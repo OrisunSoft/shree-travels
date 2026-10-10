@@ -72,9 +72,6 @@ const Footer = () => {
                 <i className="fas fa-phone-alt mt-1 me-3 contact-icon"></i>
                 <div>
                   <a href="tel:+917620411277" className="d-block contact-link fw-semibold">+91 76204 11277</a>
-                  <a href="tel:+917875774499" className="d-block contact-link fw-semibold">+91 78757 74499</a>
-                  <a href="tel:+919860256019" className="d-block contact-link small">+91 98602 56019</a>
-                  <a href="tel:+919145411005" className="d-block contact-link small">+91 91454 11005</a>
                 </div>
               </li>
               <li className="mb-3 d-flex align-items-start contact-item">

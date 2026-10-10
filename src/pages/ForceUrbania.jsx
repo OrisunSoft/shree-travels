@@ -40,7 +40,7 @@ const ForceUrbania = () => {
         description="Book Force Urbania On Rent in Pune @ ₹32/km. Premium 10, 13 & 17 seater luxury AC van hire with individual recliner seats, panoramic windows & experienced chauffeurs. Call +91 7620411277 or WhatsApp +91 78757 74499."
         keywords="Force Urbania On Rent in Pune, 13 Seater Urbania on Rent in Pune, 17 Seater Urbania on Rent in Pune, Luxury Force Urbania On Rent in Pune, Force Urbania Luxury Mini Bus On Rent, Pune to Mahabaleshwar Urbania On Rent, Urbania On Rent in Mumbai, Urbania Rent in Lonavala"
         path="/force-urbania-on-rent-pune"
-        image="/img/Keyword Based Image/Keyword Based Image-16.jpg"
+        image="/img/urbania/ub-1.jpeg"
         schema={forceUrbaniaSchema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -162,14 +162,14 @@ const ForceUrbania = () => {
                 </a>
               </div>
               <div className="small text-light opacity-75">
-                <strong>24/7 Dispatch Numbers:</strong> +91 7620411277 | +91 7875774499 | +91 9860256019 | +91 9145411005
+                <strong>24/7 Dispatch:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277 (Call)</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="position-relative overflow-hidden rounded-4 shadow-lg">
                 <img 
-                  src="/img/Keyword Based Image/Keyword Based Image-16.jpg" 
-                  alt="Force Urbania On Rent in Pune - 13 and 17 Seater Luxury AC Van" 
+                  src="/img/urbania/ub-1.jpeg" 
+                  alt="Force Urbania On Rent in Pune - 10, 13 and 17 Seater Luxury AC Van" 
                   className="img-fluid w-100 d-block" 
                 />
               </div>
@@ -228,10 +228,10 @@ const ForceUrbania = () => {
           </div>
           <div className="row g-4">
             {[
-              { src: '/img/Keyword Based Image/Keyword Based Image-39.jpg', label: 'Force Urbania Luxury Mini Bus' },
-              { src: '/img/Keyword Based Image/Keyword Based Image-44.jpg', label: 'Pune to Mahabaleshwar Urbania' },
-              { src: '/img/Keyword Based Image/comfort-1.jpeg', label: 'White Leather Recliner Cabin & LED TV' },
-              { src: '/img/Keyword Based Image/comfort-2.jpeg', label: 'Ambient Roof Lighting & Wide Aisle' }
+              { src: '/img/urbania/ub-1.jpeg', label: 'Force Urbania Executive Fleet' },
+              { src: '/img/urbania/ub-2.jpeg', label: 'Luxury 13 & 17 Seater Force Urbania' },
+              { src: '/img/urbania/ub-3.jpeg', label: 'Grey Metallic Urbania with Wide Cabin Door' },
+              { src: '/img/Keyword Based Image/comfort-1.jpeg', label: 'White Leather Recliner Cabin & LED TV' }
             ].map((item, idx) => (
               <div className="col-sm-6 col-lg-3" key={idx}>
                 <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">

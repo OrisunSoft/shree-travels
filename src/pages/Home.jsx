@@ -162,6 +162,15 @@ const Home = () => {
           .accordion-button:not(.collapsed) { background-color: #fff3e6; color: #ff7700; box-shadow: none; }
           .accordion-button:focus { box-shadow: none; }
 
+          @media (max-width: 767.98px) {
+            .hero-video-container { min-height: 65vh; }
+            .hero-content { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+            .hero-title-responsive { font-size: 1.65rem !important; line-height: 1.3 !important; }
+            .hero-badge-responsive { font-size: 0.72rem !important; padding: 0.4rem 0.8rem !important; }
+            .hero-lead-responsive { font-size: 0.95rem !important; line-height: 1.5 !important; margin-bottom: 1.25rem !important; }
+            .hero-cta-btn { padding: 0.65rem 1.4rem !important; font-size: 0.95rem !important; }
+          }
+
           @media (min-width: 768px) { 
             .hero-video-container { min-height: 82vh; }
             .album-container { justify-content: center; overflow-x: hidden; gap: 1.5rem; padding: 0.5rem 0; }
@@ -187,20 +196,22 @@ const Home = () => {
         <div className="container hero-content py-5">
           <div className="row align-items-center">
             <div className="col-lg-10 text-center text-lg-start px-3">
-              <span className="badge rounded-pill px-3 py-2 mb-3 fw-bold shadow-sm" style={{ backgroundColor: '#ff7700', color: '#ffffff', fontSize: '0.82rem' }}>
-                ★ 4.9 RATED ON GOOGLE • KOTHRUD PUNE HEAD OFFICE • 24/7 DISPATCH
+              <span className="badge rounded-pill px-3 py-2 mb-3 fw-bold shadow-sm hero-badge-responsive" style={{ backgroundColor: '#ff7700', color: '#ffffff', fontSize: '0.82rem' }}>
+                <span className="d-none d-sm-inline">★ 4.9 RATED ON GOOGLE • KOTHRUD PUNE HEAD OFFICE • 24/7 DISPATCH</span>
+                <span className="d-inline d-sm-none">★ 4.9 RATED • KOTHRUD PUNE • 24/7 DISPATCH</span>
               </span>
-              <h1 className="display-5 fw-bold text-white mb-3 text-shadow-custom">
+              <h1 className="display-5 fw-bold text-white mb-3 text-shadow-custom hero-title-responsive">
                 Shree Travels – <span style={{ color: '#ff7700' }}>Urbania on Rent in Pune</span> | Tempo Traveller &amp; Bus Rental
               </h1>
-              <p className="lead text-light mb-4 text-shadow-custom fw-semibold" style={{ fontSize: '1.15rem', lineHeight: '1.65', maxWidth: '820px' }}>
-                Book 10, 13 &amp; 17 Seater Luxury Force Urbania (@ ₹32/km), 13 &amp; 17 Seater Tempo Travellers (@ ₹22/km), 32, 40 &amp; 50 Seater AC/Non-AC Buses, and Pune to Mumbai / Airport Cabs across Pune, Mumbai, Shirdi, Nashik &amp; Lonavala.
+              <p className="lead text-light mb-4 text-shadow-custom fw-semibold hero-lead-responsive" style={{ fontSize: '1.15rem', lineHeight: '1.65', maxWidth: '820px' }}>
+                <span className="d-none d-md-inline">Book 10, 13 &amp; 17 Seater Luxury Force Urbania (@ ₹32/km), 13 &amp; 17 Seater Tempo Travellers (@ ₹22/km), 32, 40 &amp; 50 Seater AC/Non-AC Buses, and Pune to Mumbai / Airport Cabs across Pune, Mumbai, Shirdi, Nashik &amp; Lonavala.</span>
+                <span className="d-inline d-md-none">Luxury Force Urbania (@ ₹32/km), Tempo Travellers (@ ₹22/km) &amp; Luxury AC Buses on rent across Pune &amp; Maharashtra. Transparent rates &amp; 24/7 dispatch.</span>
               </p>
 
-              <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+              <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-2 gap-sm-3">
                 <button
                   type="button"
-                  className="btn fw-bold px-4 px-md-5 py-3 text-white shadow-lg rounded-pill btn-hover-animate d-inline-flex align-items-center justify-content-center open-booking-popup-btn"
+                  className="btn fw-bold px-4 px-md-5 py-3 text-white shadow-lg rounded-pill btn-hover-animate hero-cta-btn d-inline-flex align-items-center justify-content-center open-booking-popup-btn"
                   data-vehicle="17 Seater Force Urbania (₹32/km)"
                   data-ac="AC"
                   data-place="Pune Local / Outstation"
@@ -208,7 +219,7 @@ const Home = () => {
                 >
                   <FaBus className="me-2" /> Book Vehicle Now
                 </button>
-                <a href="tel:+917620411277" className="btn fw-bold px-4 px-md-5 py-3 shadow-lg rounded-pill btn-hover-animate d-inline-flex align-items-center justify-content-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'white', border: '2px solid white', backdropFilter: 'blur(6px)' }}>
+                <a href="tel:+917620411277" className="btn fw-bold px-4 px-md-5 py-3 shadow-lg rounded-pill btn-hover-animate hero-cta-btn d-inline-flex align-items-center justify-content-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'white', border: '2px solid white', backdropFilter: 'blur(6px)' }}>
                   <FaPhoneAlt className="me-2" /> Call: +91 76204 11277
                 </a>
               </div>
@@ -701,7 +712,7 @@ const Home = () => {
                   <div className="p-3 bg-white rounded-4 border h-100">
                     <div className="fw-bold text-dark small mb-1">24/7 Direct Dispatch &amp; WhatsApp</div>
                     <p className="small text-muted mb-1">
-                      <strong>Call:</strong> +91 7620411277 / +91 9860256019 / +91 9145411005
+                      <strong>Call:</strong> +91 76204 11277
                     </p>
                     <p className="small text-muted mb-0">
                       <strong>WhatsApp Booking:</strong> +91 78757 74499

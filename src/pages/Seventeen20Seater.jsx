@@ -249,7 +249,7 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
                 </Link>
               </div>
               <div className="small text-light opacity-75">
-                <strong>24/7 Helplines:</strong> +91 7620411277 | +91 7875774499 | +91 9860256019 | +91 9145411005
+                <strong>24/7 Dispatch Desk:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>
               </div>
             </div>
             <div className="col-lg-6">

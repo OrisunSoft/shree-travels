@@ -151,12 +151,12 @@ const CUSTOM_HEADINGS = {
 const VEHICLE_DETAILS = {
   "force-urbania": {
     label: "Force Urbania",
-    heroImg: "/img/Keyword Based Image/Keyword Based Image-16.jpg",
+    heroImg: "/img/urbania/ub-1.jpeg",
     gallery: [
-      { src: "/img/Keyword Based Image/Keyword Based Image-16.jpg", caption: "Luxury Force Urbania On Rent" },
-      { src: "/img/Keyword Based Image/Keyword Based Image-39.jpg", caption: "Force Urbania Luxury Mini Bus" },
-      { src: "/img/Keyword Based Image/comfort-1.jpeg", caption: "VIP Recliner Cabin Interior" },
-      { src: "/img/Keyword Based Image/comfort-3.jpeg", caption: "Panoramic Windows & Ambient Lighting" }
+      { src: "/img/urbania/ub-1.jpeg", caption: "Luxury Force Urbania On Rent" },
+      { src: "/img/urbania/ub-2.jpeg", caption: "Premium White Force Urbania Fleet" },
+      { src: "/img/urbania/ub-3.jpeg", caption: "Executive Grey Force Urbania Van" },
+      { src: "/img/Keyword Based Image/comfort-1.jpeg", caption: "VIP Recliner Cabin Interior" }
     ],
     specs: "10, 13 & 17 Seater Next-Gen Luxury Force Urbania Vans",
     summary:
@@ -167,9 +167,9 @@ const VEHICLE_DETAILS = {
     heroImg: "/img/Keyword Based Image/Keyword Based Image-01.jpg",
     gallery: [
       { src: "/img/Keyword Based Image/Keyword Based Image-01.jpg", caption: "Tempo Traveller On Rent" },
-      { src: "/img/Keyword Based Image/Keyword Based Image-48.jpg", caption: "Tempo Traveller Hire Service" },
-      { src: "/img/Keyword Based Image/Keyword Based Image-05.jpg", caption: "14 Seater AC Tempo Traveller" },
-      { src: "/img/Keyword Based Image/Keyword Based Image-09.jpg", caption: "25 & 26 Seater Tempo Traveller" }
+      { src: "/img/25-seater-tempo/tt-1.jpeg", caption: "25 & 26 Seater Luxury Tempo Traveller Interior" },
+      { src: "/img/25-seater-tempo/tt-2.jpeg", caption: "Force Traveller Long Wheelbase Exterior" },
+      { src: "/img/Keyword Based Image/Keyword Based Image-05.jpg", caption: "14 Seater AC Tempo Traveller" }
     ],
     specs: "13, 14, 17, 20 & 26 Seater Maharaja AC Tempo Travellers",
     summary:
@@ -310,7 +310,7 @@ const CityFleetPage = () => {
     },
     {
       q: `How can I book ${customH1} urgently?`,
-      a: `You can call our 24/7 dispatch numbers (+91 7620411277 / +91 7875774499 / +91 9860256019 / +91 9145411005) or click the WhatsApp button to get vehicle photos and live booking confirmation in 2 minutes.`
+      a: `You can call our 24/7 dispatch desk at +91 7620411277 or click the WhatsApp button (+91 7875774499) to get vehicle photos and live booking confirmation in 2 minutes.`
     }
   ];
 
@@ -428,11 +428,9 @@ const CityFleetPage = () => {
               </div>
 
               <div className="small" style={{ color: "#cbd5e1" }}>
-                <strong>All 24/7 Booking Helplines:</strong>{" "}
-                <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 7620411277</a> |{" "}
-                <a href="tel:+917875774499" className="text-white text-decoration-none mx-2">+91 7875774499</a> |{" "}
-                <a href="tel:+919860256019" className="text-white text-decoration-none mx-2">+91 9860256019</a> |{" "}
-                <a href="tel:+919145411005" className="text-white text-decoration-none ms-2">+91 9145411005</a>
+                <strong>24/7 Direct Dispatch:</strong>{" "}
+                <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277 (Call)</a> |{" "}
+                <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">+91 78757 74499 (WhatsApp)</a>
               </div>
             </div>
 

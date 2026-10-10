@@ -254,21 +254,35 @@ const SEOKeywordDirectory = () => {
             </div>
           </div>
 
-          {/* Interactive Filter Tabs */}
-          <div className="seo-filter-tabs d-flex flex-wrap gap-1" role="tablist" aria-label="SEO Keyword Categories">
-            {CATEGORY_TABS.map((tab) => (
+          {/* Interactive Filter Tabs & Quick Dropup Button */}
+          <div className="d-flex flex-wrap align-items-center gap-1 w-100 w-lg-auto">
+            <div className="seo-filter-tabs d-flex flex-wrap gap-1" role="tablist" aria-label="SEO Keyword Categories">
+              {CATEGORY_TABS.map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeTab === tab.id}
+                  onClick={() => handleTabClick(tab.id)}
+                  className={`seo-tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+                >
+                  {tab.icon}
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </div>
+
+            {isExpanded && (
               <button
-                key={tab.id}
                 type="button"
-                role="tab"
-                aria-selected={activeTab === tab.id}
-                onClick={() => handleTabClick(tab.id)}
-                className={`seo-tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+                onClick={() => setIsExpanded(false)}
+                className="seo-quick-collapse-btn ms-auto mt-1 mt-lg-0"
+                aria-label="Dropup and collapse keyword directory"
               >
-                {tab.icon}
-                <span>{tab.label}</span>
+                <FaChevronUp size={10} />
+                <span>Dropup / Close</span>
               </button>
-            ))}
+            )}
           </div>
         </div>
 
@@ -297,21 +311,22 @@ const SEOKeywordDirectory = () => {
         </div>
 
         {/* Sleek Expand / Collapse Toggle Bar */}
-        <div className="text-center mt-2 pt-1">
+        <div className="text-center mt-3 pt-2">
           <button
             type="button"
             onClick={() => setIsExpanded((prev) => !prev)}
-            className="seo-expand-btn"
+            className="seo-expand-btn shadow"
+            aria-expanded={isExpanded}
           >
             {isExpanded ? (
               <>
-                <span>Show Compact Directory View</span>
-                <FaChevronUp size={11} className="ms-2" />
+                <span>Dropup &amp; Show Compact Directory</span>
+                <FaChevronUp size={12} className="ms-2" />
               </>
             ) : (
               <>
                 <span>Explore All 93+ Vehicle Capacities &amp; Outstation Routes</span>
-                <FaChevronDown size={11} className="ms-2" />
+                <FaChevronDown size={12} className="ms-2" />
               </>
             )}
           </button>

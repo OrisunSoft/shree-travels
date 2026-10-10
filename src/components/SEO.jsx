@@ -124,20 +124,6 @@ const SEO = ({
         contactType: 'reservations',
         areaServed: 'IN',
         availableLanguage: ['English', 'Marathi', 'Hindi']
-      },
-      {
-        '@type': 'ContactPoint',
-        telephone: '+91-9860256019',
-        contactType: 'customer support',
-        areaServed: 'IN',
-        availableLanguage: ['English', 'Marathi', 'Hindi']
-      },
-      {
-        '@type': 'ContactPoint',
-        telephone: '+91-9145411005',
-        contactType: 'sales',
-        areaServed: 'IN',
-        availableLanguage: ['English', 'Marathi', 'Hindi']
       }
     ],
     areaServed: [

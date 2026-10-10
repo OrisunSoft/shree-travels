@@ -43,7 +43,7 @@ const Contact = () => {
           "mainEntity": {
             "@type": "LocalBusiness",
             "name": "Shree Travels",
-            "telephone": ["+91-7620411277", "+91-7875774499", "+91-9860256019", "+91-9145411005"],
+            "telephone": ["+91-7620411277", "+91-7875774499"],
             "email": "shreetravelspune5@gmail.com",
             "hasMap": GOOGLE_MAPS_LINK,
             "address": {
@@ -108,16 +108,10 @@ const Contact = () => {
                     <h5 className="fw-bold mb-1 fs-6">Contact Numbers (24/7 Dispatch)</h5>
                     <div className="d-flex flex-column gap-2 mt-2">
                       <a href="tel:+917620411277" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 76204 11277
+                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 76204 11277 (Direct Call)
                       </a>
                       <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fab fa-whatsapp me-2" style={{ color: '#25D366', fontSize: '1.1rem' }}></i> +91 78757 74499 (WhatsApp &amp; Call)
-                      </a>
-                      <a href="tel:+919860256019" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 98602 56019
-                      </a>
-                      <a href="tel:+919145411005" className="text-decoration-none text-muted small fw-semibold hover-orange d-flex align-items-center">
-                        <i className="fas fa-phone-alt me-2" style={{ color: '#ff7700' }}></i> +91 91454 11005
+                        <i className="fab fa-whatsapp me-2" style={{ color: '#25D366', fontSize: '1.1rem' }}></i> +91 78757 74499 (WhatsApp &amp; Support)
                       </a>
                     </div>
                   </div>
