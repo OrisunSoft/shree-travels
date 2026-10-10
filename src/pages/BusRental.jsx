@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const BusRental = () => {
@@ -88,6 +89,18 @@ const BusRental = () => {
                   className="img-fluid w-100 rounded-4"
                   style={{ maxHeight: '420px', objectFit: 'cover' }}
                 />
+                <div className="fleet-verified-tag">
+                  <div className="fleet-tag-pill-top">
+                    <FaStar className="me-1 text-warning" size={9} />
+                    <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                  </div>
+                  <div className="fleet-tag-title-bottom">
+                    <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                    <span className="text-truncate">
+                      32 TO 50 SEATER BUS • PUNE FLEET
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-6">

@@ -23,23 +23,23 @@ const FARE_TABLES = {
     { model: '17 Seater Force Urbania (AC Luxury)', pkg300: '₹9,600', perKm: '₹32/km (Flat)', local: '₹8,000', mumbai: '₹14,000', mahabaleshwar: '₹12,000', shirdi: '₹12,000' }
   ],
   tempo: [
-    { model: '13 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' },
-    { model: '17 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' },
-    { model: '20 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹7,500 / ₹8,400', perKm: '₹25 / ₹28', local: '₹6,000 / ₹6,500', mumbai: '₹11,000 / ₹13,000', mahabaleshwar: '₹10,000 / ₹12,000', shirdi: '₹12,000' },
-    { model: '26 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹9,600 / ₹11,100', perKm: '₹32 / ₹37', local: '₹7,000 / ₹8,000', mumbai: '₹14,000 / ₹17,000', mahabaleshwar: '₹12,000 / ₹14,000', shirdi: '₹14,000' }
+    { model: '13 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25/km', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' },
+    { model: '17 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25/km', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' },
+    { model: '20 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹7,500 / ₹8,400', perKm: '₹25 / ₹28/km', local: '₹6,000 / ₹6,500', mumbai: '₹11,000 / ₹13,000', mahabaleshwar: '₹10,000 / ₹12,000', shirdi: '₹12,000' },
+    { model: '26 Seater Tempo Traveller (Non-AC / AC)', pkg300: '₹9,600 / ₹11,100', perKm: '₹32 / ₹37/km', local: '₹7,000 / ₹8,000', mumbai: '₹14,000 / ₹17,000', mahabaleshwar: '₹12,000 / ₹14,000', shirdi: '₹14,000' }
   ],
   winger: [
-    { model: '13 Seater Tata Winger (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' }
+    { model: '13 Seater Tata Winger (Non-AC / AC)', pkg300: '₹6,600 / ₹7,500', perKm: '₹22 / ₹25/km', local: '₹5,000 / ₹5,500', mumbai: '₹10,000 / ₹11,000', mahabaleshwar: '₹9,000 / ₹10,000', shirdi: '₹10,000' }
   ],
   minibus: [
-    { model: '20 Seater Mini Bus / Tempo Traveller (Non-AC / AC)', pkg300: '₹7,500 / ₹8,400', perKm: '₹25 / ₹28', local: '₹6,000 / ₹6,500', mumbai: '₹11,000 / ₹13,000', mahabaleshwar: '₹10,000 / ₹12,000', shirdi: '₹12,000' },
+    { model: '20 Seater Mini Bus / Tempo Traveller (Non-AC / AC)', pkg300: '₹7,500 / ₹8,400', perKm: '₹25 / ₹28/km', local: '₹6,000 / ₹6,500', mumbai: '₹11,000 / ₹13,000', mahabaleshwar: '₹10,000 / ₹12,000', shirdi: '₹12,000' },
     { model: '24 Seater Mini Bus (AC)', pkg300: '₹12,000', perKm: '₹40/km', local: '₹7,000', mumbai: '₹18,000', mahabaleshwar: '₹13,000', shirdi: '₹14,000' },
-    { model: '26 Seater Mini Bus / Tempo Traveller (Non-AC / AC)', pkg300: '₹9,600 / ₹11,100', perKm: '₹32 / ₹37', local: '₹7,000 / ₹8,000', mumbai: '₹14,000 / ₹17,000', mahabaleshwar: '₹12,000 / ₹14,000', shirdi: '₹14,000' },
+    { model: '26 Seater Mini Bus / Tempo Traveller (Non-AC / AC)', pkg300: '₹9,600 / ₹11,100', perKm: '₹32 / ₹37/km', local: '₹7,000 / ₹8,000', mumbai: '₹14,000 / ₹17,000', mahabaleshwar: '₹12,000 / ₹14,000', shirdi: '₹14,000' },
     { model: '29 Seater Bus (AC)', pkg300: '₹13,500', perKm: '₹45/km', local: '₹8,000', mumbai: '₹18,000', mahabaleshwar: '₹14,000', shirdi: '₹15,000' }
   ],
   bus: [
-    { model: '30 / 32 Seater Bus (Non-AC / AC)', pkg300: '₹10,500 / ₹15,000', perKm: '₹35 / ₹50', local: '₹8,000 / ₹10,000', mumbai: '₹15,000 / ₹22,000', mahabaleshwar: '₹13,000 / ₹16,000', shirdi: '₹14,000 / ₹18,000' },
-    { model: '35 Seater Bus (Non-AC / AC Benz)', pkg300: '₹11,400 / ₹15,000', perKm: '₹38 / ₹50', local: '₹8,000 / ₹10,000', mumbai: '₹17,000 / ₹22,000', mahabaleshwar: '₹14,000 / ₹16,500', shirdi: '₹16,000 / ₹18,000' },
+    { model: '30 / 32 Seater Bus (Non-AC / AC)', pkg300: '₹10,500 / ₹15,000', perKm: '₹35 / ₹50/km', local: '₹8,000 / ₹10,000', mumbai: '₹15,000 / ₹22,000', mahabaleshwar: '₹13,000 / ₹16,000', shirdi: '₹14,000 / ₹18,000' },
+    { model: '35 Seater Bus (Non-AC / AC Benz)', pkg300: '₹11,400 / ₹15,000', perKm: '₹38 / ₹50/km', local: '₹8,000 / ₹10,000', mumbai: '₹17,000 / ₹22,000', mahabaleshwar: '₹14,000 / ₹16,500', shirdi: '₹16,000 / ₹18,000' },
     { model: '45 / 49 Seater Bus (Non-AC)', pkg300: '₹15,000', perKm: '₹50/km', local: '₹10,000', mumbai: '₹20,000', mahabaleshwar: '₹16,000', shirdi: '₹18,000' },
     { model: '53 Seater Volvo / Benz Special Bus', pkg300: '₹24,000', perKm: '₹80/km', local: '₹20,000', mumbai: '₹33,000', mahabaleshwar: '₹25,000', shirdi: '₹25,000' }
   ],
@@ -1506,6 +1506,79 @@ const KeywordLandingPage = ({ keywordKey }) => {
     ...allEntries.slice(0, Math.max(0, 9 - (allEntries.length - 1 - currentIndex)))
   ].slice(0, 9);
 
+  const getLocationTag = (slug, h1) => {
+    const s = (slug || '').toLowerCase();
+    const h = (h1 || '').toLowerCase();
+
+    // 1. Outstation Divisions & Pilgrimage Tours
+    if (s.includes('mumbai') || h.includes('mumbai')) return 'MUMBAI DIVISION • VERIFIED FLEET';
+    if (s.includes('lonavala') || h.includes('lonavala')) return 'LONAVALA DIVISION • VERIFIED FLEET';
+    if (s.includes('shirdi') || h.includes('shirdi')) return 'SHIRDI DARSHAN • PILGRIMAGE FLEET';
+    if (s.includes('nashik') || h.includes('nashik')) return 'NASHIK DIVISION • VERIFIED FLEET';
+    if (s.includes('mahabaleshwar') || h.includes('mahabaleshwar')) return 'MAHABALESHWAR • LUXURY FLEET';
+    if (s.includes('ashtavinayak') || h.includes('ashtavinayak')) return 'ASHTAVINAYAK DARSHAN • PILGRIMAGE FLEET';
+    if (s.includes('jyotirlinga') || h.includes('jyotirlinga')) return 'JYOTIRLINGA YATRA • PILGRIMAGE FLEET';
+    if (s.includes('goa') || h.includes('goa')) return 'PUNE TO GOA • HIGHWAY COACH';
+    if (s.includes('konkan') || h.includes('konkan')) return 'KONKAN COASTAL • VERIFIED FLEET';
+    if (s.includes('lavasa') || h.includes('lavasa')) return 'LAVASA GHAT • VERIFIED FLEET';
+    if (s.includes('alibaug') || h.includes('alibaug')) return 'ALIBAUG BEACH • VERIFIED FLEET';
+    if (s.includes('ujjain') || h.includes('ujjain')) return 'UJJAIN MAHAKAL • PILGRIMAGE FLEET';
+    if (s.includes('kolhapur') || h.includes('kolhapur')) return 'KOLHAPUR MAHALAXMI • VERIFIED FLEET';
+
+    // 2. Specific Pune Fleet Configurations & Models
+    if (s.includes('13-seater') && s.includes('urbania')) return '13 SEATER FORCE URBANIA • LUXURY FLEET';
+    if (s.includes('17-seater') && s.includes('urbania')) return '17 SEATER FORCE URBANIA • LUXURY FLEET';
+    if (s.includes('urbania')) return 'FORCE URBANIA • LUXURY FLEET';
+
+    if (s.includes('13-seater') && s.includes('tempo')) return '13 SEATER TEMPO TRAVELLER • PUNE FLEET';
+    if (s.includes('17-seater') && s.includes('tempo')) return '17 SEATER TEMPO TRAVELLER • PUNE FLEET';
+    if (s.includes('20-seater') && s.includes('tempo')) return '20 SEATER TEMPO TRAVELLER • PUNE FLEET';
+    if (s.includes('25-seater') || s.includes('26-seater')) return '26 SEATER TEMPO TRAVELLER • PUNE FLEET';
+    if (s.includes('tempo')) return 'TEMPO TRAVELLER • PUNE FLEET';
+
+    if (s.includes('32-seater')) return '32 SEATER LUXURY BUS • PUNE FLEET';
+    if (s.includes('35-seater')) return '35 SEATER BENZ COACH • PUNE FLEET';
+    if (s.includes('40-seater') || s.includes('45-seater')) return '45 SEATER TOURIST COACH • PUNE FLEET';
+    if (s.includes('50-seater')) return '50 SEATER LUXURY COACH • PUNE FLEET';
+    if (s.includes('mini-bus') || s.includes('minibus')) return 'AC MINI BUS RENTAL • PUNE FLEET';
+    if (s.includes('winger')) return 'TATA WINGER ON RENT • PUNE FLEET';
+    if (s.includes('volvo')) return 'VOLVO LUXURY COACH • PUNE FLEET';
+    if (s.includes('bus')) return 'LUXURY BUS RENTAL • PUNE FLEET';
+
+    // 3. Local IT Hubs & Suburbs in Pune
+    if (s.includes('hinjewadi')) return 'HINJEWADI IT PARK • 24/7 FLEET';
+    if (s.includes('wakad')) return 'WAKAD & PCMC • 24/7 FLEET';
+    if (s.includes('hadapsar') || s.includes('magarpatta')) return 'HADAPSAR & MAGARPATTA • PUNE FLEET';
+    if (s.includes('kharadi')) return 'KHARADI IT HUB • 24/7 FLEET';
+    if (s.includes('kothrud')) return 'KOTHRUD HEAD OFFICE • PUNE FLEET';
+    if (s.includes('baner')) return 'BANER & BALEWADI • PUNE FLEET';
+    if (s.includes('viman-nagar')) return 'VIMAN NAGAR AIRPORT • PUNE FLEET';
+    if (s.includes('pcmc') || s.includes('pimpri') || s.includes('chinchwad')) return 'PCMC DIVISION • VERIFIED FLEET';
+
+    // 4. Clean Dynamic Fallback Matching H1
+    const cleanTitle = (h1 || 'Shree Travels').split('–')[0].split('|')[0].trim().toUpperCase();
+    return `${cleanTitle.slice(0, 32)} • VERIFIED FLEET`;
+  };
+
+  const isNonPune = Boolean(
+    data.slug.includes('mumbai') ||
+    data.slug.includes('lonavala') ||
+    data.slug.includes('shirdi') ||
+    data.slug.includes('nashik') ||
+    data.slug.includes('goa') ||
+    data.slug.includes('mahabaleshwar') ||
+    data.slug.includes('lavasa') ||
+    data.slug.includes('alibaug') ||
+    data.slug.includes('ashtavinayak') ||
+    data.slug.includes('ujjain') ||
+    data.slug.includes('kolhapur') ||
+    data.slug.includes('bhimashankar') ||
+    data.slug.includes('jyotirlinga')
+  );
+
+  const locationTagText = getLocationTag(data.slug, data.h1);
+  const locationTagSmall = locationTagText.split('•')[0].trim();
+
   return (
     <div className="bg-light">
       <SEO
@@ -1580,6 +1653,18 @@ const KeywordLandingPage = ({ keywordKey }) => {
                     alt={data.h1}
                     className="img-fluid w-100 d-block"
                   />
+                  {(isNonPune || (data.heroImage && data.heroImage.includes('Keyword Based Image'))) && (
+                    <div className="fleet-verified-tag">
+                      <div className="fleet-tag-pill-top">
+                        <FaStar className="me-1 text-warning" size={9} />
+                        <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                      </div>
+                      <div className="fleet-tag-title-bottom">
+                        <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                        <span className="text-truncate">{locationTagText}</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-3 bg-white text-dark">
                   <div className="small text-muted mb-1">Verified Official Tariff ({data.capacity}):</div>
@@ -1722,18 +1807,38 @@ const KeywordLandingPage = ({ keywordKey }) => {
 
           <CardSlider cardsPerView={4} interval={3800}>
             {data.gallery.map((img, i) => (
-              <div className="card h-100 border-0 shadow-sm overflow-hidden" key={i}>
+              <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden" key={i}>
                 <div className="position-relative overflow-hidden">
                   <img
                     src={img.src}
                     alt={img.label}
-                    className="card-img-top d-block w-100"
+                    className="card-img-top d-block w-100 fleet-gallery-img"
+                    style={{ height: '220px', objectFit: 'cover' }}
                     loading="lazy"
                     decoding="async"
                   />
+                  {img.src.includes('Keyword Based Image') && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{isNonPune ? locationTagSmall : 'PUNE HEADQUARTERS'}</span>
+                    </div>
+                  )}
                 </div>
-                <div className="card-body p-3 text-center">
-                  <p className="small fw-bold text-dark mb-0">{img.label}</p>
+                <div className="card-body p-3 text-center d-flex flex-column justify-content-between">
+                  <div>
+                    <p className="small fw-bold text-dark mb-1">{img.label}</p>
+                    <span className="badge bg-light text-muted border small" style={{ fontSize: '0.72rem' }}>
+                      AC • Pushback • Chauffeur Driven
+                    </span>
+                  </div>
+                  <div className="mt-2 pt-2 border-top d-flex align-items-center justify-content-between">
+                    <span className="badge small" style={{ backgroundColor: '#fff3e6', color: '#ff7700', fontSize: '0.75rem', fontWeight: 700 }}>
+                      {data.rateHighlight.includes('₹') ? data.rateHighlight.split('|')[0].trim() : 'Verified Tariff'}
+                    </span>
+                    <span className="text-muted small" style={{ fontSize: '0.72rem' }}>
+                      Shree Travels
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}

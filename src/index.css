@@ -1013,3 +1013,123 @@ section h1 {
     transition: none !important;
   }
 }
+
+/* ========================================================
+   FLEET LOCATION & VERIFIED DIVISION TAGS (ORGANIC OVERLAYS)
+   ======================================================== */
+.fleet-verified-tag {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 20px);
+  max-width: 440px;
+  min-height: 64px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.98) 100%);
+  border: 1.5px solid rgba(255, 119, 0, 0.85);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+  border-radius: 14px;
+  padding: 8px 14px;
+  color: #ffffff;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+
+.fleet-tag-pill-top {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #ffaa00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3px;
+  background: rgba(255, 170, 0, 0.15);
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 170, 0, 0.35);
+  white-space: nowrap;
+}
+
+.fleet-tag-title-bottom {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.fleet-gallery-overlay-tag {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 18px);
+  max-width: 290px;
+  min-height: 38px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.98) 100%);
+  border: 1.2px solid rgba(255, 119, 0, 0.8);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 6px 12px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.4px;
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.fleet-gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .fleet-verified-tag {
+    top: 6px;
+    width: calc(100% - 14px);
+    min-height: 52px;
+    padding: 5px 8px;
+    border-radius: 10px;
+  }
+  .fleet-tag-pill-top {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+    padding: 1px 8px;
+    margin-bottom: 2px;
+  }
+  .fleet-tag-title-bottom {
+    font-size: 0.72rem;
+    letter-spacing: 0.2px;
+  }
+  .fleet-gallery-overlay-tag {
+    top: 6px;
+    width: calc(100% - 14px);
+    min-height: 34px;
+    padding: 4px 8px;
+    font-size: 0.66rem;
+  }
+  .fleet-gallery-img {
+    height: 195px;
+  }
+}

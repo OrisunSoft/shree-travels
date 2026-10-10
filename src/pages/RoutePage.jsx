@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
+import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import SEO from "../components/SEO";
 
 const ROUTES = {
@@ -204,6 +205,20 @@ const RoutePage = () => {
               <div className="col-lg-5">
                 <div className="position-relative overflow-hidden rounded-4 shadow-lg">
                   <img src={data.image} alt={data.name} className="img-fluid w-100 d-block" style={{ aspectRatio: "1280 / 826" }} />
+                  {data.image && data.image.includes('Keyword Based Image') && (
+                    <div className="fleet-verified-tag">
+                      <div className="fleet-tag-pill-top">
+                        <FaStar className="me-1 text-warning" size={9} />
+                        <span>OFFICIAL OUTSTATION ROUTE</span>
+                      </div>
+                      <div className="fleet-tag-title-bottom">
+                        <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                        <span className="text-truncate">
+                          {data.name.toUpperCase()}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -232,14 +247,14 @@ const RoutePage = () => {
                     <tbody>
                       <tr>
                         <td className="fw-bold">13 Seater Tempo Traveller (Non-AC / AC)</td>
-                        <td>₹22 / ₹25</td>
+                        <td>₹22 / ₹25/km</td>
                         <td>₹6,600 / ₹7,500</td>
                         <td>₹5,000 / ₹5,500</td>
                         <td><button type="button" className="btn btn-sm fw-bold text-white rounded-pill px-3 open-booking-popup-btn" style={{ backgroundColor: "#ff7700" }} data-vehicle="13 Seater Tempo Traveller" data-ac="AC" data-place={data.name}>Book Now</button></td>
                       </tr>
                       <tr>
                         <td className="fw-bold">17 Seater Tempo Traveller (Non-AC / AC)</td>
-                        <td>₹22 / ₹25</td>
+                        <td>₹22 / ₹25/km</td>
                         <td>₹6,600 / ₹7,500</td>
                         <td>₹5,000 / ₹5,500</td>
                         <td><button type="button" className="btn btn-sm fw-bold text-white rounded-pill px-3 open-booking-popup-btn" style={{ backgroundColor: "#ff7700" }} data-vehicle="17 Seater Tempo Traveller" data-ac="AC" data-place={data.name}>Book Now</button></td>

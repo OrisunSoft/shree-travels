@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCoins } from 'react-icons/fa';
+import { FaCoins, FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const TempoTraveller = () => {
@@ -250,6 +250,18 @@ const TempoTraveller = () => {
                   alt="Tempo Traveller On Rent in Pune - 13, 17, 20, 26 Seater AC Group Transport" 
                   className="img-fluid w-100 d-block" 
                 />
+                <div className="fleet-verified-tag">
+                  <div className="fleet-tag-pill-top">
+                    <FaStar className="me-1 text-warning" size={9} />
+                    <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                  </div>
+                  <div className="fleet-tag-title-bottom">
+                    <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                    <span className="text-truncate">
+                      13 TO 26 SEATER TEMPO TRAVELLER • PUNE FLEET
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -274,6 +286,12 @@ const TempoTraveller = () => {
                       alt={`${tempo.seater} Tempo Traveller On Rent in Pune - ${tempo.bestFor}`}
                       loading="lazy"
                     />
+                    {tempo.image.includes('Keyword Based Image') && (
+                      <div className="fleet-gallery-overlay-tag">
+                        <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                        <span className="text-truncate">{tempo.seater.toUpperCase()} • PUNE FLEET</span>
+                      </div>
+                    )}
                   </div>
                   <div className="tempo-card-body">
                     <div className="tempo-badge">{tempo.seater}</div>

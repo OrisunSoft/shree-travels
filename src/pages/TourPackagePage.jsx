@@ -795,6 +795,20 @@ const TourPackagePage = ({ tourSlug }) => {
                     alt={tour.h1}
                     className="img-fluid w-100 d-block"
                   />
+                  {tour.heroImage && tour.heroImage.includes('Keyword Based Image') && (
+                    <div className="fleet-verified-tag">
+                      <div className="fleet-tag-pill-top">
+                        <FaStar className="me-1 text-warning" size={9} />
+                        <span>OFFICIAL TOUR PACKAGE</span>
+                      </div>
+                      <div className="fleet-tag-title-bottom">
+                        <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                        <span className="text-truncate">
+                          {tour.h1.split('–')[0].split('-')[0].trim().toUpperCase()}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-3 bg-white text-dark d-flex align-items-center justify-content-between flex-wrap gap-2">
                   <div>
@@ -964,16 +978,49 @@ const TourPackagePage = ({ tourSlug }) => {
 
           <CardSlider cardsPerView={4} interval={3800}>
             {tour.galleryImages.map((img, i) => (
-              <div className="card h-100 border-0 shadow-sm overflow-hidden" key={i}>
+              <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column" key={i}>
                 <div className="position-relative overflow-hidden">
                   <img
                     src={img.src}
                     alt={img.caption}
-                    className="card-img-top w-100 d-block"
+                    className="card-img-top w-100 d-block fleet-gallery-img"
+                    style={{ height: '220px', objectFit: 'cover' }}
+                    loading="lazy"
+                    decoding="async"
                   />
+                  {img.src.includes('Keyword Based Image') && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{tour.h1.split('–')[0].split('Tour')[0].trim().toUpperCase()}</span>
+                    </div>
+                  )}
                 </div>
-                <div className="card-body p-3 text-center">
-                  <p className="small fw-bold text-dark mb-0">{img.caption}</p>
+                <div className="card-body p-3 text-center d-flex flex-column justify-content-between flex-grow-1">
+                  <div>
+                    <h3 className="h6 fw-bold text-dark mb-1" style={{ fontSize: '0.95rem' }}>{img.caption}</h3>
+                    <p className="text-muted small mb-2" style={{ fontSize: '0.8rem', lineHeight: '1.45' }}>
+                      {img.desc || `Curated ${tour.h1.split('–')[0].trim()} vehicle option with sanitized pushback seats, dual AC, and expert commercial chauffeur.`}
+                    </p>
+                    <div className="d-flex justify-content-center flex-wrap gap-1 mb-2">
+                      <span className="badge bg-light text-muted border small" style={{ fontSize: '0.7rem' }}>
+                        AC Pushback
+                      </span>
+                      <span className="badge bg-light text-muted border small" style={{ fontSize: '0.7rem' }}>
+                        Chauffeur Driven
+                      </span>
+                      <span className="badge bg-light text-muted border small" style={{ fontSize: '0.7rem' }}>
+                        Sanitized Fleet
+                      </span>
+                    </div>
+                  </div>
+                  <div className="pt-2 border-top mt-auto d-flex align-items-center justify-content-between">
+                    <span className="badge small" style={{ backgroundColor: '#fff3e6', color: '#ff7700', fontSize: '0.78rem', fontWeight: 700 }}>
+                      {tour.startingPackage.split('/')[0].trim()}
+                    </span>
+                    <span className="small text-muted fw-semibold" style={{ fontSize: '0.72rem' }}>
+                      Verified Fleet
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -1094,23 +1141,32 @@ const TourPackagePage = ({ tourSlug }) => {
 
           <CardSlider cardsPerView={3} interval={4200}>
             {otherTours.map((item) => (
-              <div className="card h-100 border-0 shadow-sm overflow-hidden d-flex flex-column" key={item.slug}>
+              <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column" key={item.slug}>
                 <div className="position-relative overflow-hidden">
                   <img
                     src={item.heroImage}
                     alt={item.h1}
-                    className="card-img-top w-100 d-block"
+                    className="card-img-top w-100 d-block fleet-gallery-img"
+                    style={{ height: '220px', objectFit: 'cover' }}
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <span
-                    className="badge position-absolute top-0 end-0 m-2 px-3 py-2 rounded-pill fw-bold shadow-sm"
-                    style={{ backgroundColor: '#ff7700', color: '#fff', zIndex: 3 }}
-                  >
-                    {item.startingPackage.split('/')[0].trim()}
-                  </span>
+                  {item.heroImage && item.heroImage.includes('Keyword Based Image') && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{item.h1.split('–')[0].split('Tour')[0].trim().toUpperCase()}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="card-body p-4 d-flex flex-column flex-grow-1">
                   <h3 className="h5 fw-bold text-dark mb-2">{item.h1.split('–')[0].trim()}</h3>
-                  <p className="text-muted small mb-3 flex-grow-1">{item.description}</p>
+                  <p className="text-muted small mb-3 flex-grow-1" style={{ lineHeight: '1.6' }}>{item.description}</p>
+                  <div className="d-flex align-items-center justify-content-between mb-3 pt-2 border-top">
+                    <span className="badge small" style={{ backgroundColor: '#fff3e6', color: '#ff7700', fontSize: '0.8rem', fontWeight: 700 }}>
+                      Starting @ {item.startingPackage.split('/')[0].trim()}
+                    </span>
+                    <span className="small text-muted fw-semibold">From Pune</span>
+                  </div>
                   <Link
                     to={`/${item.slug}`}
                     className="btn w-100 rounded-pill fw-bold text-white mt-auto"

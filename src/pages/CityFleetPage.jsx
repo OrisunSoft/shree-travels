@@ -442,6 +442,20 @@ const CityFleetPage = () => {
                     alt={customH1}
                     className="img-fluid rounded-4 w-100 d-block"
                   />
+                  <div className="fleet-verified-tag">
+                    <div className="fleet-tag-pill-top">
+                      <FaStar className="me-1 text-warning" size={9} />
+                      <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                    </div>
+                    <div className="fleet-tag-title-bottom">
+                      <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                      <span className="text-truncate">
+                        {city === "pune"
+                          ? `${vehicleInfo.label.toUpperCase()} • PUNE HEADQUARTERS`
+                          : `${cityInfo.name.toUpperCase()} DIVISION • ${vehicleInfo.label.toUpperCase()}`}
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-3 text-dark d-flex justify-content-between align-items-center">
                   <div>
@@ -516,6 +530,18 @@ const CityFleetPage = () => {
                     alt={`${cityInfo.name} Travel & Bus Hire Network`}
                     className="img-fluid w-100 d-block"
                   />
+                  <div className="fleet-verified-tag">
+                    <div className="fleet-tag-pill-top">
+                      <FaStar className="me-1 text-warning" size={9} />
+                      <span>OFFICIAL COVERAGE HUB</span>
+                    </div>
+                    <div className="fleet-tag-title-bottom">
+                      <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                      <span className="text-truncate">
+                        {cityInfo.name.toUpperCase()} SIGHTSEEING &amp; DISPATCH
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div className="card-body p-4" style={{ backgroundColor: "#0f172a", color: "#fff" }}>
                   <h3 className="h5 fw-bold text-white mb-2">
@@ -656,13 +682,33 @@ const CityFleetPage = () => {
                   <img
                     src={img.src}
                     alt={`${img.caption} - ${cityInfo.name}`}
-                    className="img-fluid w-100 d-block"
+                    className="img-fluid w-100 d-block fleet-gallery-img"
+                    style={{ height: "220px", objectFit: "cover" }}
                   />
+                  {img.src.includes("Keyword Based Image") && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{city === "pune" ? "PUNE FLEET" : `${cityInfo.name.toUpperCase()} DIVISION`}</span>
+                    </div>
+                  )}
                 </div>
-                <div className="card-body p-3 text-center">
-                  <p className="small fw-bold mb-0" style={{ color: "#0f172a" }}>
-                    {img.caption}
-                  </p>
+                <div className="card-body p-3 text-center d-flex flex-column justify-content-between">
+                  <div>
+                    <p className="small fw-bold mb-1" style={{ color: "#0f172a" }}>
+                      {img.caption}
+                    </p>
+                    <span className="badge bg-light text-muted border small" style={{ fontSize: "0.72rem" }}>
+                      AC • Pushback • Sanitized
+                    </span>
+                  </div>
+                  <div className="mt-2 pt-2 border-top d-flex align-items-center justify-content-between">
+                    <span className="badge small" style={{ backgroundColor: "#fff3e6", color: "#ff7700", fontSize: "0.75rem", fontWeight: 700 }}>
+                      ₹{startingPrice}/km
+                    </span>
+                    <span className="text-muted small" style={{ fontSize: "0.72rem" }}>
+                      {cityInfo.name} Fleet
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}

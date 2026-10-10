@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const Thirteen14Seater = () => {
@@ -198,11 +199,25 @@ const Thirteen14Seater = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <img 
-                src="/img/Keyword Based Image/Keyword Based Image-05.jpg" 
-                alt="14 Seater Tempo Traveller On Rent in Pune - AC Pushback Seats" 
-                className="img-fluid rounded-4 shadow-lg" 
-              />
+              <div className="position-relative overflow-hidden rounded-4 shadow-lg">
+                <img 
+                  src="/img/Keyword Based Image/Keyword Based Image-05.jpg" 
+                  alt="14 Seater Tempo Traveller On Rent in Pune - AC Pushback Seats" 
+                  className="img-fluid w-100 d-block" 
+                />
+                <div className="fleet-verified-tag">
+                  <div className="fleet-tag-pill-top">
+                    <FaStar className="me-1 text-warning" size={9} />
+                    <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                  </div>
+                  <div className="fleet-tag-title-bottom">
+                    <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                    <span className="text-truncate">
+                      14 SEATER TEMPO TRAVELLER • PUNE FLEET
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

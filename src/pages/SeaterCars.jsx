@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 const SeaterCars = () => {
@@ -219,6 +220,18 @@ const SeaterCars = () => {
                   alt="13 Seater Tempo Traveller On Rent in Pune - AC Pushback Seats" 
                   className="img-fluid w-100 d-block" 
                 />
+                <div className="fleet-verified-tag">
+                  <div className="fleet-tag-pill-top">
+                    <FaStar className="me-1 text-warning" size={9} />
+                    <span>OFFICIAL DISPATCH • 24/7 FLEET</span>
+                  </div>
+                  <div className="fleet-tag-title-bottom">
+                    <FaMapMarkerAlt className="me-1 text-warning flex-shrink-0" size={11} />
+                    <span className="text-truncate">
+                      13 SEATER TEMPO TRAVELLER • PUNE FLEET
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -243,6 +256,12 @@ const SeaterCars = () => {
                       alt={`${type.seater} Tempo Traveller On Rent in Pune`}
                       loading="lazy"
                     />
+                    {type.image.includes('Keyword Based Image') && (
+                      <div className="fleet-gallery-overlay-tag">
+                        <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                        <span className="text-truncate">{type.seater.toUpperCase()} • PUNE FLEET</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-3">
                     <div className="seater-badge">{type.seater}</div>

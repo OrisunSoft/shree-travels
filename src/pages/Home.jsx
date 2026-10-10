@@ -95,7 +95,7 @@ const Home = () => {
   // Cards for the Interactive Vehicles Slider
   const vehicleCards = [
     { title: "Tempo Traveller", desc: "13, 17, 20 & 26 Seater • Starting ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-01.jpg", link: "/tempo-traveller-on-rent-in-pune", tag: "Most Popular" },
-    { title: "Force Urbania", desc: "10, 13 & 17 Seater Luxury Van • ₹32/km", img: "/img/Keyword Based Image/Keyword Based Image-16.jpg", link: "/urbania-on-rent-in-pune", tag: "Ultra Luxury" },
+    { title: "Force Urbania", desc: "10, 13 & 17 Seater Luxury Van • ₹32/km", img: "/img/urbania/ub-1.jpeg", link: "/urbania-on-rent-in-pune", tag: "Ultra Luxury" },
     { title: "32 & 35 Seater Bus", desc: "2x2 Pushback AC & Non-AC • From ₹45/km", img: "/img/Keyword Based Image/Keyword Based Image-11.jpg", link: "/32-seater-bus-on-rent-in-pune", tag: "Wedding Special" },
     { title: "Mini Bus & Tata Winger", desc: "9 to 25 Seater Mini Buses • From ₹20/km", img: "/img/Keyword Based Image/Keyword Based Image-04.jpg", link: "/mini-bus-on-rent-pune", tag: "Best Value" },
     { title: "40 & 50 Seater Luxury Bus", desc: "Large Tourist & School Coach • From ₹50/km", img: "/img/Keyword Based Image/Keyword Based Image-14.jpg", link: "/50-seater-bus-on-rent-in-pune", tag: "Large Group" },
@@ -105,8 +105,8 @@ const Home = () => {
   const homeTourCards = [
     { title: "Pune to Mahabaleshwar", subtitle: "Pratapgad, Venna Lake & Mapro Garden", rate: "From ₹9,000", img: "/img/Keyword Based Image/Keyword Based Image-31.jpg", link: "/pune-to-mahabaleshwar-bus-hire" },
     { title: "Pune to Lonavala & Khandala", subtitle: "Bhushi Dam, Tiger Point & Karla Caves", rate: "From ₹7,200", img: "/img/Keyword Based Image/Keyword Based Image-26.jpg", link: "/pune-to-lonavala-bus-hire" },
-    { title: "Pune to Konkan Darshan", subtitle: "Alibaug, Ganpatipule, Tarkarli & Malvan", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-24.jpg", link: "/pune-to-konkan-darshan" },
-    { title: "Pune to Goa Beach Tour", subtitle: "North & South Goa Coastal Package", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-23.jpg", link: "/pune-to-goa-bus-hire" },
+    { title: "Pune to Konkan Darshan", subtitle: "Alibaug, Ganpatipule, Tarkarli & Malvan", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-28.jpg", link: "/pune-to-konkan-darshan" },
+    { title: "Pune to Goa Beach Tour", subtitle: "North & South Goa Coastal Package", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-27.jpg", link: "/pune-to-goa-bus-hire" },
     { title: "Ashtavinayak Darshan", subtitle: "All 8 Swayambhu Ganpati Temples", rate: "From ₹14,400", img: "/img/Keyword Based Image/Keyword Based Image-29.jpg", link: "/ashtavinayak-darshan-bus-hire-pune" },
     { title: "Bhimashankar & 5 Jyotirlinga", subtitle: "Trimbakeshwar, Ellora, Parli & Aundha", rate: "From ₹7,200", img: "/img/Keyword Based Image/Keyword Based Image-63.jpg", link: "/bhimashankar-5-jyotirlinga-darshan-pune" },
     { title: "Sade Teen Shakti Peeth", subtitle: "Kolhapur, Tuljapur, Mahurgad & Vani", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-25.jpg", link: "/sade-teen-shakti-peeth-darshan-pune" },
@@ -147,7 +147,7 @@ const Home = () => {
           /* Uniform Grid Card Hover Effects (For Vehicles) */
           .grid-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
           .grid-card:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12) !important; }
-          .grid-card-img { transition: transform 0.5s ease; }
+          .grid-card-img { transition: transform 0.5s ease; height: 210px; width: 100%; object-fit: cover; }
           .grid-card:hover .grid-card-img { transform: scale(1.05); }
 
           /* Comfort Section Photo Album Swipe (Book-like slide) */
@@ -310,6 +310,12 @@ const Home = () => {
               <div className="card h-100 rounded-4 overflow-hidden bg-white shadow-sm border position-relative grid-card d-flex flex-column" key={`vehicle-card-${index}`}>
                 <div className="position-relative overflow-hidden border-bottom">
                   <img src={card.img} alt={card.title} className="w-100 grid-card-img" loading="lazy" decoding="async" />
+                  {card.img.includes('Keyword Based Image') && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{card.title.toUpperCase()} • PUNE FLEET</span>
+                    </div>
+                  )}
                 </div>
                 <div className="card-body p-4 d-flex flex-column justify-content-between flex-grow-1">
                   <div>
@@ -461,7 +467,13 @@ const Home = () => {
             {homeTourCards.map((pkg, idx) => (
               <div className="card h-100 rounded-4 overflow-hidden bg-white shadow-sm border d-flex flex-column" key={`home-tour-${idx}`}>
                 <div className="position-relative overflow-hidden">
-                  <img src={pkg.img} alt={pkg.title} className="w-100" loading="lazy" decoding="async" />
+                  <img src={pkg.img} alt={pkg.title} className="w-100 fleet-gallery-img" style={{ height: '200px', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                  {pkg.img.includes('Keyword Based Image') && (
+                    <div className="fleet-gallery-overlay-tag">
+                      <FaMapMarkerAlt className="text-warning me-1 flex-shrink-0" size={10} />
+                      <span className="text-truncate">{pkg.title.toUpperCase()}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="card-body p-3 d-flex flex-column flex-grow-1">
                   <h3 className="h6 fw-bold text-dark mb-1">{pkg.title}</h3>
