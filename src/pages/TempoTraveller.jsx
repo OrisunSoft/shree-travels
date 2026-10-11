@@ -8,7 +8,7 @@ const TempoTraveller = () => {
     '@context': 'https://schema.org',
     '@type': 'AutoRental',
     name: 'Tempo Traveller On Rent in Pune',
-    description: 'Affordable 13, 14, 17, 20 & 26 seater Tempo Traveller On Rent in Pune starting @ ₹22/km',
+    description: 'Affordable 13, 14, 17, 20 & 26 seater Tempo Traveller On Rent in Pune starting at ₹22/km',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -23,7 +23,7 @@ const TempoTraveller = () => {
     {
       seater: '13 Seater',
       capacity: '13 passengers',
-      startingRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      startingRate: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC)',
       route: '/13-seater-on-rent-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-01.jpg',
       bestFor: 'Family trips, small tours',
@@ -32,7 +32,7 @@ const TempoTraveller = () => {
     {
       seater: '14 Seater',
       capacity: '14 passengers',
-      startingRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      startingRate: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC)',
       route: '/14-seater-on-rent-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-05.jpg',
       bestFor: 'Weddings, medium groups',
@@ -41,7 +41,7 @@ const TempoTraveller = () => {
     {
       seater: '17 Seater',
       capacity: '17 passengers',
-      startingRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      startingRate: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC)',
       route: '/17-seater-on-rent-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-06.jpg',
       bestFor: 'Large groups, tours',
@@ -50,7 +50,7 @@ const TempoTraveller = () => {
     {
       seater: '20 Seater',
       capacity: '20 passengers',
-      startingRate: '₹28/km (AC & Non-AC)',
+      startingRate: 'Starting at ₹28/km (AC & Non-AC)',
       route: '/20-seater-bus-rental-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-08.jpg',
       bestFor: 'Large events, charters',
@@ -61,8 +61,8 @@ const TempoTraveller = () => {
   return (
     <>
       <SEO
-        title="Tempo Traveller On Rent in Pune @ ₹22/km | 13, 17, 20 & 26 Seater Hire"
-        description="Book Tempo Traveller On Rent in Pune starting @ ₹22/km (Non-AC) & ₹25/km (AC). Verified 13, 14, 17, 20 & 26 seater Maharaja Tempo Travellers with experienced drivers. Call +91 7620411277 or WhatsApp +91 78757 74499."
+        title="Tempo Traveller On Rent in Pune Starting at ₹22/km | 13, 17, 20 & 26 Seater Hire"
+        description="Book Tempo Traveller On Rent in Pune starting at ₹22/km (Non-AC) & ₹25/km (AC). Verified 13, 14, 17, 20 & 26 seater Maharaja Tempo Travellers with experienced drivers. Call +91 7620411277 or WhatsApp +91 78757 74499."
         keywords="Tempo Traveller On Rent in Pune, Tempo Traveller Hire in Pune, 13 Seater Tempo Traveller On Rent in Pune, 17 Seater Tempo Traveller On Rent in Pune, 20 Seater Bus On Rent in Pune, 26 Seater Tempo Traveller On Rent in Pune, Luxury Tempo Traveller On Rent in Pune"
         path="/tempo-traveller-seater-hire-pune"
         image="/img/Keyword Based Image/Keyword Based Image-01.jpg"
@@ -214,7 +214,7 @@ const TempoTraveller = () => {
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
-                Starting @ ₹22/km (Non-AC) & ₹25/km (AC)
+                Starting at ₹22/km (Non-AC) & ₹25/km (AC)
               </span>
               <h1 className="display-5 fw-bold mb-3 text-white">
                 Tempo Traveller On Rent in Pune
@@ -224,7 +224,9 @@ const TempoTraveller = () => {
               </p>
               <div className="d-flex gap-3 flex-wrap mb-3">
                 <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
+                  <i className="fas fa-phone me-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%20Tempo%20Traveller%20On%20Rent%20in%20Pune."
@@ -233,11 +235,20 @@ const TempoTraveller = () => {
                   className="btn btn-lg fw-bold text-white"
                   style={{ backgroundColor: '#25D366' }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  Book Online
-                </Link>
+                <button
+                  type="button"
+                  className="btn btn-lg fw-bold border-2 open-booking-popup-btn"
+                  data-vehicle="17 Seater Tempo Traveller"
+                  data-ac="AC"
+                  data-place="Tempo Traveller On Rent in Pune"
+                  style={{ borderColor: 'white', color: 'white', backgroundColor: 'transparent' }}
+                >
+                  Instant Enquiry
+                </button>
               </div>
               <div className="small text-light opacity-75">
                 <strong>24/7 Dispatch Desk:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277 (Call)</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>

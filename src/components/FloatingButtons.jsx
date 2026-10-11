@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloatingButtons = () => {
   // Your specific enquiry message
-  const rawMessage = "Hello Shree Travels Team, I want to Book Mini Bus / 26 32 35 40 45 50 Seater Bus / Volvo Bus On Rent / Bus Service With Amruta Travels. Request you Please Send More Details or Call Me. Thank you!";
+  const rawMessage = "Hello Shree Travels Team, I want to Book Force Urbania / Tempo Traveller / Mini Bus / Luxury Bus On Rent with Shree Travels. Please Send Details & Best Quotation. Thank you!";
   
   // Encode the message so it formats correctly in a URL
   const whatsappMessage = encodeURIComponent(rawMessage);

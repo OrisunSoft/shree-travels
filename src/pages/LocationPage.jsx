@@ -203,22 +203,32 @@ const LocationPage = () => {
               <p className="text-uppercase fw-bold mb-2" style={{ color: "#ff7700" }}>Verified Fleet & Chauffeur Services • {data.name}</p>
               <h1 className="display-5 fw-bold mb-3 text-white">{data.h1}</h1>
               <p className="lead mb-4 text-light">{data.intro}</p>
-              <div className="d-flex flex-wrap gap-3">
-                <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4 py-3 shadow-sm" style={{ backgroundColor: "#ff7700" }}>
-                  <i className="fas fa-phone-alt me-2"></i> Call +91 76204 11277
+              <div className="d-flex flex-wrap gap-2 gap-sm-3">
+                <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-3 px-sm-4 py-2 py-sm-3 shadow-sm d-inline-flex align-items-center" style={{ backgroundColor: "#ff7700" }}>
+                  <i className="fas fa-phone-alt me-1 me-sm-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I need a vehicle in ${data.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg text-white fw-bold px-4 py-3 shadow-sm"
+                  className="btn btn-lg text-white fw-bold px-3 px-sm-4 py-2 py-sm-3 shadow-sm d-inline-flex align-items-center"
                   style={{ backgroundColor: "#25D366" }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i> WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-1 me-sm-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp: +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold px-4 py-3 shadow-sm">
-                  Book Online
-                </Link>
+                <button
+                  type="button"
+                  className="btn btn-lg btn-outline-light fw-bold px-3 px-sm-4 py-2 py-sm-3 shadow-sm rounded-pill open-booking-popup-btn d-inline-flex align-items-center"
+                  data-vehicle={data.h1}
+                  data-place={data.name}
+                  data-mode="enquiry"
+                >
+                  Instant Enquiry
+                </button>
               </div>
             </div>
             <div className="col-lg-5">
@@ -248,9 +258,20 @@ const LocationPage = () => {
                     <h3 className="h5 fw-bold mb-2">{vehicle.name}</h3>
                     <p className="text-muted small mb-4">{vehicle.desc}</p>
                   </div>
-                  <Link to={vehicle.link} className="btn btn-outline-dark fw-semibold rounded-pill w-100 py-2">
-                    View Details
-                  </Link>
+                  <div className="d-flex gap-2">
+                    <Link to={vehicle.link} className="btn btn-sm btn-outline-dark fw-semibold rounded-pill flex-grow-1 py-2 text-nowrap text-center">
+                      Details
+                    </Link>
+                    <button
+                      type="button"
+                      className="btn btn-sm fw-bold text-white rounded-pill px-3 py-2 flex-grow-1 open-booking-popup-btn text-nowrap"
+                      data-vehicle={vehicle.name}
+                      data-place={data.name}
+                      style={{ backgroundColor: "#ff7700" }}
+                    >
+                      Enquire
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -278,10 +299,12 @@ const LocationPage = () => {
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want a quote from ${data.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn fw-bold px-5 py-3 rounded-pill text-white shadow-sm"
-                  style={{ backgroundColor: "#ff7700" }}
+                  className="btn fw-bold px-4 px-sm-5 py-3 rounded-pill text-white shadow-sm d-inline-flex align-items-center justify-content-center"
+                  style={{ backgroundColor: "#25D366" }}
                 >
-                  Book Now via WhatsApp (+91 78757 74499)
+                  <i className="fab fa-whatsapp me-2 fs-5"></i>
+                  <span className="d-none d-sm-inline">Book Now via WhatsApp (+91 78757 74499)</span>
+                  <span className="d-inline d-sm-none">WhatsApp Booking</span>
                 </a>
               </div>
             </div>

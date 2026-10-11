@@ -39,8 +39,8 @@ const Thirteen14Seater = () => {
   return (
     <>
       <SEO
-        title="14 Seater Tempo Traveller On Rent in Pune @ ₹22/km | Group Transport"
-        description="Book 14 Seater Tempo Traveller On Rent in Pune starting @ ₹22/km (Non-AC) & ₹25/km (AC). Pushback seats, experienced drivers, best rates for weddings, tours, and corporate events. Call +91 7620411277 or WhatsApp +91 78757 74499."
+        title="14 Seater Tempo Traveller On Rent in Pune Starting at ₹22/km | Group Transport"
+        description="Book 14 Seater Tempo Traveller On Rent in Pune starting at ₹22/km (Non-AC) & ₹25/km (AC). Pushback seats, experienced drivers, best rates for weddings, tours, and corporate events. Call +91 7620411277 or WhatsApp +91 78757 74499."
         keywords="14 seater on rent Pune, 14 seater tempo traveller Pune, 14 passenger bus rental, group transport Pune, AC tempo traveller hire, wedding transport Pune"
         path="/14-seater-on-rent-pune"
         image="/img/Keyword Based Image/Keyword Based Image-05.jpg"
@@ -169,7 +169,7 @@ const Thirteen14Seater = () => {
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
-                Starting @ ₹22/km (Non-AC) & ₹25/km (AC)
+                Starting at ₹22/km (Non-AC) & ₹25/km (AC)
               </span>
               <h1 className="display-5 fw-bold mb-3 text-white">
                 14 Seater Tempo Traveller On Rent in Pune
@@ -179,7 +179,9 @@ const Thirteen14Seater = () => {
               </p>
               <div className="d-flex gap-3 flex-wrap mb-3">
                 <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
+                  <i className="fas fa-phone me-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%2014%20Seater%20Tempo%20Traveller%20On%20Rent%20in%20Pune."
@@ -188,11 +190,20 @@ const Thirteen14Seater = () => {
                   className="btn btn-lg fw-bold text-white"
                   style={{ backgroundColor: '#25D366' }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  Book Online
-                </Link>
+                <button
+                  type="button"
+                  className="btn btn-lg fw-bold border-2 open-booking-popup-btn"
+                  data-vehicle="14 Seater Tempo Traveller"
+                  data-ac="AC"
+                  data-place="14 Seater Tempo Traveller On Rent in Pune"
+                  style={{ borderColor: 'white', color: 'white', backgroundColor: 'transparent' }}
+                >
+                  Instant Enquiry
+                </button>
               </div>
               <div className="small text-light opacity-75">
                 <strong>24/7 Dispatch Desk:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>
@@ -307,7 +318,7 @@ const Thirteen14Seater = () => {
               <div className="price-item">
                 <h5>Outstation Per KM</h5>
                 <p className="text-muted small">Multi-day & tours</p>
-                <div className="price-amount">₹22–25/km</div>
+                <div className="price-amount">Starting at ₹22–25/km</div>
                 <p className="small" style={{ color: '#666' }}>Minimum 300 km/day</p>
               </div>
             </div>
@@ -575,7 +586,7 @@ const Thirteen14Seater = () => {
               </h2>
               <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#seaterFAQ">
                 <div className="accordion-body">
-                  Yes! We offer multi-day outstation packages. For 2-3 day trips, we charge per kilometer (₹17/km) which works out to be very economical for group travel. Driver accommodation is included.
+                  Yes! We offer multi-day outstation packages. For 2-3 day trips, we charge our transparent per kilometer rate (₹22/km for Non-AC &amp; ₹25/km for AC) which works out to be very economical for group travel.
                 </div>
               </div>
             </div>
@@ -605,9 +616,16 @@ const Thirteen14Seater = () => {
               <p className="lead text-white mb-0">Get instant quotes, book now, enjoy premium comfort for your group</p>
             </div>
             <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
-              <Link to="/book-taxi" className="btn btn-lg fw-bold px-5" style={{ backgroundColor: 'white', color: '#ff7700' }}>
-                Book Now <i className="fas fa-arrow-right ms-2"></i>
-              </Link>
+              <button
+                type="button"
+                className="btn btn-lg fw-bold px-5 open-booking-popup-btn"
+                data-vehicle="14 Seater Tempo Traveller"
+                data-ac="AC"
+                data-place="Pune / Outstation"
+                style={{ backgroundColor: 'white', color: '#ff7700', border: 'none' }}
+              >
+                Instant Enquiry <i className="fas fa-arrow-right ms-2"></i>
+              </button>
             </div>
           </div>
         </div>

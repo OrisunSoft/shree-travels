@@ -906,16 +906,6 @@ const RAW_KEYWORD_ENTRIES = [
     spotKey: 'allIndia'
   },
   {
-    slug: 'car-rental-in-pune',
-    h1: 'Car Rental in Pune',
-    cat: 'winger',
-    img: '/img/innova-crysta.png',
-    rate: 'Starting @ ₹12/Km (Sedan), ₹15–₹18/Km (Ertiga/Innova Crysta) & ₹20/Km (Winger)',
-    cap: '4+1 Seater Dzire, 6+1 Seater Ertiga/Innova Crysta & 9–17 Seater Vans',
-    focus: 'Pune to Mumbai Airport cab drops, corporate executive car rentals, local 8 Hrs/80 Km city packages, and outstation family trips',
-    spotKey: 'mahabaleshwar'
-  },
-  {
     slug: '26-seater-tempo-traveller-on-rent',
     h1: '26 Seater Tempo Traveller On Rent',
     cat: 'tempo',
@@ -1438,35 +1428,35 @@ const FEATURED_RELATED_CARDS = [
   {
     title: 'Force Urbania On Rent in Pune',
     subtitle: '13 & 17 Seater European Luxury Van',
-    rate: '₹32 / Km',
+    rate: 'Starting at ₹32/km',
     image: '/img/urbania/ub-1.jpeg',
     path: '/force-urbania-on-rent-in-pune'
   },
   {
     title: 'Tempo Traveller On Rent in Pune',
     subtitle: '13, 17, 20 & 26 Seater AC/Non-AC',
-    rate: '₹22 – ₹25 / Km',
+    rate: 'Starting at ₹22/km',
     image: '/img/Keyword Based Image/Keyword Based Image-01.jpg',
     path: '/tempo-traveller-on-rent-in-pune'
   },
   {
     title: '32 Seater Bus On Rent in Pune',
     subtitle: '2x2 Pushback AC & Non-AC Coach',
-    rate: '₹45 / Km',
+    rate: 'Starting at ₹45/km',
     image: '/img/Keyword Based Image/Keyword Based Image-11.jpg',
     path: '/32-seater-bus-on-rent-in-pune'
   },
   {
     title: '50 Seater Bus On Rent in Pune',
     subtitle: 'Large Wedding & Excursion Coach',
-    rate: '₹50 / Km',
+    rate: 'Starting at ₹50/km',
     image: '/img/Keyword Based Image/Keyword Based Image-14.jpg',
     path: '/50-seater-bus-on-rent-in-pune'
   },
   {
     title: 'Tata Winger On Rent in Pune',
     subtitle: '9, 12, 13 & 15 Seater Compact Van',
-    rate: '₹20 – ₹22 / Km',
+    rate: 'Starting at ₹20/km',
     image: '/img/Keyword Based Image/1.jpg',
     path: '/tata-winger-on-rent-in-pune'
   },
@@ -1487,7 +1477,7 @@ const FEATURED_RELATED_CARDS = [
   {
     title: 'Pune to Konkan Darshan Bus Hire',
     subtitle: 'Alibaug, Ganpatipule & Tarkarli',
-    rate: 'From ₹22 / Km',
+    rate: 'Starting at ₹22/km',
     image: '/img/Keyword Based Image/Keyword Based Image-24.jpg',
     path: '/pune-to-konkan-darshan'
   }
@@ -1619,29 +1609,36 @@ const KeywordLandingPage = ({ keywordKey }) => {
                 {data.intro}
               </p>
 
-              <div className="d-flex flex-wrap gap-3 mb-4">
+              <div className="d-flex flex-wrap gap-2 gap-sm-3 mb-4">
                 <a
                   href="tel:+917620411277"
-                  className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center"
+                  className="btn btn-lg text-white fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow-sm d-inline-flex align-items-center"
                   style={{ backgroundColor: '#ff7700' }}
                 >
-                  <FaPhoneAlt className="me-2" /> Call: +91 76204 11277
+                  <FaPhoneAlt className="me-1 me-sm-2" />
+                  <span className="d-none d-sm-inline">Call: +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I need a quote for ${data.h1}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center text-white"
+                  className="btn btn-lg fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow-sm d-inline-flex align-items-center text-white"
                   style={{ backgroundColor: '#25D366', borderColor: '#25D366' }}
                 >
-                  <FaWhatsapp className="me-2" size={20} /> WhatsApp: +91 78757 74499
+                  <FaWhatsapp className="me-1 me-sm-2" size={19} />
+                  <span className="d-none d-sm-inline">WhatsApp: +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link
-                  to="/book-taxi"
-                  className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill d-inline-flex align-items-center"
+                <button
+                  type="button"
+                  className="btn btn-lg btn-outline-light fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill d-inline-flex align-items-center open-booking-popup-btn"
+                  data-vehicle={data.h1}
+                  data-place={data.h1}
+                  data-mode="enquiry"
                 >
-                  Book Online <FaArrowRight className="ms-2" size={14} />
-                </Link>
+                  Instant Enquiry <FaArrowRight className="ms-1 ms-sm-2" size={13} />
+                </button>
               </div>
             </div>
 

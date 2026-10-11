@@ -14,7 +14,7 @@ import {
 export const MULTI_CITY_LOCAL_SEO_GROUPS = [
   {
     category: "Bus On Rent (Mumbai • Shirdi • Nashik • Lonavala)",
-    badge: "From ₹28/km",
+    badge: "Starting at ₹28/km",
     links: [
       { label: "Bus On Rent in Mumbai", path: "/rent/mumbai/bus" },
       { label: "Bus On Rent in Shirdi", path: "/rent/shirdi/bus" },
@@ -25,7 +25,7 @@ export const MULTI_CITY_LOCAL_SEO_GROUPS = [
   },
   {
     category: "Force Urbania On Rent (Luxury AC)",
-    badge: "Flat ₹32/km",
+    badge: "Starting at ₹32/km",
     links: [
       { label: "Urbania On Rent in Mumbai", path: "/rent/mumbai/force-urbania" },
       { label: "Urbania On Rent in Shirdi", path: "/rent/shirdi/force-urbania" },
@@ -36,7 +36,7 @@ export const MULTI_CITY_LOCAL_SEO_GROUPS = [
   },
   {
     category: "Tempo Traveller On Rent (13–26 Seater)",
-    badge: "From ₹22/km",
+    badge: "Starting at ₹22/km",
     links: [
       { label: "Tempo Traveller On Rent in Mumbai", path: "/rent/mumbai/tempo-traveller" },
       { label: "Tempo Traveller On Rent in Shirdi", path: "/rent/shirdi/tempo-traveller" },
@@ -47,7 +47,7 @@ export const MULTI_CITY_LOCAL_SEO_GROUPS = [
   },
   {
     category: "Mini Bus On Rent (13–25 Seater)",
-    badge: "AC & Non-AC",
+    badge: "Starting at ₹22/km",
     links: [
       { label: "Mini Bus On Rent in Mumbai", path: "/rent/mumbai/mini-bus" },
       { label: "Mini Bus On Rent in Shirdi", path: "/rent/shirdi/mini-bus" },
@@ -90,8 +90,7 @@ export const FOOTER_KEYWORD_COLUMNS = [
     { label: "Tata Winger On Rent in Pune", path: "/tata-winger-on-rent-in-pune" },
     { label: "Pune to Mumbai Cab", path: "/pune-to-mumbai-cab" },
     { label: "Pune Airport Cab", path: "/pune-airport-cab" },
-    { label: "Outstation Cab Service Pune", path: "/outstation-cab-service-pune" },
-    { label: "Car Rental in Pune", path: "/car-rental-in-pune" }
+    { label: "Outstation Cab Service Pune", path: "/outstation-cab-service-pune" }
   ],
 
   // Column 2 (Bus Capacities, Local Pune Areas, Corporate & Weddings)
@@ -166,7 +165,7 @@ export const FOOTER_KEYWORD_COLUMNS = [
 ];
 
 const CATEGORY_TABS = [
-  { id: 'all', label: 'All Popular Searches (93)', icon: <FaLayerGroup className="me-1" /> },
+  { id: 'all', label: 'All Popular Searches (92)', icon: <FaLayerGroup className="me-1" /> },
   { id: 'col-0', label: 'Urbania, Tempo Traveller & Cabs', icon: <FaShuttleVan className="me-1" /> },
   { id: 'col-1', label: '17–50 Seater Buses & Pune Hubs', icon: <FaBus className="me-1" /> },
   { id: 'col-2', label: 'Multi-City, Weddings & Corporate', icon: <FaRoute className="me-1" /> }
@@ -202,10 +201,10 @@ const SEOKeywordDirectory = () => {
         </div>
         <div className="d-flex flex-wrap gap-2">
           <span className="seo-rate-pill">
-            Force Urbania <strong>@ ₹32/km</strong>
+            Force Urbania <strong>Starting at ₹32/km</strong>
           </span>
           <span className="seo-rate-pill">
-            Tempo Traveller <strong>@ ₹22/km</strong>
+            Tempo Traveller <strong>Starting at ₹22/km</strong>
           </span>
         </div>
       </div>

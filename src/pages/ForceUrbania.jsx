@@ -7,7 +7,7 @@ const ForceUrbania = () => {
     '@context': 'https://schema.org',
     '@type': 'Vehicle',
     name: 'Force Urbania On Rent in Pune',
-    description: 'Premium 13 & 17 Seater Force Urbania rental service in Pune @ ₹32/km with experienced drivers',
+    description: 'Premium 13 & 17 Seater Force Urbania rental service in Pune Starting at ₹32/km with experienced drivers',
     manufacturer: {
       '@type': 'Organization',
       name: 'Force Motors'
@@ -36,8 +36,8 @@ const ForceUrbania = () => {
   return (
     <>
       <SEO
-        title="Force Urbania On Rent in Pune @ ₹32/km | Shree Travels"
-        description="Book Force Urbania On Rent in Pune @ ₹32/km. Premium 10, 13 & 17 seater luxury AC van hire with individual recliner seats, panoramic windows & experienced chauffeurs. Call +91 7620411277 or WhatsApp +91 78757 74499."
+        title="Force Urbania On Rent in Pune Starting at ₹32/km | Shree Travels"
+        description="Book Force Urbania On Rent in Pune Starting at ₹32/km. Premium 10, 13 & 17 seater luxury AC van hire with individual recliner seats, panoramic windows & experienced chauffeurs. Call +91 7620411277 or WhatsApp +91 78757 74499."
         keywords="Force Urbania On Rent in Pune, 13 Seater Urbania on Rent in Pune, 17 Seater Urbania on Rent in Pune, Luxury Force Urbania On Rent in Pune, Force Urbania Luxury Mini Bus On Rent, Pune to Mahabaleshwar Urbania On Rent, Urbania On Rent in Mumbai, Urbania Rent in Lonavala"
         path="/force-urbania-on-rent-pune"
         image="/img/urbania/ub-1.jpeg"
@@ -129,36 +129,43 @@ const ForceUrbania = () => {
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <span className="badge px-3 py-2 rounded-pill mb-3 fw-bold" style={{ backgroundColor: '#ff7700', color: '#fff' }}>
-                Flat ₹32/km Outstation Tariff | 10, 13 &amp; 17 Seater
+                Starting at ₹32/km Outstation Tariff | 10, 13 &amp; 17 Seater
               </span>
               <h1 className="display-5 fw-bold mb-3 text-white">
                 Force Urbania On Rent in Pune
               </h1>
               <p className="lead mb-4">
-                Experience business-class road travel with Shree Travels' next-generation 10, 13 &amp; 17 Seater Force Urbania luxury vans in Pune (@ ₹32/km). Perfect for corporate delegations, VIP airport transfers, Ashtavinayak Darshan, and weekend trips to Mahabaleshwar, Lonavala &amp; Goa.
+                Experience business-class road travel with Shree Travels' next-generation 10, 13 &amp; 17 Seater Force Urbania luxury vans in Pune (Starting at ₹32/km). Perfect for corporate delegations, VIP airport transfers, Ashtavinayak Darshan, and weekend trips to Mahabaleshwar, Lonavala &amp; Goa.
               </p>
-              <div className="d-flex gap-3 flex-wrap mb-3">
+              <div className="d-flex gap-2 gap-sm-3 flex-wrap mb-3">
                 <button
                   type="button"
-                  className="btn btn-lg fw-bold text-white open-booking-popup-btn"
-                  data-vehicle="17 Seater Force Urbania (₹32/km)"
+                  className="btn btn-lg fw-bold text-white open-booking-popup-btn d-inline-flex align-items-center"
+                  data-vehicle="17 Seater Force Urbania (Starting at ₹32/km)"
                   data-ac="AC"
                   data-place="Force Urbania On Rent in Pune"
+                  data-mode="booking"
                   style={{ backgroundColor: '#ff7700' }}
                 >
-                  <i className="fas fa-calendar-check me-2"></i>Book Urbania Now
+                  <i className="fas fa-calendar-check me-1 me-sm-2"></i>
+                  <span className="d-none d-sm-inline">Book Urbania Now</span>
+                  <span className="d-inline d-sm-none">Book Urbania</span>
                 </button>
                 <a
-                  href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%20Force%20Urbania%20On%20Rent%20in%20Pune%20%40%20%E2%82%B932%2Fkm."
+                  href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%20Force%20Urbania%20On%20Rent%20in%20Pune%20Starting%20at%20%E2%82%B932%2Fkm."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg fw-bold text-white"
+                  className="btn btn-lg fw-bold text-white d-inline-flex align-items-center"
                   style={{ backgroundColor: '#25D366' }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-1 me-sm-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <a href="tel:+917620411277" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
+                <a href="tel:+917620411277" className="btn btn-lg fw-bold border-2 d-inline-flex align-items-center" style={{ borderColor: 'white', color: 'white' }}>
+                  <i className="fas fa-phone me-1 me-sm-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
               </div>
               <div className="small text-light opacity-75">
@@ -183,7 +190,7 @@ const ForceUrbania = () => {
         <div className="container">
           <div className="text-center mb-5">
             <h2 className="fw-bold mb-3">Why Choose Our <span style={{ color: '#ff7700' }}>Force Urbania</span>?</h2>
-            <p className="text-muted max-w-75 mx-auto">Premium comfort and reliability for every journey starting @ ₹32/km</p>
+            <p className="text-muted max-w-75 mx-auto">Premium comfort and reliability for every journey starting at ₹32/km</p>
           </div>
 
           <div className="row g-4">
@@ -211,7 +218,7 @@ const ForceUrbania = () => {
             <div className="col-md-6 col-lg-3">
               <div className="vehicle-spec">
                 <i className="fas fa-wallet feature-icon"></i>
-                <h5>Flat ₹32/km Rate</h5>
+                <h5>Starting at ₹32/km Rate</h5>
                 <p>Official Packages rate with zero hidden charges</p>
               </div>
             </div>
@@ -314,11 +321,11 @@ const ForceUrbania = () => {
                   <p className="mb-2"><strong>13 Seater (300 KM):</strong> ₹9,600</p>
                   <p className="mb-2"><strong>17 Seater (300 KM):</strong> ₹11,200</p>
                   <p className="mb-2"><strong>Per KM Tariff:</strong> ₹32/km</p>
-                  <p style={{ color: '#ff7700', fontSize: '1.2rem', fontWeight: '700' }}>@ ₹32/km</p>
+                  <p style={{ color: '#ff7700', fontSize: '1.2rem', fontWeight: '700' }}>Starting at ₹32/km</p>
                   <button
                     type="button"
                     className="btn btn-sm fw-bold text-white open-booking-popup-btn"
-                    data-vehicle="17 Seater Force Urbania (₹32/km)"
+                    data-vehicle="17 Seater Force Urbania (Starting at ₹32/km)"
                     data-ac="AC"
                     data-place="Outstation 300 KM/Day"
                     style={{ backgroundColor: '#ff7700' }}
@@ -336,11 +343,11 @@ const ForceUrbania = () => {
                   <p className="mb-2"><strong>Mumbai / Mahabaleshwar (13S):</strong> ₹12,500</p>
                   <p className="mb-2"><strong>Mumbai / Mahabaleshwar (17S):</strong> ₹14,500</p>
                   <p className="mb-2"><strong>Shirdi Darshan (13S / 17S):</strong> ₹11,500 / ₹13,500</p>
-                  <p style={{ color: '#ff7700', fontSize: '1.2rem', fontWeight: '700' }}>₹32/km</p>
+                  <p style={{ color: '#ff7700', fontSize: '1.2rem', fontWeight: '700' }}>Starting at ₹32/km</p>
                   <button
                     type="button"
                     className="btn btn-sm btn-outline-warning fw-bold open-booking-popup-btn"
-                    data-vehicle="17 Seater Force Urbania (₹32/km)"
+                    data-vehicle="17 Seater Force Urbania (Starting at ₹32/km)"
                     data-ac="AC"
                     data-place="Mumbai / Mahabaleshwar / Shirdi"
                   >

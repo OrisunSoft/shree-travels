@@ -274,7 +274,7 @@ const Services = () => {
       vehicle: "Tata Winger (AC / Non-AC)",
       capacity: "9, 12 & 13 Seater",
       idealFor: "Small family trips & airport drops",
-      rate: "₹22 (Non-AC) / ₹25 (AC) / km",
+      rate: "Starting at ₹20–₹22/km (Non-AC) / ₹25/km (AC)",
       minKm: "300 km / day",
       link: "/tata-winger-on-rent-in-pune"
     },
@@ -282,7 +282,7 @@ const Services = () => {
       vehicle: "13 & 14 Seater Tempo Traveller",
       capacity: "13 & 14 Passengers + Driver",
       idealFor: "Family weekend tours & Shirdi trips",
-      rate: "₹22 (Non-AC) / ₹25 (AC) / km",
+      rate: "Starting at ₹22/km (Non-AC) / ₹25/km (AC)",
       minKm: "300 km / day",
       link: "/13-seater-tempo-traveller-on-rent-in-pune"
     },
@@ -290,7 +290,7 @@ const Services = () => {
       vehicle: "17 Seater Luxury Tempo Traveller",
       capacity: "17 Passengers + Driver",
       idealFor: "Corporate outings & pilgrimage tours",
-      rate: "₹22 (Non-AC) / ₹25 (AC) / km",
+      rate: "Starting at ₹22/km (Non-AC) / ₹25/km (AC)",
       minKm: "300 km / day",
       link: "/17-seater-tempo-traveller-on-rent-in-pune"
     },
@@ -298,7 +298,7 @@ const Services = () => {
       vehicle: "20 & 26 Seater Tempo Traveller / Mini Bus",
       capacity: "20 to 26 Passengers + Driver",
       idealFor: "Mid-sized group tours & weddings",
-      rate: "₹25 - ₹37 / km",
+      rate: "Starting at ₹25–₹37/km",
       minKm: "300 km / day",
       link: "/20-seater-bus-on-rent-in-pune"
     },
@@ -306,7 +306,7 @@ const Services = () => {
       vehicle: "Luxury Force Urbania (10, 13 & 17 Seater)",
       capacity: "10, 13 & 17 Recliner Seats",
       idealFor: "VIP corporate delegations & luxury family tours",
-      rate: "₹32 / km (Flat)",
+      rate: "Starting at ₹32/km (Flat)",
       minKm: "300 km / day",
       link: "/urbania-on-rent-in-pune"
     },
@@ -314,7 +314,7 @@ const Services = () => {
       vehicle: "32 & 35 Seater Luxury Bus (AC / Non-AC)",
       capacity: "32 & 35 Pushback Seats",
       idealFor: "Marriage functions, picnics & group events",
-      rate: "₹35 (Non-AC) / ₹50 (AC) / km",
+      rate: "Starting at ₹35/km (Non-AC) / ₹50/km (AC)",
       minKm: "300 km / day",
       link: "/32-seater-bus-on-rent-in-pune"
     },
@@ -322,7 +322,7 @@ const Services = () => {
       vehicle: "40, 45 & 50 Seater Luxury AC / Volvo Coach",
       capacity: "40 to 53 Recliner Seats",
       idealFor: "Large corporate events, yatra & school trips",
-      rate: "₹50 (Non-AC) / ₹80 (53S Volvo/Benz) / km",
+      rate: "Starting at ₹50/km (Non-AC) / ₹80/km (53S Volvo/Benz)",
       minKm: "300 km / day",
       link: "/50-seater-bus-on-rent-in-pune"
     },
@@ -330,7 +330,7 @@ const Services = () => {
       vehicle: "Pune to Mumbai Cab & Pune Airport Cab",
       capacity: "4 Seater Dzire & 7 Seater Ertiga / Crysta",
       idealFor: "24/7 Airport Transfers & Outstation Cabs",
-      rate: "Fixed Packages / ₹12 - ₹20 / km",
+      rate: "Starting at ₹12–₹20/km (Fixed Packages Available)",
       minKm: "One-Way / 300 km",
       link: "/pune-to-mumbai-cab"
     }
@@ -488,7 +488,7 @@ const Services = () => {
                         <FaBus size={26} />
                       </span>
                       <span className="badge rounded-pill px-3 py-2 fw-semibold" style={{ backgroundColor: '#f8fafc', color: '#0f172a', border: '1px solid #e2e8f0' }}>
-                        17 to 50 Seater
+                        17 to 50 Seater • Starting at ₹28/km
                       </span>
                     </div>
                     <h3 className="h5 fw-bold mb-2">
@@ -671,7 +671,7 @@ const Services = () => {
                         <FaShuttleVan size={26} />
                       </span>
                       <span className="badge rounded-pill px-3 py-2 fw-semibold" style={{ backgroundColor: '#f8fafc', color: '#0f172a', border: '1px solid #e2e8f0' }}>
-                        9 to 15 Seater
+                        9 to 15 Seater • Starting at ₹20/km
                       </span>
                     </div>
                     <h3 className="h5 fw-bold mb-2">

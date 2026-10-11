@@ -6,7 +6,7 @@ const CORPORATE = {
   "corporate-car-rental-pune": {
     h1: "Corporate Car & Urbania Rental in Pune",
     title: "Corporate Car & Force Urbania Rental in Pune | Executive Chauffeur Service",
-    description: "Chauffeur-driven corporate car, Force Urbania @ ₹30/km, and executive van rental in Pune for client visits, airport transfers, and IT park meetings.",
+    description: "Chauffeur-driven corporate car, Force Urbania Starting at ₹32/km, and executive van rental in Pune for client visits, airport transfers, and IT park meetings.",
     image: "/img/Keyword Based Image/Keyword Based Image-41.jpg"
   },
   "corporate-bus-rental-pune": {
@@ -38,7 +38,7 @@ const CorporatePage = () => {
 
   const faqs = [
     ["Can you handle recurring monthly corporate transportation?", "Yes, we provide daily and monthly contract buses, Mini Buses, and Tempo Travellers with GPS tracking, dedicated route supervisors, and GST-compliant monthly billing."],
-    ["Can you provide vehicles for corporate events and team offsites?", "Yes. Force Urbania @ ₹30/km, 17-26 seater Tempo Travellers, and 32-50 seater AC luxury coaches are available for conferences and weekend offsites to Lonavala, Mahabaleshwar, and Goa."],
+    ["Can you provide vehicles for corporate events and team offsites?", "Yes. Force Urbania Starting at ₹32/km, 17-26 seater Tempo Travellers, and 32-50 seater AC luxury coaches are available for conferences and weekend offsites to Lonavala, Mahabaleshwar, and Goa."],
     ["Do you provide Mumbai & Pune airport transfers for business travellers?", "Yes. 24/7 punctual airport transfers are arranged for individual executives and corporate delegations at Pune Airport (PNQ) and Mumbai Airport (BOM T2)."],
     ["How do we request a corporate quotation?", "Call +91 7620411277 or WhatsApp +91 78757 74499 with your route, shift timings, or event dates to receive an instant commercial proposal."]
   ];
@@ -94,7 +94,8 @@ const CorporatePage = () => {
                 <p className="lead mt-3 text-light">{data.description}</p>
                 <div className="mt-4 d-flex flex-wrap gap-3">
                   <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4" style={{ background: "#ff7700" }}>
-                    Call +91 76204 11277
+                    <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                    <span className="d-inline d-sm-none">Call Now</span>
                   </a>
                   <a
                     href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I need a corporate quote for ${data.h1}.`)}`}
@@ -103,11 +104,17 @@ const CorporatePage = () => {
                     className="btn btn-lg text-white fw-bold px-4"
                     style={{ background: "#25D366" }}
                   >
-                    WhatsApp +91 78757 74499
+                    <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                    <span className="d-inline d-sm-none">WhatsApp</span>
                   </a>
-                  <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold px-4">
-                    Request Quote
-                  </Link>
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-light fw-bold px-4 rounded-pill open-booking-popup-btn"
+                    data-vehicle={data.h1}
+                    data-place={data.h1}
+                  >
+                    Instant Enquiry
+                  </button>
                 </div>
               </div>
               <div className="col-lg-5">
@@ -123,7 +130,7 @@ const CorporatePage = () => {
             <div className="row g-4">
               {[
                 ["Scheduled employee movement", "Plan recurring monthly shifts or one-time transportation around employee pickup points and IT park schedules."],
-                ["Client & executive travel", "Use chauffeur-driven Force Urbania (@ ₹30/km) or luxury coaches for VIP delegations, airport transfers, and plant visits."],
+                ["Client & executive travel", "Use chauffeur-driven Force Urbania (@ ₹32/km) or luxury coaches for VIP delegations, airport transfers, and plant visits."],
                 ["Corporate events & offsites", "Move teams seamlessly between offices, 5-star hotels, convention halls, and Lonavala/Mahabaleshwar offsite resorts."],
                 ["GST & SLA compliance", "100% RTO-compliant commercial permits, speed governors, GPS tracking, and clean monthly GST invoicing."],
                 ["Multi-bus route coordination", "Dedicated on-ground transport supervisors for large 200 to 2,000+ attendee conferences and annual days."],

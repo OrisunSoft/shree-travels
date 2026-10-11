@@ -400,13 +400,15 @@ const CityFleetPage = () => {
                 {vehicleInfo.summary} Serving <strong>{cityInfo.hub}</strong> with transparent garage-to-garage rates and experienced commercial chauffeurs.
               </p>
 
-              <div className="d-flex flex-wrap gap-3 mb-4">
+              <div className="d-flex flex-wrap gap-2 gap-sm-3 mb-4">
                 <a
                   href="tel:+917620411277"
-                  className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow"
+                  className="btn btn-lg text-white fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow d-inline-flex align-items-center"
                   style={{ backgroundColor: "#ff7700" }}
                 >
-                  <FaPhoneAlt className="me-2" /> Call +91 76204 11277
+                  <FaPhoneAlt className="me-1 me-sm-2" />
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(
@@ -414,17 +416,22 @@ const CityFleetPage = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg fw-bold px-4 py-3 rounded-pill shadow text-white"
+                  className="btn btn-lg fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow text-white d-inline-flex align-items-center"
                   style={{ backgroundColor: "#25D366" }}
                 >
-                  <FaWhatsapp className="me-2" /> WhatsApp +91 78757 74499
+                  <FaWhatsapp className="me-1 me-sm-2" />
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link
-                  to="/book-taxi"
-                  className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill"
+                <button
+                  type="button"
+                  className="btn btn-lg btn-outline-light fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill open-booking-popup-btn d-inline-flex align-items-center"
+                  data-vehicle={customH1}
+                  data-place={cityInfo.name}
+                  data-mode="enquiry"
                 >
-                  Online Booking
-                </Link>
+                  Instant Enquiry
+                </button>
               </div>
 
               <div className="small" style={{ color: "#cbd5e1" }}>
@@ -703,7 +710,7 @@ const CityFleetPage = () => {
                   </div>
                   <div className="mt-2 pt-2 border-top d-flex align-items-center justify-content-between">
                     <span className="badge small" style={{ backgroundColor: "#fff3e6", color: "#ff7700", fontSize: "0.75rem", fontWeight: 700 }}>
-                      ₹{startingPrice}/km
+                      Starting at ₹{startingPrice}/km
                     </span>
                     <span className="text-muted small" style={{ fontSize: "0.72rem" }}>
                       {cityInfo.name} Fleet

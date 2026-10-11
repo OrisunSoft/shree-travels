@@ -9,12 +9,12 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
   const seaterData = {
     '17': {
       h1: '17 Seater Tempo Traveller On Rent in Pune',
-      title: '17 Seater Tempo Traveller On Rent in Pune @ ₹22/km | AC & Non-AC Hire',
+      title: '17 Seater Tempo Traveller On Rent in Pune Starting at ₹22/km | AC & Non-AC Hire',
       shortDesc: 'Premium 17 Seater Tempo Traveller On Rent in Pune with AC, pushback recliner seats & top carrier',
       fullDesc: 'Perfect for 14–17 member groups! Our 17 Seater Tempo Traveller On Rent in Pune is ideal for corporate tours, family pilgrimages, Ashtavinayak Darshan, and weekend trips to Mahabaleshwar & Lonavala.',
       localRate: '₹5,500',
       fullDayRate: '₹7,500–9,600',
-      outstationRate: '₹22/km (Non-AC) | ₹25/km (AC)',
+      outstationRate: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC)',
       keywords: '17 Seater Tempo Traveller On Rent in Pune, 17 seater on rent Pune, 17 seater tempo traveller Pune, 17 passenger bus rental, AC tempo traveller hire',
       path: '/17-seater-on-rent-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-06.jpg',
@@ -23,12 +23,12 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
     },
     '20': {
       h1: '20 Seater Bus On Rent in Pune',
-      title: '20 Seater Bus On Rent in Pune @ ₹28/km | Luxury Mini Bus Hire',
-      shortDesc: 'Book 20 Seater Bus On Rent in Pune for group tours, weddings & corporate events @ ₹28/km',
+      title: '20 Seater Bus On Rent in Pune Starting at ₹28/km | Luxury Mini Bus Hire',
+      shortDesc: 'Book 20 Seater Bus On Rent in Pune for group tours, weddings & corporate events Starting at ₹28/km',
       fullDesc: 'Our 20 Seater Bus On Rent in Pune offers a wide center aisle, high-back 2x1 pushback recliner seats, powerful dual-compressor AC, and generous rear & rooftop luggage space.',
       localRate: '₹5,500–6,000',
       fullDayRate: '₹8,100–10,200',
-      outstationRate: '₹28/km (Non-AC & AC)',
+      outstationRate: 'Starting at ₹28/km (Non-AC & AC)',
       keywords: '20 Seater Bus On Rent in Pune, 20 seater bus rental Pune, 20 seater tempo traveller Pune, mini bus on rent Pune',
       path: '/20-seater-bus-rental-pune',
       image: '/img/Keyword Based Image/Keyword Based Image-08.jpg',
@@ -234,7 +234,9 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
               </p>
               <div className="d-flex gap-3 flex-wrap mb-3">
                 <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white" style={{ backgroundColor: '#ff7700' }}>
-                  <i className="fas fa-phone me-2"></i>Call +91 76204 11277
+                  <i className="fas fa-phone me-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want to book ${data.h1}.`)}`}
@@ -243,11 +245,20 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
                   className="btn btn-lg fw-bold text-white"
                   style={{ backgroundColor: '#25D366' }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i>WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link to="/book-taxi" className="btn btn-lg fw-bold border-2" style={{ borderColor: 'white', color: 'white' }}>
-                  Book Online
-                </Link>
+                <button
+                  type="button"
+                  className="btn btn-lg fw-bold border-2 open-booking-popup-btn"
+                  data-vehicle={data.h1}
+                  data-ac="AC"
+                  data-place={data.h1}
+                  style={{ borderColor: 'white', color: 'white', backgroundColor: 'transparent' }}
+                >
+                  Instant Enquiry
+                </button>
               </div>
               <div className="small text-light opacity-75">
                 <strong>24/7 Dispatch Desk:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>
@@ -602,9 +613,16 @@ const Seventeen20Seater = ({ seaterType = '17' }) => {
               <p className="lead text-white mb-0">Instant quotes, confirmed booking, premium comfort for large groups</p>
             </div>
             <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
-              <Link to="/book-taxi" className="btn btn-lg fw-bold px-5" style={{ backgroundColor: 'white', color: '#ff7700' }}>
-                Reserve Now <i className="fas fa-arrow-right ms-2"></i>
-              </Link>
+              <button
+                type="button"
+                className="btn btn-lg fw-bold px-5 open-booking-popup-btn"
+                data-vehicle={data.h1}
+                data-ac="AC"
+                data-place={data.h1}
+                style={{ backgroundColor: 'white', color: '#ff7700', border: 'none' }}
+              >
+                Instant Enquiry <i className="fas fa-arrow-right ms-2"></i>
+              </button>
             </div>
           </div>
         </div>

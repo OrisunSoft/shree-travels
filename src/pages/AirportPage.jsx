@@ -103,7 +103,8 @@ const AirportPage = () => {
                 <p className="lead text-light mt-3">{data.intro}</p>
                 <div className="d-flex flex-wrap gap-3 mt-4">
                   <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4" style={{ background: "#ff7700" }}>
-                    Call +91 76204 11277
+                    <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                    <span className="d-inline d-sm-none">Call Now</span>
                   </a>
                   <a
                     href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want to book ${data.h1}.`)}`}
@@ -112,11 +113,17 @@ const AirportPage = () => {
                     className="btn btn-lg text-white fw-bold px-4"
                     style={{ background: "#25D366" }}
                   >
-                    WhatsApp +91 78757 74499
+                    <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                    <span className="d-inline d-sm-none">WhatsApp</span>
                   </a>
-                  <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold px-4">
-                    Book Online
-                  </Link>
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-light fw-bold px-4 rounded-pill open-booking-popup-btn"
+                    data-vehicle={data.h1}
+                    data-place={data.h1}
+                  >
+                    Instant Enquiry
+                  </button>
                 </div>
               </div>
               <div className="col-lg-5">
@@ -131,7 +138,7 @@ const AirportPage = () => {
             <div className="row g-4">
               {[
                 ["Live Flight Tracking", "Share your flight number and terminal details so our driver tracks delays and waits at the arrival gate on time."],
-                ["13 to 50 Seater Fleet", "Choose from Tata Winger, 13–26 Seater Tempo Travellers, Luxury Force Urbania (@ ₹30/km), or 32–50 Seater Coaches."],
+                ["13 to 50 Seater Fleet", "Choose from Tata Winger, 13–26 Seater Tempo Travellers, Luxury Force Urbania (@ ₹32/km), or 32–50 Seater Coaches."],
                 ["Heavy Luggage Carriers", "Dedicated rear boot space and weatherproof rooftop carriers for international suitcases and golf kits."],
                 ["Single-Vehicle Savings", "Keep your entire family or corporate delegation together instead of booking 3–4 separate airport cabs."]
               ].map(([t, d]) => (

@@ -112,7 +112,7 @@ const App = () => {
               <Route path="/sade-teen-shakti-peeth-darshan-pune" element={<TourPackagePage />} />
               <Route path="/pune-to-konkan-darshan-bus-hire" element={<Navigate to="/pune-to-konkan-darshan" replace />} />
 
-              {/* All 93 Dedicated Footer Keyword Vehicle & Route Landing Pages */}
+              {/* All 92 Dedicated Footer Keyword Vehicle & Route Landing Pages */}
               {Object.keys(KEYWORD_PAGES_DATA).map((slug) => (
                 <Route
                   key={slug}

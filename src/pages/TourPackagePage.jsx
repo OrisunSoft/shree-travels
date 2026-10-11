@@ -27,7 +27,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Hill Station Tour Package • Sahyadri Ghats',
     h1: 'Pune to Mahabaleshwar & Panchgani Tour Package – Bus, Urbania & Tempo Traveller Hire',
     title: 'Pune to Mahabaleshwar Bus, Force Urbania & Tempo Traveller Hire | Shree Travels',
-    description: 'Book Pune to Mahabaleshwar & Panchgani tour packages with Shree Travels. Rent 13-20 seater Tempo Traveller, Luxury Force Urbania (@₹32/km), or 32-50 seater Bus with expert ghat drivers.',
+    description: 'Book Pune to Mahabaleshwar & Panchgani tour packages with Shree Travels. Rent 13-20 seater Tempo Traveller, Luxury Force Urbania (Starting at ₹32/km), or 32-50 seater Bus with expert ghat drivers.',
     keywords: 'Pune to Mahabaleshwar bus hire, Pune to Mahabaleshwar Tempo Traveller, Pune to Mahabaleshwar Urbania on rent, Mahabaleshwar Panchgani tour package from Pune, Pratapgad Mapro Garden bus trip',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-31.jpg',
     galleryImages: [
@@ -39,7 +39,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '120 km (One Way) / ~300 km Round Trip with Sightseeing',
     duration: '3 to 3.5 Hours via NH-48 (Pune–Satara Highway) & Pasarani Ghat',
     bestTime: 'October to June (Winter Strawberry Season & Monsoon Waterfalls)',
-    startingPackage: '₹9,000 (13 Seater Non-AC) / ₹9,600 (Force Urbania @ ₹32/km)',
+    startingPackage: '₹9,000 (13 Seater Non-AC) / ₹9,600 (Force Urbania Starting at ₹32/km)',
     intro: 'Nestled at 1,353 meters in the Western Ghats, Mahabaleshwar and twin hill station Panchgani are Pune’s most loved family weekend and corporate outing destinations. Shree Travels provides experienced ghat-certified chauffeurs who know every hairpin bend of Pasarani Ghat and Ambenali Ghat, ensuring a motion-sickness-free, relaxing mountain holiday for your entire group.',
     localPlaces: [
       {
@@ -86,7 +86,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'What is the fixed package cost for Pune to Mahabaleshwar bus or Tempo Traveller?',
-        'As per our official tariff card, a Pune to Mahabaleshwar package (up to 300 km) starts at ₹9,000 for a 13-Seater Non-AC Tempo Traveller, ₹10,000 for a 13-Seater AC Tempo Traveller, ₹9,600–₹12,500 for a 13/17-Seater Force Urbania (@₹32/km), and ₹14,000–₹16,000 for a 32-Seater Bus.'
+        'As per our official tariff card, a Pune to Mahabaleshwar package (up to 300 km) starts at ₹9,000 for a 13-Seater Non-AC Tempo Traveller, ₹10,000 for a 13-Seater AC Tempo Traveller, ₹9,600–₹12,500 for a 13/17-Seater Force Urbania (Starting at ₹32/km), and ₹14,000–₹16,000 for a 32-Seater Bus.'
       ],
       [
         'Can a 32-seater or 45-seater bus go up to Pratapgad Fort and Mahabaleshwar points?',
@@ -104,7 +104,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: '1-Day & Weekend Escape • Mumbai-Pune Corridor',
     h1: 'Pune to Lonavala & Khandala Tour Package – Bus, Mini Bus & Force Urbania Hire',
     title: 'Pune to Lonavala Bus, Tempo Traveller & Force Urbania On Rent | Shree Travels',
-    description: 'Hire a Bus, Mini Bus, Tempo Traveller, or Luxury Force Urbania (@₹32/km) from Pune to Lonavala & Khandala. Complete local sightseeing covering Bhushi Dam, Tiger Point, Karla Caves, Pawna Lake & Della.',
+    description: 'Hire a Bus, Mini Bus, Tempo Traveller, or Luxury Force Urbania (Starting at ₹32/km) from Pune to Lonavala & Khandala. Complete local sightseeing covering Bhushi Dam, Tiger Point, Karla Caves, Pawna Lake & Della.',
     keywords: 'Pune to Lonavala bus hire, Pune to Lonavala Tempo Traveller, Urbania rent in Lonavala, Mini bus on rent for Lonavala picnic, Lonavala Khandala 1 day tour package from Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-26.jpg',
     galleryImages: [
@@ -116,7 +116,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '65 km (One Way) / ~180–220 km Round Trip with Sightseeing',
     duration: '1.5 Hours via Mumbai–Pune Expressway or Old NH-48 Highway',
     bestTime: 'Year-Round (June–September for Waterfalls; October–March for Forts & Camping)',
-    startingPackage: '₹7,200 (13 Seater Non-AC) / ₹8,100 (13 Seater AC) / ₹32/km Force Urbania',
+    startingPackage: 'From ₹7,200 (13 Seater Non-AC) / ₹8,100 (13 Seater AC) / Starting at ₹32/km Force Urbania',
     intro: 'Just a 90-minute drive from Pune, Lonavala and Khandala offer mist-covered valleys, ancient Buddhist rock-cut caves, lakeside camping, and thrilling adventure parks. Whether you are planning a corporate resort offsite at Amby Valley/Della, a school excursion to Wet’nJoy, or a monsoon family picnic to Bhushi Dam, Shree Travels delivers spotless vehicles right to your doorstep.',
     localPlaces: [
       {
@@ -163,7 +163,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'Which vehicle is best for a 15 to 40 member group picnic from Pune to Lonavala?',
-        'For 10–17 passengers, our 13/17-Seater AC Tempo Traveller (₹25/km) or Luxury Force Urbania (₹32/km) is ideal and easily navigates Tiger Point and Pawna roads. For 20–50 passengers, our 20-Seater Mini Bus (₹28/km) and 32/45-Seater Luxury Coaches are most economical.'
+        'For 10–17 passengers, our 13/17-Seater AC Tempo Traveller (Starting at ₹25/km) or Luxury Force Urbania (Starting at ₹32/km) is ideal and easily navigates Tiger Point and Pawna roads. For 20–50 passengers, our 20-Seater Mini Bus (Starting at ₹28/km) and 32/45-Seater Luxury Coaches are most economical.'
       ],
       [
         'Can you arrange multiple buses for a school picnic to Wet’nJoy Lonavala?',
@@ -181,7 +181,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Coastal Beach Holiday • North & South Goa',
     h1: 'Pune to Goa Bus Hire, Force Urbania & Tempo Traveller Package',
     title: 'Pune to Goa Bus Hire, Tempo Traveller & Force Urbania Rental | Shree Travels',
-    description: 'Book Pune to Goa Bus, Mini Bus, Tempo Traveller, or Luxury Force Urbania (@₹32/km) with Shree Travels. Explore North Goa & South Goa beaches, forts, churches, and Dudhsagar with experienced highway drivers.',
+    description: 'Book Pune to Goa Bus, Mini Bus, Tempo Traveller, or Luxury Force Urbania (Starting at ₹32/km) with Shree Travels. Explore North Goa & South Goa beaches, forts, churches, and Dudhsagar with experienced highway drivers.',
     keywords: 'Pune to Goa Bus Hire, Pune to Goa Tempo Traveller, Pune to Goa Force Urbania on rent, Mini bus on rent for Goa trip from Pune, North South Goa group tour bus Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-23.jpg',
     galleryImages: [
@@ -193,7 +193,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '450 km (One Way) / ~1,100–1,250 km 4-Day Round Trip',
     duration: '8.5 to 10 Hours via NH-48 (Satara–Kolhapur–Nipani–Amboli Ghat)',
     bestTime: 'October to March (Peak Beach & Festival Season) & June–September (Lush Monsoon Goa)',
-    startingPackage: '₹22/km (Non-AC Traveller) / ₹25/km (AC Traveller) / ₹32/km (Force Urbania)',
+    startingPackage: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC) | ₹32/km (Force Urbania)',
     intro: 'Planning an unforgettable road trip from Pune to Goa with friends, extended family, or your corporate team? Avoid the hassle of split flight tickets, train waitlists, and expensive local Goa taxis. When you hire a dedicated Tempo Traveller, Force Urbania, or Luxury AC Bus from Shree Travels, your vehicle stays with you throughout North and South Goa for seamless beach-hopping and sightseeing.',
     localPlaces: [
       {
@@ -266,7 +266,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Coastal Maharashtra Circuit • Beaches, Sea Forts & Temples',
     h1: 'Pune to Konkan Darshan Bus Hire – Alibaug, Dapoli, Ganpatipule & Tarkarli Tour',
     title: 'Pune to Konkan Darshan Bus Hire, Tempo Traveller & Urbania | Shree Travels',
-    description: 'Book Pune to Konkan Darshan Bus, Mini Bus, Tempo Traveller, or Force Urbania (@₹32/km). Explore Diveagar, Harihareshwar, Dapoli, Ganpatipule, Ratnagiri, Sindhudurg & Tarkarli with expert coastal drivers.',
+    description: 'Book Pune to Konkan Darshan Bus, Mini Bus, Tempo Traveller, or Force Urbania (Starting at ₹32/km). Explore Diveagar, Harihareshwar, Dapoli, Ganpatipule, Ratnagiri, Sindhudurg & Tarkarli with expert coastal drivers.',
     keywords: 'Pune to Konkan Darshan Bus Hire, Pune to Ganpatipule Tempo Traveller, Pune to Dapoli Diveagar Mini Bus on rent, Pune to Tarkarli Malvan bus package, Konkan coastal tour from Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-24.jpg',
     galleryImages: [
@@ -278,7 +278,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '170 km (Diveagar) / 310 km (Ganpatipule) / 390 km (Tarkarli-Malvan)',
     duration: '2 to 5 Days Customizable Coastal Circuit via Tamhini, Varandha or Amba Ghat',
     bestTime: 'October to May (Clear Seas, Dolphin Rides, Scuba & Alphonso Mango Season)',
-    startingPackage: '₹22/km (Non-AC) / ₹25/km (AC Traveller) / ₹32/km (Force Urbania)',
+    startingPackage: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC) | ₹32/km (Force Urbania)',
     intro: 'Stretching across Raigad, Ratnagiri, and Sindhudurg districts, the Konkan coastline is a breathtaking paradise of untouched white-sand beaches, ancient sea forts built by Chhatrapati Shivaji Maharaj, coconut and Alphonso mango orchards, and sacred seaside temples. Because Konkan roads wind through scenic ghats and coastal villages, Shree Travels recommends our nimble 13–26 Seater Tempo Travellers, Force Urbania vans, and 20–35 Seater Mini/Mid-Size Buses driven by seasoned Konkan route specialists.',
     localPlaces: [
       {
@@ -329,7 +329,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'Which vehicle size is best suited for Konkan coastal roads and ferry crossings?',
-        'For Konkan trips (especially Diveagar, Dapoli, Guhagar, and Ganpatipule where roads have scenic ghats and optional Ro-Ro ferry crossings at Bagmandla/Dabhol), our 13, 17, and 20-Seater Tempo Travellers, Force Urbania (@₹32/km), and 20–32 Seater Mini/Mid-size Buses are the most comfortable and agile choices.'
+        'For Konkan trips (especially Diveagar, Dapoli, Guhagar, and Ganpatipule where roads have scenic ghats and optional Ro-Ro ferry crossings at Bagmandla/Dabhol), our 13, 17, and 20-Seater Tempo Travellers, Force Urbania (Starting at ₹32/km), and 20–32 Seater Mini/Mid-size Buses are the most comfortable and agile choices.'
       ],
       [
         'Can we customize our Konkan Darshan route to include Kolhapur Mahalakshmi on the way back?',
@@ -347,7 +347,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: '1-Day & 2-Day City Sightseeing • Express Highway',
     h1: 'Pune to Mumbai Darshan Bus On Rent – Siddhivinayak, Gateway of India & Marine Drive Tour',
     title: 'Pune to Mumbai Darshan Bus On Rent, Force Urbania & Tempo Traveller | Shree Travels',
-    description: 'Book Pune to Mumbai Darshan Bus, Mini Bus, Force Urbania (@₹32/km), or Tempo Traveller on rent. Cover Siddhivinayak Temple, Gateway of India, Marine Drive, Mahalakshmi, Haji Ali & Juhu Beach in 1 day.',
+    description: 'Book Pune to Mumbai Darshan Bus, Mini Bus, Force Urbania (Starting at ₹32/km), or Tempo Traveller on rent. Cover Siddhivinayak Temple, Gateway of India, Marine Drive, Mahalakshmi, Haji Ali & Juhu Beach in 1 day.',
     keywords: 'Pune to Mumbai Darshan Bus On Rent, Pune to Mumbai bus hire, Pune to Mumbai Urbania on rent, Pune to Mumbai Tempo Traveller, 1 day Mumbai Darshan package from Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-27.jpg',
     galleryImages: [
@@ -359,7 +359,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '150 km (One Way) / ~350 km Complete Mumbai Darshan Round Trip',
     duration: '3 Hours (One Way) via Mumbai–Pune Yashwantrao Chavan Expressway',
     bestTime: 'Year-Round (October to March Ideal for Walking & Ferry Rides)',
-    startingPackage: '₹9,000 (13 Seater Non-AC) / ₹10,000 (13 Seater AC) / ₹32/km Force Urbania',
+    startingPackage: 'From ₹9,000 (13 Seater Non-AC) / ₹10,000 (13 Seater AC) / Starting at ₹32/km Force Urbania',
     intro: 'Experience the magic of India’s financial and entertainment capital in complete air-conditioned comfort! Whether your family wants a sacred darshan at Shree Siddhivinayak and Mahalakshmi Temples, your school is planning an educational tour to Nehru Science Centre and Taraporewala/Prince of Wales Museum, or your guests want to see the Gateway of India, Bandra-Worli Sea Link, and Marine Drive, Shree Travels provides Mumbai-experienced chauffeurs who navigate South Mumbai traffic and bus parking zones effortlessly.',
     localPlaces: [
       {
@@ -402,7 +402,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'What is the fixed package price for a 1-day Pune to Mumbai Darshan trip?',
-        'From our official Packages tariff card (covering up to 350 km round trip): 13-Seater Non-AC is ₹9,000 (AC: ₹10,000), 17-Seater Non-AC is ₹10,000 (AC: ₹12,000), Force Urbania is ₹12,500–₹14,500 (@₹32/km), 20-Seater AC is ₹15,000, 32-Seater AC Bus is ₹16,000, and 35/40-Seater AC Bus is ₹21,000.'
+        'From our official Packages tariff card (covering up to 350 km round trip): 13-Seater Non-AC is ₹9,000 (AC: ₹10,000), 17-Seater Non-AC is ₹10,000 (AC: ₹12,000), Force Urbania is Starting at ₹32/km (₹12,500–₹14,500 pkg), 20-Seater AC is ₹15,000, 32-Seater AC Bus is ₹16,000, and 35/40-Seater AC Bus is ₹21,000.'
       ],
       [
         'Are large tourist buses allowed inside South Mumbai for Gateway of India and Marine Drive?',
@@ -420,7 +420,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Sacred 8 Swayambhu Ganesh Yatra • Starting from Pune',
     h1: 'Ashtavinayak Darshan Bus, Force Urbania & Tempo Traveller Hire from Pune',
     title: 'Ashtavinayak Darshan Bus Hire, Tempo Traveller & Urbania Pune | Shree Travels',
-    description: 'Book Ashtavinayak Darshan Bus, Mini Bus, Force Urbania (@₹32/km), or Tempo Traveller from Pune. Cover all 8 Swayambhu Ganesh temples (Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, Ranjangaon) in comfort.',
+    description: 'Book Ashtavinayak Darshan Bus, Mini Bus, Force Urbania (Starting at ₹32/km), or Tempo Traveller from Pune. Cover all 8 Swayambhu Ganesh temples (Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, Ranjangaon) in comfort.',
     keywords: 'Bus hire for Pune to Ashtavinayak, Force Urbania On Rent for Ashtavinayak Darshan, Ashtavinayak Darshan Tempo Traveller Pune, 2 days Ashtavinayak package from Pune by bus, Ashtavinayak tour rental Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-29.jpg',
     galleryImages: [
@@ -432,7 +432,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: 'Approx. 650 to 720 km (Complete 8-Temple Shastra Sequence Circuit)',
     duration: '2 Days / 1 Night (Standard) OR 3 Days / 2 Nights (Relaxed Senior Citizen Pace)',
     bestTime: 'Year-Round (Especially Auspicious on Sankashti Chaturthi, Vinayaki & Maghi Ganeshotsav)',
-    startingPackage: '₹22/km (Non-AC Traveller) / ₹25/km (AC Traveller) / ₹32/km (Force Urbania)',
+    startingPackage: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC) | ₹32/km (Force Urbania)',
     intro: 'Pune is the spiritual gateway to the sacred Ashtavinayak Yatra—the eight ancient Swayambhu (self-originated) temples of Lord Ganesha situated across Pune, Ahmednagar, and Raigad districts. At Shree Travels, our drivers have completed thousands of Ashtavinayak circuits over the past 30+ years. They know the exact Shastra-recommended sequence, temple aarti timings, clean vegetarian meal stops, and comfortable bhakta niwas / hotel halts at Ozar, Lenyadri, or Lonavala.',
     localPlaces: [
       {
@@ -489,7 +489,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'What is the total cost to hire a Tempo Traveller, Force Urbania, or Bus for the 2-Day Ashtavinayak Darshan?',
-        'The complete 8-temple Ashtavinayak circuit from Pune covers approximately 650–700 km over 2 days. At our official per-km rates, a 13-Seater Non-AC Tempo Traveller costs ₹22/km (AC: ₹25/km), a 17-Seater AC Tempo Traveller is ₹25/km, a Luxury Force Urbania is ₹32/km, a 20-Seater Mini Bus is ₹28/km, and a 32-Seater Bus is ₹45/km, plus actual toll, parking, and driver allowance.'
+        'The complete 8-temple Ashtavinayak circuit from Pune covers approximately 650–700 km over 2 days. At our official per-km rates, a 13-Seater Non-AC Tempo Traveller starts at ₹22/km (AC: ₹25/km), a 17-Seater AC Tempo Traveller is Starting at ₹25/km, a Luxury Force Urbania is Starting at ₹32/km, a 20-Seater Mini Bus is Starting at ₹28/km, and a 32-Seater Bus is Starting at ₹45/km, plus actual toll, parking, and driver allowance.'
       ],
       [
         'Can we include Jejuri Khandoba and Ketkawale Prati Balaji on the Morgaon day?',
@@ -507,7 +507,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Sacred Shiva Circuit • Panch Jyotirlinga of Maharashtra',
     h1: 'Bhimashankar & 5 Jyotirlinga Darshan Bus Hire from Pune – Complete Pilgrimage Guide',
     title: 'Pune to Bhimashankar & 5 Jyotirlinga Darshan Bus Hire | Shree Travels',
-    description: 'Book a Bus, Mini Bus, Force Urbania (@₹32/km), or Tempo Traveller from Pune for 1-Day Bhimashankar Darshan or the 4-Day Maharashtra 5 Jyotirlinga Tour (Bhimashankar, Trimbakeshwar, Grishneshwar, Aundha Nagnath, Parli Vaijnath).',
+    description: 'Book a Bus, Mini Bus, Force Urbania (Starting at ₹32/km), or Tempo Traveller from Pune for 1-Day Bhimashankar Darshan or the 4-Day Maharashtra 5 Jyotirlinga Tour (Bhimashankar, Trimbakeshwar, Grishneshwar, Aundha Nagnath, Parli Vaijnath).',
     keywords: 'Pune to Bhimashankar Jyotirlinga Mini Bus Hire in Pune, Pune to 5 Jyotirlinga Darshan Bus Hire, Pune to Bhimashankar bus on rent, Panch Jyotirlinga Maharashtra tour package from Pune, 12 Jyotirlinga Darshan Tour Package from Pune',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-63.jpg',
     galleryImages: [
@@ -519,7 +519,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: '230 km (1-Day Bhimashankar Round Trip) / ~1,350 km (Complete 5 Jyotirlinga Circuit)',
     duration: '1 Day (Bhimashankar Only) OR 3 to 4 Days (All 5 Maharashtra Jyotirlingas)',
     bestTime: 'Year-Round (Shravan Maas, Mahashivratri, Kartik Purnima & Winter Months)',
-    startingPackage: '₹7,200 (1-Day Bhimashankar Non-AC) / ₹9,600 (Force Urbania @ ₹32/km)',
+    startingPackage: 'From ₹7,200 (1-Day Bhimashankar Non-AC) / ₹9,600 (Force Urbania Starting at ₹32/km)',
     intro: 'Maharashtra is blessed with five of India’s twelve sacred Swayambhu Jyotirlingas—known reveredly as the "Panch Jyotirlinga of Maharashtra." Whether your family wishes to take a peaceful 1-day darshan trip to Shri Bhimashankar in the Sahyadri hills (just 110 km from Pune) or embark on the complete 4-day spiritual circuit covering Bhimashankar, Trimbakeshwar, Grishneshwar, Aundha Nagnath, and Parli Vaijnath (along with Shirdi and Shanishingnapur), Shree Travels provides smooth-suspension vehicles and deeply experienced pilgrimage drivers.',
     localPlaces: [
       {
@@ -566,7 +566,7 @@ export const TOUR_PACKAGES_DATA = {
     faqs: [
       [
         'What is the cost of hiring a Mini Bus or Tempo Traveller from Pune to Bhimashankar for 1 day?',
-        'Pune to Bhimashankar and back is approximately 230 km (covered under our 300 km daily outstation slab). A 13-Seater Non-AC Tempo Traveller costs ₹7,200 (AC: ₹8,100), a 17-Seater Non-AC costs ₹7,500 (AC: ₹9,600), a Force Urbania costs ₹9,600 (@₹32/km), and a 20-Seater Mini Bus costs ₹8,100–₹10,200.'
+        'Pune to Bhimashankar and back is approximately 230 km (covered under our 300 km daily outstation slab). A 13-Seater Non-AC Tempo Traveller costs ₹7,200 (AC: ₹8,100), a 17-Seater Non-AC costs ₹7,500 (AC: ₹9,600), a Force Urbania costs ₹9,600 (Starting at ₹32/km), and a 20-Seater Mini Bus costs ₹8,100–₹10,200.'
       ],
       [
         'How many kilometers is the complete 5 Jyotirlinga tour from Pune?',
@@ -584,7 +584,7 @@ export const TOUR_PACKAGES_DATA = {
     badge: 'Sacred Devi Yatra • Kolhapur, Tuljapur, Mahur & Vani',
     h1: 'Pune to Sade Teen Shakti Peeth Bus On Rent – Complete 3.5 Shakti Peeth Darshan Tour',
     title: 'Pune Sade Teen Shakti Peeth Bus On Rent, Tempo Traveller & Urbania | Shree Travels',
-    description: 'Book a Bus, Mini Bus, Force Urbania (@₹32/km), or Tempo Traveller from Pune for the sacred Sade Teen (3.5) Shakti Peeth Darshan: Kolhapur Mahalakshmi, Tuljapur Tulja Bhavani, Mahur Renuka Mata & Vani Saptashrungi.',
+    description: 'Book a Bus, Mini Bus, Force Urbania (Starting at ₹32/km), or Tempo Traveller from Pune for the sacred Sade Teen (3.5) Shakti Peeth Darshan: Kolhapur Mahalakshmi, Tuljapur Tulja Bhavani, Mahur Renuka Mata & Vani Saptashrungi.',
     keywords: 'Pune Sade Teen Shakti Peeth Bus on Rent, Sade Teen Shakti Peeth tour package from Pune, Kolhapur Tuljapur Mahur Vani bus hire Pune, Tempo Traveller for Shakti Peeth Yatra Maharashtra',
     heroImage: '/img/Keyword Based Image/Keyword Based Image-25.jpg',
     galleryImages: [
@@ -596,7 +596,7 @@ export const TOUR_PACKAGES_DATA = {
     distance: 'Approx. 1,550 to 1,700 km (Complete 4-Shrine Maharashtra Circuit)',
     duration: '4 to 5 Days (Covering Kolhapur, Tuljapur, Mahurgad & Saptashrungi Vani)',
     bestTime: 'Year-Round (Chaitra Navratri, Sharadiya Navratri, Kojagiri & Diwali-to-Summer Months)',
-    startingPackage: '₹22/km (Non-AC Traveller) / ₹25/km (AC Traveller) / ₹32/km (Force Urbania) / ₹45/km (32-Seater Bus)',
+    startingPackage: 'Starting at ₹22/km (Non-AC) | ₹25/km (AC) | ₹32/km (Urbania) | ₹45/km (32-Seater Bus)',
     intro: 'In Maharashtra’s sacred tradition, the "Sade Teen Shakti Peeth" (Three and a Half Shakti Peethas) represent the supreme cosmic energy of Adi Shakti—embodying Ohm (ॐ) through three full peethas (A-kara, U-kara, Ma-kara) and one half-peeth (Ardha-matra). Completing this yatra with your family or mandal is a deeply fulfilling spiritual milestone. Shree Travels provides reliable, long-distance luxury buses, Tempo Travellers, and Force Urbania vans with courteous drivers who know the exact highway connections, ropeway timings, and temple lodging across Western Maharashtra, Marathwada, Vidarbha border, and Khandesh.',
     localPlaces: [
       {
@@ -659,7 +659,7 @@ export const TOUR_PACKAGES_DATA = {
       ],
       [
         'Which vehicle is best for a 12 to 35 member family or society group for this 5-day yatra?',
-        'Because this circuit covers ~1,600 km across Maharashtra, we highly recommend our pushback AC 13/17-Seater Tempo Traveller (₹25/km), Luxury Force Urbania with individual AC vents (₹32/km), or 32/35-Seater AC Pushback Coach (₹45–50/km) for maximum legroom and fatigue-free travel.'
+        'Because this circuit covers ~1,600 km across Maharashtra, we highly recommend our pushback AC 13/17-Seater Tempo Traveller (Starting at ₹25/km), Luxury Force Urbania with individual AC vents (Starting at ₹32/km), or 32/35-Seater AC Pushback Coach (Starting at ₹45–50/km) for maximum legroom and fatigue-free travel.'
       ]
     ]
   }
@@ -761,29 +761,36 @@ const TourPackagePage = ({ tourSlug }) => {
                 {tour.intro}
               </p>
 
-              <div className="d-flex flex-wrap gap-3 mb-4">
+              <div className="d-flex flex-wrap gap-2 gap-sm-3 mb-4">
                 <a
                   href="tel:+917620411277"
-                  className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center"
+                  className="btn btn-lg text-white fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow-sm d-inline-flex align-items-center"
                   style={{ backgroundColor: '#ff7700' }}
                 >
-                  <FaPhoneAlt className="me-2" /> Call: +91 76204 11277
+                  <FaPhoneAlt className="me-1 me-sm-2" />
+                  <span className="d-none d-sm-inline">Call: +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want a quote for ${tour.h1.split('–')[0].trim()}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center text-white"
+                  className="btn btn-lg fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill shadow-sm d-inline-flex align-items-center text-white"
                   style={{ backgroundColor: '#25D366', borderColor: '#25D366' }}
                 >
-                  <FaWhatsapp className="me-2" size={20} /> WhatsApp: +91 78757 74499
+                  <FaWhatsapp className="me-1 me-sm-2" size={19} />
+                  <span className="d-none d-sm-inline">WhatsApp: +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link
-                  to="/book-taxi"
-                  className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill d-inline-flex align-items-center"
+                <button
+                  type="button"
+                  className="btn btn-lg btn-outline-light fw-bold px-3 px-sm-4 py-2 py-sm-3 rounded-pill d-inline-flex align-items-center open-booking-popup-btn"
+                  data-vehicle={tour.h1.split('–')[0].trim()}
+                  data-place={tour.h1.split('–')[0].trim()}
+                  data-mode="enquiry"
                 >
-                  Online Booking <FaArrowRight className="ms-2" size={14} />
-                </Link>
+                  Instant Enquiry <FaArrowRight className="ms-1 ms-sm-2" size={13} />
+                </button>
               </div>
             </div>
 
@@ -1167,13 +1174,23 @@ const TourPackagePage = ({ tourSlug }) => {
                     </span>
                     <span className="small text-muted fw-semibold">From Pune</span>
                   </div>
-                  <Link
-                    to={`/${item.slug}`}
-                    className="btn w-100 rounded-pill fw-bold text-white mt-auto"
-                    style={{ backgroundColor: '#0f172a' }}
-                  >
-                    View Sightseeing &amp; Rates <FaArrowRight className="ms-1" size={12} />
-                  </Link>
+                  <div className="d-flex gap-2 mt-auto">
+                    <Link
+                      to={`/${item.slug}`}
+                      className="btn btn-sm btn-outline-dark rounded-pill fw-semibold flex-fill py-2 text-center small text-nowrap"
+                    >
+                      View Details
+                    </Link>
+                    <button
+                      type="button"
+                      className="btn btn-sm fw-bold text-white rounded-pill px-3 py-2 flex-fill open-booking-popup-btn d-inline-flex align-items-center justify-content-center gap-1 text-nowrap"
+                      data-vehicle={item.h1.split('–')[0].trim()}
+                      data-place={item.h1.split('–')[0].trim()}
+                      style={{ backgroundColor: '#ff7700' }}
+                    >
+                      <FaWhatsapp size={14} /> Enquire
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}

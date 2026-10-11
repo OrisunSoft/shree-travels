@@ -10,7 +10,7 @@ const OutOfCityRentals = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Shree Travels",
-      "telephone": "+91-9822970041",
+      "telephone": "+91-7620411277",
       "url": "https://shreetravels.in"
     },
     "description": "Book Force Urbania, Tempo Travellers, and Buses starting directly from Mumbai, Lonavala, Nashik, and Shirdi.",
@@ -64,7 +64,14 @@ const OutOfCityRentals = () => {
                   <li className="mb-3 d-flex align-items-start"><i className="fas fa-check-circle text-success mt-1 me-2"></i> Bus Rental Service in Mumbai</li>
                 </ul>
                 <div className="mt-auto">
-                  <Link to="/contact" className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2">Request Mumbai Quote</Link>
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 open-booking-popup-btn"
+                    data-place="Mumbai"
+                    data-vehicle="Force Urbania / Bus"
+                  >
+                    Request Mumbai Quote
+                  </button>
                 </div>
               </div>
             </div>
@@ -87,7 +94,14 @@ const OutOfCityRentals = () => {
                   <li className="mb-3 d-flex align-items-start"><i className="fas fa-check-circle text-success mt-1 me-2"></i> Urbania Rent in Lonavala</li>
                 </ul>
                 <div className="mt-auto">
-                  <Link to="/contact" className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2">Request Lonavala Quote</Link>
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 open-booking-popup-btn"
+                    data-place="Lonavala"
+                    data-vehicle="Tempo Traveller / Urbania / Bus"
+                  >
+                    Request Lonavala Quote
+                  </button>
                 </div>
               </div>
             </div>
@@ -109,7 +123,14 @@ const OutOfCityRentals = () => {
                   <li className="mb-3 d-flex align-items-start"><i className="fas fa-check-circle text-success mt-1 me-2"></i> Outstation Tempo Traveller from Nashik</li>
                 </ul>
                 <div className="mt-auto">
-                  <Link to="/contact" className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2">Request Nashik Quote</Link>
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 open-booking-popup-btn"
+                    data-place="Nashik"
+                    data-vehicle="Force Urbania / Tempo Traveller"
+                  >
+                    Request Nashik Quote
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,7 +152,14 @@ const OutOfCityRentals = () => {
                   <li className="mb-3 d-flex align-items-start"><i className="fas fa-check-circle text-success mt-1 me-2"></i> Group Bus Rentals from Shirdi</li>
                 </ul>
                 <div className="mt-auto">
-                  <Link to="/contact" className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2">Request Shirdi Quote</Link>
+                  <button
+                    type="button"
+                    className="btn btn-outline-dark rounded-pill fw-bold px-4 py-2 open-booking-popup-btn"
+                    data-place="Shirdi"
+                    data-vehicle="Force Urbania / Bus"
+                  >
+                    Request Shirdi Quote
+                  </button>
                 </div>
               </div>
             </div>
@@ -145,9 +173,22 @@ const OutOfCityRentals = () => {
         <div className="container text-center text-white">
           <h2 className="fw-bold mb-3 h3">Need a Vehicle Outside Pune?</h2>
           <p className="lead opacity-75 mb-4">Dispatch times vary by location. Call us to confirm availability and exact pricing for out-of-city origins.</p>
-          <div className="d-flex justify-content-center gap-3">
-            <a href="tel:+919822970041" className="btn btn-lg fw-bold text-white rounded-pill px-4 shadow-sm" style={{ backgroundColor: "#ff7700" }}>
-              <i className="fas fa-phone-alt me-2"></i> Call +91 98229 70041
+          <div className="d-flex justify-content-center flex-wrap gap-3">
+            <a href="tel:+917620411277" className="btn btn-lg fw-bold text-white rounded-pill px-4 shadow-sm" style={{ backgroundColor: "#ff7700" }}>
+              <i className="fas fa-phone-alt me-2"></i>
+              <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+              <span className="d-inline d-sm-none">Call Now</span>
+            </a>
+            <a
+              href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20enquire%20about%20vehicle%20rentals%20outside%20Pune."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-lg fw-bold text-white rounded-pill px-4 shadow-sm"
+              style={{ backgroundColor: "#25D366" }}
+            >
+              <i className="fab fa-whatsapp me-2"></i>
+              <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+              <span className="d-inline d-sm-none">WhatsApp</span>
             </a>
           </div>
         </div>

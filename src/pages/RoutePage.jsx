@@ -186,7 +186,8 @@ const RoutePage = () => {
                 <p className="lead text-light">{data.intro}</p>
                 <div className="d-flex flex-wrap gap-3 mt-4">
                   <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold shadow-sm px-4" style={{ background: "#ff7700" }}>
-                    Call +91 76204 11277
+                    <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                    <span className="d-inline d-sm-none">Call Now</span>
                   </a>
                   <a
                     href={`https://wa.me/917875774499?text=${encodeURIComponent(`Hello Shree Travels, I want to enquire about ${data.name}.`)}`}
@@ -195,7 +196,8 @@ const RoutePage = () => {
                     className="btn btn-lg text-white fw-bold shadow-sm px-4"
                     style={{ background: "#25D366" }}
                   >
-                    WhatsApp +91 78757 74499
+                    <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                    <span className="d-inline d-sm-none">WhatsApp</span>
                   </a>
                   <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold shadow-sm px-4">
                     Book Online
@@ -373,11 +375,18 @@ const RoutePage = () => {
                     className="btn w-100 text-white fw-bold py-3 rounded-pill shadow-sm mb-2"
                     style={{ background: "#25D366" }}
                   >
-                    WhatsApp +91 78757 74499
+                    <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                    <span className="d-inline d-sm-none">WhatsApp</span>
                   </a>
-                  <Link to="/book-taxi" className="btn w-100 text-white fw-bold py-3 rounded-pill shadow-sm" style={{ background: "#ff7700" }}>
-                    Book / Enquire Online
-                  </Link>
+                  <button
+                    type="button"
+                    className="btn w-100 text-white fw-bold py-3 rounded-pill shadow-sm open-booking-popup-btn"
+                    data-vehicle={data.name}
+                    data-place={data.name}
+                    style={{ background: "#ff7700" }}
+                  >
+                    Quick Enquiry / Instant Quote
+                  </button>
                 </div>
               </aside>
             </div>

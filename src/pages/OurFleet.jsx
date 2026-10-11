@@ -10,7 +10,8 @@ const OurFleet = () => {
       desc: 'Premium luxury seating, perfect for VIP travel and corporate executives.', 
       img: '/img/urbania/ub-1.jpeg',
       link: '/force-urbania-on-rent-pune',
-      tag: 'Ultra Luxury'
+      tag: 'Ultra Luxury',
+      rate: 'Starting at ₹32/km'
     },
     { 
       name: 'Tempo Traveller', 
@@ -18,14 +19,16 @@ const OurFleet = () => {
       desc: 'Comfortable push-back seats, AC, and ample luggage space for family trips.', 
       img: '/img/Tempo Traveller img-01.jpg',
       link: '/tempo-traveller-seater-hire-pune',
-      tag: 'Most Popular'
+      tag: 'Most Popular',
+      rate: 'Starting at ₹22/km'
     },
     { 
       name: 'Tata Winger', 
       capacity: '14 Seater', 
       desc: 'Compact, efficient, and comfortable for smaller group outings.', 
       img: '/img/tata-winger.jpeg',
-      link: '/contact'
+      link: '/tata-winger-on-rent-in-pune',
+      rate: 'Starting at ₹20/km'
     },
     { 
       name: 'Mini Bus', 
@@ -33,7 +36,8 @@ const OurFleet = () => {
       desc: 'Ideal for medium-sized groups, school picnics, and local event transportation.', 
       img: '/img/hell2.png',
       link: '/bus-rental-pune',
-      tag: 'Corporate Pick'
+      tag: 'Corporate Pick',
+      rate: 'Starting at ₹22/km'
     },
     { 
       name: 'Mid-Size AC Bus', 
@@ -41,21 +45,23 @@ const OurFleet = () => {
       desc: 'Spacious and equipped with advanced air conditioning for outstation tours.', 
       img: '/img/32-seater.jpeg',
       link: '/bus-rental-pune',
-      tag: 'Corporate Pick'
+      tag: 'Corporate Pick',
+      rate: 'Starting at ₹35/km'
     },
     { 
       name: 'Luxury AC Coach', 
       capacity: '40 to 50 Seater', 
       desc: 'Air-suspended coaches for maximum comfort on long-distance corporate or wedding tours.', 
       img: '/img/bus-luxury.jpg',
-      link: '/bus-rental-pune'
+      link: '/bus-rental-pune',
+      rate: 'Starting at ₹50/km'
     },
   ];
 
   return (
     <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       <SEO 
-        title="Tempo Traveller, Urbania & Bus Rental Pune | starting @30₹"
+        title="Tempo Traveller, Urbania & Bus Rental Pune | Starting at ₹22/km | Shree Travels"
         description="View the Shree Travels fleet. We offer 13 to 26-seater Tempo Travellers, Luxury Force Urbania, and 32 to 50-seater AC buses on rent in Pune."
         keywords="Our Fleet, Tempo Traveller hire Pune, Force Urbania on rent, 50 seater bus rent"
         path="/our-fleet"
@@ -110,11 +116,25 @@ const OurFleet = () => {
                   />
                   <div className="card-body p-4 d-flex flex-column">
                     <h3 className="h5 fw-bold mb-1">{vehicle.name}</h3>
-                    <p className="text-primary fw-semibold mb-3" style={{ color: '#ff7700' }}>{vehicle.capacity}</p>
-                    <p className="text-muted small mb-4 flex-grow-1">{vehicle.desc}</p>
-                    <Link to={vehicle.link} className="btn btn-outline-dark w-100 fw-bold rounded-pill">
-                      Explore Vehicle
-                    </Link>
+                    <div className="d-flex align-items-center justify-content-between mb-3">
+                      <span className="text-secondary small fw-semibold">{vehicle.capacity}</span>
+                      <span className="badge rounded-pill px-3 py-1.5" style={{ backgroundColor: '#fff3e6', color: '#ff7700', fontWeight: 700, fontSize: '0.8rem' }}>
+                        {vehicle.rate}
+                      </span>
+                    </div>
+                    <div className="d-flex gap-2 mt-auto">
+                      <Link to={vehicle.link} className="btn btn-outline-dark flex-grow-1 fw-bold rounded-pill">
+                        Explore
+                      </Link>
+                      <button
+                        type="button"
+                        className="btn fw-bold text-white rounded-pill px-3 open-booking-popup-btn d-inline-flex align-items-center justify-content-center gap-1"
+                        data-vehicle={vehicle.name}
+                        style={{ backgroundColor: '#ff7700' }}
+                      >
+                        <i className="fab fa-whatsapp"></i> Enquire
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

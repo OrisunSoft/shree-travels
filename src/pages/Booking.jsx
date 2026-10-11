@@ -13,14 +13,20 @@ const Booking = () => {
     e.preventDefault();
     
     // 1. Format the booking data perfectly for WhatsApp
-    const whatsappMessage = 
-      `*New Vehicle Booking Request*%0A%0A` +
-      `*Name:* ${formData.name}%0A` +
-      `*Phone:* ${formData.phone}%0A` +
-      `*Email:* ${formData.email || 'Not provided'}%0A` +
-      `*Travel Date:* ${formData.date}%0A` +
-      `*Vehicle Selected:* ${formData.vehicle}%0A` +
-      `*Destination/Route:* ${formData.destination}`;
+    const lines = [
+      `*🚐 New Vehicle Booking Request - Shree Travels*`,
+      `━━━━━━━━━━━━━━━━━━━━━━━━━`,
+      `👤 *Name:* ${formData.name}`,
+      `📞 *Phone:* ${formData.phone}`,
+      formData.email ? `✉️ *Email:* ${formData.email}` : null,
+      `📅 *Travel Date:* ${formData.date}`,
+      `🚌 *Vehicle:* ${formData.vehicle}`,
+      `📍 *Route / Destination:* ${formData.destination}`,
+      `━━━━━━━━━━━━━━━━━━━━━━━━━`,
+      `_Please confirm availability and share final booking details._`
+    ].filter(Boolean);
+
+    const whatsappMessage = encodeURIComponent(lines.join('\n'));
 
     // 2. Open WhatsApp with your business number (7875774499)
     window.open(`https://wa.me/917875774499?text=${whatsappMessage}`, '_blank');
@@ -38,7 +44,7 @@ const Booking = () => {
     <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <SEO 
         title="Book a Bus on Rent in Pune | Mini & Luxury Bus Hire"
-        description="Book your next ride with Shree Travels. Fill out our quick booking form for Tempo Travellers, Force Urbania @ ₹30/km, and luxury buses."
+        description="Book your next ride with Shree Travels. Fill out our quick booking form for Tempo Travellers, Force Urbania @ ₹32/km, and luxury buses."
         keywords="book bus online Pune, Force Urbania booking, tempo traveller booking Pune"
         path="/book-taxi"
         breadcrumbs={[
@@ -138,7 +144,8 @@ const Booking = () => {
                           }}
                         >
                           <i className="fab fa-whatsapp fs-5"></i>
-                          <span>Send Booking via WhatsApp</span>
+                          <span className="d-none d-sm-inline">Send Booking via WhatsApp</span>
+                          <span className="d-inline d-sm-none">Book via WhatsApp</span>
                         </button>
                       </div>
                     </div>

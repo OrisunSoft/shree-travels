@@ -16,7 +16,7 @@ const BusRental = () => {
   return (
     <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <SEO 
-        title="Bus On Rent in Pune @ ₹28/km | 20, 32, 35, 40, 45 & 50 Seater Bus Hire"
+        title="Bus On Rent in Pune Starting at ₹28/km | 20, 32, 35, 40, 45 & 50 Seater Bus Hire"
         description="Book Bus On Rent in Pune with Shree Travels. Verified 20, 25, 32, 35, 40, 45 & 50 seater AC, Non-AC & Volvo luxury coaches for weddings, corporate events, school picnics & outstation tours. Call +91 7620411277 or WhatsApp +91 78757 74499."
         keywords="Bus On Rent in Pune, Bus Hire in Pune, Pune Bus Hire, 32 Seater Bus On Rent in Pune, 35 Seater Bus On Rent in Pune, 40 Seater bus on rent in pune, 50 Seater Bus On Rent in Pune, Volvo Bus On Rent in Pune"
         path="/bus-rental-pune"
@@ -42,7 +42,9 @@ const BusRental = () => {
               </p>
               <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-3">
                 <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4 py-3 shadow-sm" style={{ backgroundColor: "#ff7700" }}>
-                  <i className="fas fa-phone-alt me-2"></i> Call +91 76204 11277
+                  <i className="fas fa-phone-alt me-2"></i>
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
                 <a
                   href="https://wa.me/917875774499?text=Hello%20Shree%20Travels%2C%20I%20want%20to%20book%20a%20Bus%20On%20Rent%20in%20Pune.%20Please%20share%20rates."
@@ -51,11 +53,18 @@ const BusRental = () => {
                   className="btn btn-lg text-white fw-bold px-4 py-3 shadow-sm"
                   style={{ backgroundColor: "#25D366" }}
                 >
-                  <i className="fab fa-whatsapp me-2"></i> WhatsApp +91 78757 74499
+                  <i className="fab fa-whatsapp me-2"></i>
+                  <span className="d-none d-sm-inline">WhatsApp +91 78757 74499</span>
+                  <span className="d-inline d-sm-none">WhatsApp</span>
                 </a>
-                <Link to="/book-taxi" className="btn btn-lg btn-outline-light fw-bold px-4 py-3 shadow-sm">
-                  Book Online
-                </Link>
+                <button
+                  type="button"
+                  className="btn btn-lg btn-outline-light fw-bold px-4 py-3 shadow-sm open-booking-popup-btn"
+                  data-vehicle="32 Seater Bus"
+                  data-place="Pune Local / Outstation"
+                >
+                  Instant Enquiry
+                </button>
               </div>
               <div className="small text-light opacity-75">
                 <strong>24/7 Dispatch Desk:</strong> <a href="tel:+917620411277" className="text-white text-decoration-none me-2">+91 76204 11277</a> | <a href="https://wa.me/917875774499" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none ms-2">WhatsApp: +91 78757 74499</a>
@@ -112,25 +121,25 @@ const BusRental = () => {
                 <div className="col-6">
                   <div className="p-3 bg-light rounded-3 border-start border-4 border-warning">
                     <h3 className="h6 fw-bold mb-1">Mini Buses</h3>
-                    <p className="small text-muted mb-0">17, 20 & 25 Seater (@ ₹22–38/km)</p>
+                    <p className="small text-muted mb-0">17, 20 & 25 Seater (Starting at ₹22–38/km)</p>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="p-3 bg-light rounded-3 border-start border-4 border-warning">
                     <h3 className="h6 fw-bold mb-1">Medium Coaches</h3>
-                    <p className="small text-muted mb-0">30, 32 & 35 Seater (@ ₹32–50/km)</p>
+                    <p className="small text-muted mb-0">30, 32 & 35 Seater (Starting at ₹32–50/km)</p>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="p-3 bg-light rounded-3 border-start border-4 border-warning">
                     <h3 className="h6 fw-bold mb-1">Large Luxury Buses</h3>
-                    <p className="small text-muted mb-0">40, 45 & 50 Seater (@ ₹48–90/km)</p>
+                    <p className="small text-muted mb-0">40, 45 & 50 Seater (Starting at ₹48–90/km)</p>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="p-3 bg-light rounded-3 border-start border-4 border-warning">
                     <h3 className="h6 fw-bold mb-1">Volvo & Scania</h3>
-                    <p className="small text-muted mb-0">45 & 49 Seater Multi-Axle (@ ₹80–90/km)</p>
+                    <p className="small text-muted mb-0">45 & 49 Seater Multi-Axle (Starting at ₹80–90/km)</p>
                   </div>
                 </div>
               </div>
@@ -156,6 +165,7 @@ const BusRental = () => {
                   <th className="py-3 text-white" style={{ backgroundColor: '#0f172a' }}>Local 8Hr/80KM</th>
                   <th className="py-3 text-white" style={{ backgroundColor: '#0f172a' }}>Outstation 300KM Pkg</th>
                   <th className="py-3 text-white" style={{ backgroundColor: '#0f172a' }}>Mumbai / Mahabaleshwar</th>
+                  <th className="py-3 text-white" style={{ backgroundColor: '#0f172a' }}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -166,6 +176,7 @@ const BusRental = () => {
                   <td>₹6,000 / ₹6,500</td>
                   <td>₹7,500 / ₹8,400</td>
                   <td>₹10,000 – ₹13,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="20 Seater Bus / Tempo Traveller" data-ac="AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
                 <tr>
                   <td className="fw-bold"><Link to="/25-seater-bus-on-rent-in-pune" className="text-decoration-none text-dark">26 Seater Bus / Tempo Traveller</Link></td>
@@ -174,6 +185,7 @@ const BusRental = () => {
                   <td>₹7,000 / ₹8,000</td>
                   <td>₹9,600 / ₹11,100</td>
                   <td>₹12,000 – ₹17,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="26 Seater Bus / Tempo Traveller" data-ac="AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
                 <tr>
                   <td className="fw-bold"><Link to="/32-seater-bus-on-rent-in-pune" className="text-decoration-none text-dark">30 / 32 Seater Bus</Link></td>
@@ -182,6 +194,7 @@ const BusRental = () => {
                   <td>₹8,000 / ₹10,000</td>
                   <td>₹10,500 / ₹15,000</td>
                   <td>₹13,000 – ₹22,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="32 Seater Bus" data-ac="AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
                 <tr>
                   <td className="fw-bold"><Link to="/35-seater-bus-on-rent-in-pune" className="text-decoration-none text-dark">35 Seater Bus (Benz / Executive)</Link></td>
@@ -190,6 +203,7 @@ const BusRental = () => {
                   <td>₹8,000 / ₹10,000</td>
                   <td>₹11,400 / ₹15,000</td>
                   <td>₹14,000 – ₹22,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="35 Seater Bus (Benz / Executive)" data-ac="AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
                 <tr>
                   <td className="fw-bold"><Link to="/40-seater-bus-on-rent-in-pune" className="text-decoration-none text-dark">45 / 49 Seater Bus (Non-AC)</Link></td>
@@ -198,6 +212,7 @@ const BusRental = () => {
                   <td>₹10,000</td>
                   <td>₹15,000</td>
                   <td>₹16,000 / ₹20,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="45 / 49 Seater Bus" data-ac="Non-AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
                 <tr>
                   <td className="fw-bold"><Link to="/volvo-bus-on-rent-in-pune" className="text-decoration-none text-dark">53 Seater Volvo / Benz Special Bus</Link></td>
@@ -206,6 +221,7 @@ const BusRental = () => {
                   <td>₹20,000</td>
                   <td>₹24,000</td>
                   <td>₹25,000 / ₹33,000</td>
+                  <td><button type="button" className="btn btn-sm text-white fw-bold px-3 rounded-pill open-booking-popup-btn" data-vehicle="53 Seater Volvo / Benz Special Bus" data-ac="AC" style={{ backgroundColor: '#ff7700' }}>Book Now</button></td>
                 </tr>
               </tbody>
             </table>

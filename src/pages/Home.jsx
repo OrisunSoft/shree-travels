@@ -9,7 +9,8 @@ import {
   FaMapMarkerAlt,
   FaChevronRight,
   FaGoogle,
-  FaStar
+  FaStar,
+  FaWhatsapp
 } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import CardSlider from '../components/CardSlider';
@@ -94,22 +95,22 @@ const Home = () => {
 
   // Cards for the Interactive Vehicles Slider
   const vehicleCards = [
-    { title: "Tempo Traveller", desc: "13, 17, 20 & 26 Seater • Starting ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-01.jpg", link: "/tempo-traveller-on-rent-in-pune", tag: "Most Popular" },
-    { title: "Force Urbania", desc: "10, 13 & 17 Seater Luxury Van • ₹32/km", img: "/img/urbania/ub-1.jpeg", link: "/urbania-on-rent-in-pune", tag: "Ultra Luxury" },
-    { title: "32 & 35 Seater Bus", desc: "2x2 Pushback AC & Non-AC • From ₹45/km", img: "/img/Keyword Based Image/Keyword Based Image-11.jpg", link: "/32-seater-bus-on-rent-in-pune", tag: "Wedding Special" },
-    { title: "Mini Bus & Tata Winger", desc: "9 to 25 Seater Mini Buses • From ₹20/km", img: "/img/Keyword Based Image/Keyword Based Image-04.jpg", link: "/mini-bus-on-rent-pune", tag: "Best Value" },
-    { title: "40 & 50 Seater Luxury Bus", desc: "Large Tourist & School Coach • From ₹50/km", img: "/img/Keyword Based Image/Keyword Based Image-14.jpg", link: "/50-seater-bus-on-rent-in-pune", tag: "Large Group" },
-    { title: "Volvo Multi-Axle Coach", desc: "45 & 49 Seater Air-Suspension • ₹90/km", img: "/img/Keyword Based Image/Keyword Based Image-42.jpg", link: "/volvo-bus-on-rent-in-pune", tag: "Corporate VIP" }
+    { title: "Tempo Traveller", desc: "13, 17, 20 & 26 Seater • Starting at ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-01.jpg", link: "/tempo-traveller-on-rent-in-pune", tag: "Most Popular" },
+    { title: "Force Urbania", desc: "10, 13 & 17 Seater Luxury Van • Starting at ₹32/km", img: "/img/urbania/ub-1.jpeg", link: "/urbania-on-rent-in-pune", tag: "Ultra Luxury" },
+    { title: "32 & 35 Seater Bus", desc: "2x2 Pushback AC & Non-AC • Starting at ₹45/km", img: "/img/Keyword Based Image/Keyword Based Image-11.jpg", link: "/32-seater-bus-on-rent-in-pune", tag: "Wedding Special" },
+    { title: "Mini Bus & Tata Winger", desc: "9 to 25 Seater Mini Buses • Starting at ₹20/km", img: "/img/Keyword Based Image/Keyword Based Image-04.jpg", link: "/mini-bus-on-rent-pune", tag: "Best Value" },
+    { title: "40 & 50 Seater Luxury Bus", desc: "Large Tourist & School Coach • Starting at ₹50/km", img: "/img/Keyword Based Image/Keyword Based Image-14.jpg", link: "/50-seater-bus-on-rent-in-pune", tag: "Large Group" },
+    { title: "Volvo Multi-Axle Coach", desc: "45 & 49 Seater Air-Suspension • Starting at ₹80–90/km", img: "/img/Keyword Based Image/Keyword Based Image-42.jpg", link: "/volvo-bus-on-rent-in-pune", tag: "Corporate VIP" }
   ];
 
   const homeTourCards = [
     { title: "Pune to Mahabaleshwar", subtitle: "Pratapgad, Venna Lake & Mapro Garden", rate: "From ₹9,000", img: "/img/Keyword Based Image/Keyword Based Image-31.jpg", link: "/pune-to-mahabaleshwar-bus-hire" },
     { title: "Pune to Lonavala & Khandala", subtitle: "Bhushi Dam, Tiger Point & Karla Caves", rate: "From ₹7,200", img: "/img/Keyword Based Image/Keyword Based Image-26.jpg", link: "/pune-to-lonavala-bus-hire" },
-    { title: "Pune to Konkan Darshan", subtitle: "Alibaug, Ganpatipule, Tarkarli & Malvan", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-28.jpg", link: "/pune-to-konkan-darshan" },
-    { title: "Pune to Goa Beach Tour", subtitle: "North & South Goa Coastal Package", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-27.jpg", link: "/pune-to-goa-bus-hire" },
+    { title: "Pune to Konkan Darshan", subtitle: "Alibaug, Ganpatipule, Tarkarli & Malvan", rate: "Starting at ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-24.jpg", link: "/pune-to-konkan-darshan" },
+    { title: "Pune to Goa Beach Tour", subtitle: "North & South Goa Coastal Package", rate: "Starting at ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-23.jpg", link: "/pune-to-goa-bus-hire" },
     { title: "Ashtavinayak Darshan", subtitle: "All 8 Swayambhu Ganpati Temples", rate: "From ₹14,400", img: "/img/Keyword Based Image/Keyword Based Image-29.jpg", link: "/ashtavinayak-darshan-bus-hire-pune" },
     { title: "Bhimashankar & 5 Jyotirlinga", subtitle: "Trimbakeshwar, Ellora, Parli & Aundha", rate: "From ₹7,200", img: "/img/Keyword Based Image/Keyword Based Image-63.jpg", link: "/bhimashankar-5-jyotirlinga-darshan-pune" },
-    { title: "Sade Teen Shakti Peeth", subtitle: "Kolhapur, Tuljapur, Mahurgad & Vani", rate: "From ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-25.jpg", link: "/sade-teen-shakti-peeth-darshan-pune" },
+    { title: "Sade Teen Shakti Peeth", subtitle: "Kolhapur, Tuljapur, Mahurgad & Vani", rate: "Starting at ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-25.jpg", link: "/sade-teen-shakti-peeth-darshan-pune" },
     { title: "Pune to Mumbai Darshan", subtitle: "Gateway of India, Sea Link & Siddhivinayak", rate: "From ₹9,000", img: "/img/Keyword Based Image/Keyword Based Image-27.jpg", link: "/pune-to-mumbai-darshan" }
   ];
 
@@ -117,7 +118,7 @@ const Home = () => {
     <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <SEO 
         title="Shree Travels – Urbania on Rent in Pune | Tempo Traveller & Bus Rental"
-        description="Shree Travels – Urbania on Rent in Pune (@ ₹32/km for 10, 13 & 17 Seater), Tempo Traveller on Rent in Pune (13 & 17 Seater @ ₹22/km), 32, 40 & 50 Seater Bus on Rent in Pune, Pune to Mumbai Cab & Pune Airport Cab."
+        description="Shree Travels – Urbania on Rent in Pune (Starting at ₹32/km for 10, 13 & 17 Seater), Tempo Traveller on Rent in Pune (13 & 17 Seater Starting at ₹22/km), 32, 40 & 50 Seater Bus on Rent in Pune, Pune to Mumbai Cab & Pune Airport Cab."
         keywords="Urbania On Rent in Pune, 13 Seater Urbania on Rent in Pune, 17 Seater Urbania on Rent in Pune, Tempo Traveller On Rent in Pune, 13 Seater Tempo Traveller On Rent in Pune, 17 Seater Tempo Traveller On Rent in Pune, Bus On Rent in Pune, 32 Seater Bus On Rent in Pune, 40 Seater Bus On Rent in Pune, 50 Seater Bus On Rent in Pune, Pune to Mumbai Cab, Pune Airport Cab, Outstation Cab Service Pune"
         path="/"
         image="https://shreetravels.in/img/force-ub.jpg"
@@ -196,31 +197,56 @@ const Home = () => {
         <div className="container hero-content py-5">
           <div className="row align-items-center">
             <div className="col-lg-10 text-center text-lg-start px-3">
-              <span className="badge rounded-pill px-3 py-2 mb-3 fw-bold shadow-sm hero-badge-responsive" style={{ backgroundColor: '#ff7700', color: '#ffffff', fontSize: '0.82rem' }}>
+              <span className="badge rounded-pill px-3 py-2 mb-2 mb-md-3 fw-bold shadow-sm hero-badge-responsive" style={{ backgroundColor: '#ff7700', color: '#ffffff', fontSize: '0.82rem' }}>
                 <span className="d-none d-sm-inline">★ 4.9 RATED ON GOOGLE • KOTHRUD PUNE HEAD OFFICE • 24/7 DISPATCH</span>
                 <span className="d-inline d-sm-none">★ 4.9 RATED • KOTHRUD PUNE • 24/7 DISPATCH</span>
               </span>
-              <h1 className="display-5 fw-bold text-white mb-3 text-shadow-custom hero-title-responsive">
-                Shree Travels – <span style={{ color: '#ff7700' }}>Urbania on Rent in Pune</span> | Tempo Traveller &amp; Bus Rental
+              <h1 className="display-5 fw-bold text-white mb-2 mb-md-3 text-shadow-custom hero-title-responsive">
+                <span className="d-none d-md-inline">Shree Travels – <span style={{ color: '#ff7700' }}>Urbania on Rent in Pune</span> | Tempo Traveller &amp; Bus Rental</span>
+                <span className="d-inline d-md-none">Shree Travels – <span style={{ color: '#ff7700' }}>Urbania &amp; Bus</span> on Rent in Pune</span>
               </h1>
-              <p className="lead text-light mb-4 text-shadow-custom fw-semibold hero-lead-responsive" style={{ fontSize: '1.15rem', lineHeight: '1.65', maxWidth: '820px' }}>
-                <span className="d-none d-md-inline">Book 10, 13 &amp; 17 Seater Luxury Force Urbania (@ ₹32/km), 13 &amp; 17 Seater Tempo Travellers (@ ₹22/km), 32, 40 &amp; 50 Seater AC/Non-AC Buses, and Pune to Mumbai / Airport Cabs across Pune, Mumbai, Shirdi, Nashik &amp; Lonavala.</span>
-                <span className="d-inline d-md-none">Luxury Force Urbania (@ ₹32/km), Tempo Travellers (@ ₹22/km) &amp; Luxury AC Buses on rent across Pune &amp; Maharashtra. Transparent rates &amp; 24/7 dispatch.</span>
+              
+              {/* Desktop Lead Text */}
+              <p className="lead text-light mb-4 text-shadow-custom fw-semibold hero-lead-responsive d-none d-md-block" style={{ fontSize: '1.15rem', lineHeight: '1.65', maxWidth: '820px' }}>
+                Book 10, 13 &amp; 17 Seater Luxury Force Urbania (Starting at ₹32/km), 13 &amp; 17 Seater Tempo Travellers (Starting at ₹22/km), 32, 40 &amp; 50 Seater AC/Non-AC Buses, and Pune to Mumbai / Airport Cabs across Pune, Mumbai, Shirdi, Nashik &amp; Lonavala.
               </p>
+
+              {/* Mobile-Optimized Clean Feature Highlights */}
+              <div className="d-md-none mb-3">
+                <div className="d-flex flex-wrap gap-2 justify-content-center mb-2">
+                  <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
+                    <i className="fas fa-check text-warning me-1"></i>Urbania Starting at ₹32/km
+                  </span>
+                  <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
+                    <i className="fas fa-check text-warning me-1"></i>Tempo Traveller Starting at ₹22/km
+                  </span>
+                  <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
+                    <i className="fas fa-check text-warning me-1"></i>Clean AC Fleet
+                  </span>
+                </div>
+                <div className="text-light small text-shadow-custom text-center opacity-90">
+                  Doorstep dispatch across Pune, PCMC &amp; outstation tours.
+                </div>
+              </div>
 
               <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-2 gap-sm-3">
                 <button
                   type="button"
-                  className="btn fw-bold px-4 px-md-5 py-3 text-white shadow-lg rounded-pill btn-hover-animate hero-cta-btn d-inline-flex align-items-center justify-content-center open-booking-popup-btn"
-                  data-vehicle="17 Seater Force Urbania (₹32/km)"
+                  className="btn fw-bold px-4 px-md-5 py-3 text-white shadow-lg rounded-pill btn-hover-animate hero-cta-btn d-inline-flex align-items-center justify-content-center open-enquiry-popup-btn"
+                  data-mode="enquiry"
+                  data-vehicle="17 Seater Force Urbania (Starting at ₹32/km)"
                   data-ac="AC"
                   data-place="Pune Local / Outstation"
                   style={{ backgroundColor: '#ff7700', border: 'none' }}
                 >
-                  <FaBus className="me-2" /> Book Vehicle Now
+                  <FaWhatsapp className="me-2" size={19} />
+                  <span className="d-none d-sm-inline">Quick Trip Enquiry</span>
+                  <span className="d-inline d-sm-none">Trip Enquiry</span>
                 </button>
                 <a href="tel:+917620411277" className="btn fw-bold px-4 px-md-5 py-3 shadow-lg rounded-pill btn-hover-animate hero-cta-btn d-inline-flex align-items-center justify-content-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.15)', color: 'white', border: '2px solid white', backdropFilter: 'blur(6px)' }}>
-                  <FaPhoneAlt className="me-2" /> Call: +91 76204 11277
+                  <FaPhoneAlt className="me-2" />
+                  <span className="d-none d-sm-inline">Call: +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
               </div>
             </div>
@@ -257,20 +283,20 @@ const Home = () => {
         <div className="container py-2">
           <div className="text-center mb-4">
             <span className="badge rounded-pill px-3 py-2 mb-2 fw-bold" style={{ backgroundColor: '#fff3e6', color: '#ff7700' }}>
-              FORCE URBANIA @ ₹32/KM &amp; LUXURY RECLINER CABINS
+              FORCE URBANIA STARTING AT ₹32/KM &amp; LUXURY RECLINER CABINS
             </span>
             <h2 className="fw-bold h3">
               Experience Ultimate Comfort in <span style={{ color: '#ff7700' }}>Force Urbania &amp; Luxury Fleet</span>
             </h2>
             <p className="text-muted small mb-0 mx-auto" style={{ maxWidth: '760px' }}>
-              Book 10, 13 &amp; 17 Seater Luxury Force Urbania on Rent in Pune (@ ₹32/km), Maharaja Tempo Travellers, and Air-Suspension Coaches with individual recliners, ambient lighting &amp; LED entertainment.
+              Book 10, 13 &amp; 17 Seater Luxury Force Urbania on Rent in Pune (Starting at ₹32/km), Maharaja Tempo Travellers, and Air-Suspension Coaches with individual recliners, ambient lighting &amp; LED entertainment.
             </p>
           </div>
 
           <CardSlider cardsPerView={4} interval={3600}>
             {[
-              { num: 1, tag: 'Force Urbania @ ₹32/Km', label: '13 & 17 Seater Force Urbania Leather Recliners', link: '/17-seater-urbania-on-rent-pune' },
-              { num: 2, tag: '13 Seater Urbania @ ₹32/Km', label: 'Smart LED TV, Surround Audio & Mood Lighting', link: '/13-seater-urbania-on-rent-pune' },
+              { num: 1, tag: 'Starting at ₹32/km', label: '13 & 17 Seater Force Urbania Leather Recliners', link: '/17-seater-urbania-on-rent-pune' },
+              { num: 2, tag: 'Starting at ₹32/km', label: 'Smart LED TV, Surround Audio & Mood Lighting', link: '/13-seater-urbania-on-rent-pune' },
               { num: 3, tag: 'Urbania Safety & Space', label: '3-Point Seatbelts & Aircraft-Style Cabin Lockers', link: '/urbania-on-rent-in-pune' },
               { num: 4, tag: 'Maharaja Luxury Fleet', label: 'Individual AC Louvers, Cupholders & USB-C Ports', link: '/luxury-tempo-traveller-on-rent-in-pune' }
             ].map((item) => (
@@ -317,24 +343,24 @@ const Home = () => {
                     </div>
                   )}
                 </div>
-                <div className="card-body p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div className="card-body p-3 p-md-4 d-flex flex-column justify-content-between flex-grow-1">
                   <div>
-                    <h3 className="h5 fw-bold mb-2 text-dark">{card.title}</h3>
-                    <p className="text-muted small mb-4">{card.desc}</p>
+                    <h3 className="h6 fw-bold mb-1 mb-md-2 text-dark">{card.title}</h3>
+                    <p className="text-muted small mb-3">{card.desc}</p>
                   </div>
                   <div className="d-flex gap-2 mt-auto">
-                    <Link to={card.link} className="btn btn-outline-dark flex-grow-1 fw-semibold rounded-pill py-2 d-inline-flex align-items-center justify-content-center small">
+                    <Link to={card.link} className="btn btn-outline-dark flex-grow-1 fw-semibold rounded-pill py-2 d-inline-flex align-items-center justify-content-center small text-nowrap">
                       Details <FaArrowRight className="ms-1" size={11} />
                     </Link>
                     <button
                       type="button"
-                      className="btn fw-bold text-white rounded-pill px-3 py-2 small open-booking-popup-btn"
+                      className="btn fw-bold text-white rounded-pill px-3 py-2 small open-booking-popup-btn d-inline-flex align-items-center justify-content-center gap-1 text-nowrap"
                       data-vehicle={card.title}
                       data-ac="AC"
                       data-place="Pune Local / Outstation"
                       style={{ backgroundColor: '#ff7700' }}
                     >
-                      Book Now
+                      <FaWhatsapp size={14} /> Enquire
                     </button>
                   </div>
                 </div>
@@ -426,27 +452,46 @@ const Home = () => {
           <div className="mt-4 p-3 p-md-4 rounded-4 border shadow-sm" style={{ backgroundColor: '#fffdfa', borderColor: '#ffd8a8' }}>
             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2 pb-2 border-bottom">
               <span className="badge rounded-pill px-3 py-2 fw-bold text-white fs-6" style={{ backgroundColor: '#dc2626' }}>
-                <i className="fas fa-exclamation-triangle me-2"></i>Please note that toll, parking, and border tax charges are extra
+                <i className="fas fa-exclamation-triangle me-2"></i>Toll, parking &amp; border tax charges are extra at actuals
               </span>
               <span className="text-muted small fw-semibold">
-                Official Shree Travels Fare Card Rules (04/02/2026)
+                Official Fare Card Rules (04/02/2026)
               </span>
             </div>
-            <div className="row g-2 pt-1 text-dark small" style={{ lineHeight: '1.7' }}>
+
+            {/* Desktop View */}
+            <div className="d-none d-md-block row g-2 pt-1 text-dark small" style={{ lineHeight: '1.7' }}>
               <div className="col-md-6">
                 <ul className="list-unstyled mb-0 d-flex flex-column gap-1">
-                  <li><strong>• Toll, Parking &amp; Taxes:</strong> Full toll, parking, passenger tax, GST, and the cost of special permits are to be paid by the party.</li>
-                  <li><strong>• Outstation Distance:</strong> For an outstation trip, the minimum daily billing distance is 300 km; special fixed packages apply for Mumbai, Shirdi, and Mahabaleshwar routes.</li>
-                  <li><strong>• Force Urbania:</strong> Force Urbania (10, 13 &amp; 17 Seater) is charged at flat <strong>₹32/km</strong> for outstation travel.</li>
+                  <li><strong>• Toll, Parking &amp; Taxes:</strong> Fastag toll, parking, passenger tax, GST and permits paid by party.</li>
+                  <li><strong>• Outstation Distance:</strong> Minimum daily outstation billing is 300 km (fixed packages apply for select routes).</li>
+                  <li><strong>• Force Urbania:</strong> Charged at flat <strong>₹32/km</strong> for 10, 13 &amp; 17 Seater outstation.</li>
                 </ul>
               </div>
               <div className="col-md-6">
                 <ul className="list-unstyled mb-0 d-flex flex-column gap-1">
-                  <li><strong>• Service Hours:</strong> Bus service is available from 6:00 AM to 12:00 midnight. Extra hours incur additional charges.</li>
-                  <li><strong>• Advance Booking:</strong> Advance booking requires 50% payment at least 2 days before the trip.</li>
-                  <li><strong>• Duty Calculation:</strong> Time &amp; KM calculation will be office to office. Driver food charges ₹300/- local &amp; ₹400/- outstation duties.</li>
+                  <li><strong>• Service Hours:</strong> 6:00 AM to 12:00 midnight. Extra hours incur additional charges.</li>
+                  <li><strong>• Advance Booking:</strong> 50% advance payment required 2 days before trip.</li>
+                  <li><strong>• Duty Calculation:</strong> Office-to-office time &amp; KM. Driver food ₹300 local / ₹400 outstation.</li>
                 </ul>
               </div>
+            </div>
+
+            {/* Mobile View - Clean & Concise */}
+            <div className="d-md-none pt-2 text-dark small">
+              <div className="d-flex flex-column gap-1 mb-2">
+                <div><strong>• Outstation:</strong> Min 300 km/day • Fastag tolls &amp; parking extra at actuals</div>
+                <div><strong>• Force Urbania:</strong> Flat <strong>₹32/km</strong> outstation rate</div>
+                <div><strong>• Timings &amp; Duty:</strong> 6:00 AM to 12:00 AM • Garage-to-garage calculation</div>
+              </div>
+              <details className="mt-2 text-muted" style={{ cursor: 'pointer' }}>
+                <summary className="fw-semibold text-primary">View complete fare rules &amp; driver charges</summary>
+                <div className="pt-2 ps-2 border-start border-2 border-warning mt-1 small">
+                  <div>• Driver food charges ₹300/- local &amp; ₹400/- outstation duties.</div>
+                  <div>• Service hours: 6:00 AM to 12:00 midnight. Extra hours incur extra charges.</div>
+                  <div>• 50% advance required 2 days prior to departure.</div>
+                </div>
+              </details>
             </div>
           </div>
         </div>
@@ -476,15 +521,30 @@ const Home = () => {
                   )}
                 </div>
                 <div className="card-body p-3 d-flex flex-column flex-grow-1">
-                  <h3 className="h6 fw-bold text-dark mb-1">{pkg.title}</h3>
+                  <div className="d-flex justify-content-between align-items-start mb-1">
+                    <h3 className="h6 fw-bold text-dark mb-0">{pkg.title}</h3>
+                    <span className="badge px-2 py-1 rounded-pill small fw-bold" style={{ backgroundColor: '#fff3e6', color: '#ff7700', fontSize: '0.74rem' }}>
+                      {pkg.rate}
+                    </span>
+                  </div>
                   <p className="text-muted small mb-3 flex-grow-1">{pkg.subtitle}</p>
-                  <Link
-                    to={pkg.link}
-                    className="btn btn-sm w-100 rounded-pill text-white fw-bold py-2 mt-auto"
-                    style={{ backgroundColor: '#0f172a' }}
-                  >
-                    View Tour Guide &amp; Rates <FaArrowRight className="ms-1" size={11} />
-                  </Link>
+                  <div className="d-flex gap-2 mt-auto">
+                    <Link
+                      to={pkg.link}
+                      className="btn btn-sm btn-outline-dark rounded-pill fw-semibold flex-fill py-2 text-center small text-nowrap"
+                    >
+                      Guide
+                    </Link>
+                    <button
+                      type="button"
+                      className="btn btn-sm fw-bold text-white rounded-pill px-3 py-2 flex-fill open-booking-popup-btn d-inline-flex align-items-center justify-content-center gap-1 text-nowrap"
+                      data-vehicle={pkg.title}
+                      data-place={pkg.title}
+                      style={{ backgroundColor: '#ff7700' }}
+                    >
+                      <FaWhatsapp size={14} /> Enquire
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -711,8 +771,8 @@ const Home = () => {
                 Rated <strong>4.9★ across 348+ verified customer reviews</strong>, Shree Travels operates from our registered head office in Kothrud, Pune with All-India Tourist Permits, GST-compliant corporate billing, and GPS-monitored fleet dispatch across Pune, Mumbai, Shirdi, Nashik, and Lonavala.
               </p>
 
-              <div className="row g-3 mb-4">
-                <div className="col-sm-6">
+              <div className="row g-2 g-md-3 mb-4">
+                <div className="col-12 col-md-6">
                   <div className="p-3 bg-white rounded-4 border h-100">
                     <div className="fw-bold text-dark small mb-1">Registered Head Office Address</div>
                     <p className="small text-muted mb-0">
@@ -720,7 +780,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-12 col-md-6">
                   <div className="p-3 bg-white rounded-4 border h-100">
                     <div className="fw-bold text-dark small mb-1">24/7 Direct Dispatch &amp; WhatsApp</div>
                     <p className="small text-muted mb-1">
@@ -731,7 +791,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-12 col-md-6">
                   <div className="p-3 bg-white rounded-4 border h-100">
                     <div className="fw-bold text-dark small mb-1">RTO Permits &amp; Corporate GST Billing</div>
                     <p className="small text-muted mb-0">
@@ -739,7 +799,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-12 col-md-6">
                   <div className="p-3 bg-white rounded-4 border h-100">
                     <div className="fw-bold text-dark small mb-1">Verified Chauffeurs &amp; 30+ Yrs Legacy</div>
                     <p className="small text-muted mb-0">
@@ -900,15 +960,20 @@ const Home = () => {
                 <button
                   type="button"
                   className="btn btn-lg text-white fw-bold px-4 rounded-pill shadow-sm d-inline-flex align-items-center open-booking-popup-btn"
+                  data-mode="booking"
                   data-vehicle="17 Seater Force Urbania (₹32/km)"
                   data-ac="AC"
                   data-place="Pune Local / Outstation"
                   style={{ backgroundColor: '#ff7700' }}
                 >
-                  <FaBus className="me-2" /> Book Vehicle Online
+                  <FaBus className="me-2" />
+                  <span className="d-none d-sm-inline">Book Vehicle Online</span>
+                  <span className="d-inline d-sm-none">Book Online</span>
                 </button>
                 <a href="tel:+917620411277" className="btn btn-lg btn-outline-light fw-bold px-4 rounded-pill shadow-sm d-inline-flex align-items-center">
-                  <FaPhoneAlt className="me-2" /> Call +91 7620411277
+                  <FaPhoneAlt className="me-2" />
+                  <span className="d-none d-sm-inline">Call +91 76204 11277</span>
+                  <span className="d-inline d-sm-none">Call Now</span>
                 </a>
               </div>
             </div>

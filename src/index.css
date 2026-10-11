@@ -1133,3 +1133,92 @@ section h1 {
     height: 195px;
   }
 }
+
+/* ==========================================================================
+   Shree Travels Instant Booking & WhatsApp Enquiry Modal
+   ========================================================================== */
+.shree-booking-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+  animation: shreeModalFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shree-booking-modal-dialog {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  animation: shreeModalScaleUp 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shree-booking-modal-dialog input:focus,
+.shree-booking-modal-dialog select:focus {
+  border-color: #ff7700 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 119, 0, 0.18) !important;
+  outline: none;
+}
+
+.booking-submit-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.booking-submit-btn:hover {
+  background-color: #1eb956 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4) !important;
+}
+
+.booking-submit-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes shreeModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shreeModalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .shree-booking-modal-backdrop {
+    padding: 8px;
+    align-items: flex-end;
+  }
+  .shree-booking-modal-dialog {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-height: 94vh;
+    border-radius: 20px 20px 0 0;
+  }
+}

@@ -75,8 +75,8 @@ const Packages = () => {
   return (
     <>
       <SEO 
-        title="Bus, Tempo Traveller & Force Urbania Rates in Pune | @ ₹22/Km | Shree Travels"
-        description="Official verified Fare Card (04/02/2026) for Bus, Tempo Traveller (@ ₹22/Km) and Force Urbania (@ ₹32/Km) rental rates in Pune. View AC & Non-AC bus packages, Pune local 8/80 fares, Mahabaleshwar and Mumbai packages."
+        title="Bus, Tempo Traveller & Force Urbania Rates in Pune | Starting at ₹22/km | Shree Travels"
+        description="Official verified Fare Card (04/02/2026) for Bus, Tempo Traveller (Starting at ₹22/km) and Force Urbania (Starting at ₹32/km) rental rates in Pune. View AC & Non-AC bus packages, Pune local 8/80 fares, Mahabaleshwar and Mumbai packages."
         keywords="Bus fare Pune, Force Urbania rate per km Pune, Tempo Traveller rate per km Pune, Non AC bus rate, AC bus price Pune, Bus rental package, Shree Travels rates"
         path="/packages"
         schema={[packageSchema]}
@@ -95,7 +95,7 @@ const Packages = () => {
             Bus, Tempo Traveller &amp; Urbania <span style={{ color: '#ff7700' }}>Fares &amp; Packages</span>
           </h1>
           <p className="text-muted lead fs-6 fs-md-5 max-w-75 mx-auto mb-2">
-            Transparent pricing for local sightseeing, outstation packages, and corporate tours. Force Urbania @ flat ₹32/km, Tempo Traveller @ ₹22/km &amp; Buses from ₹28–₹35/km.
+            Transparent pricing for local sightseeing, outstation packages, and corporate tours. Force Urbania Starting at ₹32/km, Tempo Traveller Starting at ₹22/km &amp; Buses Starting at ₹28–₹35/km.
           </p>
           <div className="d-inline-flex flex-wrap align-items-center justify-content-center gap-2 mt-2">
             <span className="badge bg-dark text-white px-3 py-2 rounded-pill">
@@ -116,11 +116,11 @@ const Packages = () => {
         <div className="container px-2 px-md-3">
           <div className="d-flex flex-wrap align-items-center justify-content-between mb-4 border-bottom pb-2 gap-2">
             <div>
-              <h2 className="fw-bold mb-0 text-dark fs-4">Force Urbania Luxury AC Van Fare (@ Flat ₹32/KM)</h2>
+              <h2 className="fw-bold mb-0 text-dark fs-4">Force Urbania Luxury AC Van Fare (Starting at ₹32/km)</h2>
               <small className="text-muted">Premium 10, 13 &amp; 17 Seater executive recliner fleet for outstation &amp; VIP tours</small>
             </div>
             <span className="badge rounded-pill px-3 py-2 text-white fw-bold shadow-sm" style={{ backgroundColor: '#ff7700' }}>
-              Flat ₹32/km Outstation Tariff
+              Starting at ₹32/km Outstation Tariff
             </span>
           </div>
           <div className="table-responsive shadow-sm rounded-4 border bg-white">
