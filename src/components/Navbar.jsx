@@ -1,6 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { FaChevronDown } from 'react-icons/fa';
+import { 
+  FaChevronDown, 
+  FaFacebook, 
+  FaInstagram, 
+  FaGoogle, 
+  FaWhatsapp, 
+  FaBars, 
+  FaTimes, 
+  FaPhoneAlt 
+} from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -338,38 +347,38 @@ const Navbar = () => {
           
           <div className="d-flex align-items-center gap-1 gap-sm-2">
             {/* Social Icons Pill (FB, Instagram, Google) */}
-            <div className="mobile-social-pill d-flex">
-              <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
-                <i className="fab fa-facebook fs-6" style={{ color: '#1877F2' }}></i>
+            <div className="mobile-social-pill d-flex align-items-center">
+              <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Facebook">
+                <FaFacebook size={16} style={{ color: '#1877F2' }} />
               </a>
-              <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
-                <i className="fab fa-instagram fs-6 insta-gradient"></i>
+              <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Instagram">
+                <FaInstagram size={16} className="insta-gradient" />
               </a>
-              <a href="https://share.google/p6WieDC55DgKtuLN6" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Google Business">
-                <i className="fab fa-google fs-6" style={{ color: '#EA4335' }}></i>
+              <a href="https://share.google/p6WieDC55DgKtuLN6" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Google Business">
+                <FaGoogle size={15} style={{ color: '#EA4335' }} />
               </a>
             </div>
 
             {/* WhatsApp Enquiry Button - ONLY WhatsApp logo, NO text */}
             <button 
               type="button" 
-              className="header-whatsapp-icon-btn open-enquiry-popup-btn"
+              className="header-whatsapp-icon-btn open-enquiry-popup-btn d-flex align-items-center justify-content-center"
               data-mode="enquiry"
               aria-label="Instant Trip Enquiry"
               title="Instant Trip Enquiry"
             >
-              <i className="fab fa-whatsapp fs-5"></i>
+              <FaWhatsapp size={20} />
             </button>
             
             {/* Hamburger Toggle Button */}
             <button 
-              className="custom-toggler" 
+              className="custom-toggler d-flex align-items-center justify-content-center" 
               type="button" 
               onClick={toggleNavbar}
               aria-expanded={isOpen} 
               aria-label="Toggle navigation"
             >
-              <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'} fs-5`} style={{ color: '#ff7700' }}></i>
+              {isOpen ? <FaTimes size={20} style={{ color: '#ff7700' }} /> : <FaBars size={20} style={{ color: '#ff7700' }} />}
             </button>
           </div>
         </div>
@@ -510,7 +519,7 @@ const Navbar = () => {
                 aria-label="Instant Trip Enquiry"
                 title="Instant Trip Enquiry"
               >
-                <i className="fab fa-whatsapp fs-5"></i>
+                <FaWhatsapp size={20} />
               </button>
             </li>
           </ul>
@@ -727,14 +736,14 @@ const Navbar = () => {
                   style={{ backgroundColor: '#25D366', border: 'none' }}
                   onClick={closeNavbar}
                 >
-                  <i className="fab fa-whatsapp fs-5"></i>
+                  <FaWhatsapp size={20} />
                   <span>Quick Trip Enquiry</span>
                 </button>
                 <a 
                   href="tel:+917620411277" 
                   className="btn btn-outline-dark fw-bold py-2.5 rounded-pill shadow-sm d-flex align-items-center justify-content-center gap-2"
                 >
-                  <i className="fas fa-phone-alt text-warning"></i>
+                  <FaPhoneAlt className="text-warning" size={16} />
                   <span>Call 24/7: +91 76204 11277</span>
                 </a>
               </div>
@@ -744,13 +753,13 @@ const Navbar = () => {
                 <p className="small text-muted mb-2 fw-semibold">Connect with Shree Travels</p>
                 <div className="d-flex justify-content-center align-items-center gap-3">
                   <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Facebook">
-                    <i className="fab fa-facebook-f text-primary fs-6"></i>
+                    <FaFacebook size={18} style={{ color: '#1877F2' }} />
                   </a>
                   <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Instagram">
-                    <i className="fab fa-instagram insta-gradient fs-6"></i>
+                    <FaInstagram size={18} className="insta-gradient" />
                   </a>
                   <a href="https://share.google/p6WieDC55DgKtuLN6" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Google Business">
-                    <i className="fab fa-google text-danger fs-6"></i>
+                    <FaGoogle size={17} style={{ color: '#EA4335' }} />
                   </a>
                 </div>
               </div>

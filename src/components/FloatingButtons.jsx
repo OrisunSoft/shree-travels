@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
 const FloatingButtons = () => {
   // Your specific enquiry message
@@ -17,7 +18,7 @@ const FloatingButtons = () => {
         style={{ width: '55px', height: '55px', zIndex: 1000, textDecoration: 'none' }}
         aria-label="Chat on WhatsApp"
       >
-        <i className="fab fa-whatsapp fs-2"></i>
+        <FaWhatsapp size={28} />
       </a>
 
       <a 
@@ -26,7 +27,7 @@ const FloatingButtons = () => {
         style={{ width: '55px', height: '55px', zIndex: 1000, backgroundColor: '#ff7700', textDecoration: 'none' }}
         aria-label="Call Us"
       >
-        <i className="fas fa-phone-alt fs-4"></i>
+        <FaPhoneAlt size={22} />
       </a>
     </>
   );

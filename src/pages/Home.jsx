@@ -4,6 +4,8 @@ import {
   FaBus,
   FaPhoneAlt,
   FaCheckCircle,
+  FaCheck,
+  FaExclamationTriangle,
   FaArrowRight,
   FaRoute,
   FaMapMarkerAlt,
@@ -228,13 +230,13 @@ const Home = () => {
               <div className="d-md-none mb-3">
                 <div className="d-flex flex-wrap gap-2 justify-content-center mb-2">
                   <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
-                    <i className="fas fa-check text-warning me-1"></i>Urbania Starting at ₹32/km
+                    <FaCheck className="text-warning me-1" />Urbania Starting at ₹32/km
                   </span>
                   <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
-                    <i className="fas fa-check text-warning me-1"></i>Tempo Traveller Starting at ₹22/km
+                    <FaCheck className="text-warning me-1" />Tempo Traveller Starting at ₹22/km
                   </span>
                   <span className="badge bg-dark bg-opacity-75 text-white border border-secondary px-2 py-1 rounded-pill small">
-                    <i className="fas fa-check text-warning me-1"></i>Clean AC Fleet
+                    <FaCheck className="text-warning me-1" />Clean AC Fleet
                   </span>
                 </div>
                 <div className="text-light small text-shadow-custom text-center opacity-90">
@@ -467,7 +469,7 @@ const Home = () => {
           <div className="mt-4 p-3 p-md-4 rounded-4 border shadow-sm" style={{ backgroundColor: '#fffdfa', borderColor: '#ffd8a8' }}>
             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2 pb-2 border-bottom">
               <span className="badge rounded-pill px-3 py-2 fw-bold text-white fs-6" style={{ backgroundColor: '#dc2626' }}>
-                <i className="fas fa-exclamation-triangle me-2"></i>Toll, parking &amp; border tax charges are extra at actuals
+                <FaExclamationTriangle className="me-2" />Toll, parking &amp; border tax charges are extra at actuals
               </span>
               <span className="text-muted small fw-semibold">
                 Official Fare Card Rules (04/02/2026)
