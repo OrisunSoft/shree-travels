@@ -662,6 +662,97 @@ export const TOUR_PACKAGES_DATA = {
         'Because this circuit covers ~1,600 km across Maharashtra, we highly recommend our pushback AC 13/17-Seater Tempo Traveller (Starting at ₹25/km), Luxury Force Urbania with individual AC vents (Starting at ₹32/km), or 32/35-Seater AC Pushback Coach (Starting at ₹45–50/km) for maximum legroom and fatigue-free travel.'
       ]
     ]
+  },
+
+  'pune-to-sambhaji-nagar-tour': {
+    slug: 'pune-to-sambhaji-nagar-tour',
+    badge: 'UNESCO World Heritage & Historical Circuit • Ajanta, Ellora & Forts',
+    h1: 'Pune to Chhatrapati Sambhaji Nagar Tour Package – Ajanta & Ellora Caves, Urbania & Bus Hire',
+    title: 'Pune to Sambhaji Nagar Tour Package, Ajanta Ellora Bus Hire | Shree Travels',
+    description: 'Book Pune to Chhatrapati Sambhaji Nagar (Aurangabad) tour packages with Shree Travels. Hire Force Urbania (Starting at ₹32/km), Tempo Traveller & Luxury Buses for UNESCO Ajanta & Ellora Caves, Kailasa Temple, Daulatabad Fort, Bibi Ka Maqbara & Grishneshwar Jyotirlinga.',
+    keywords: 'Pune to Sambhaji Nagar tour package, Pune to Aurangabad bus hire, Pune to Ajanta Ellora tour package, Sambhaji Nagar Urbania on rent, Grishneshwar Daulatabad Fort tour bus Pune, Ellora Caves Tempo Traveller Pune',
+    heroImage: '/img/city-fleet/sambhaji-nagar.jpg',
+    galleryImages: [
+      { src: '/img/city-fleet/sambhaji-nagar.jpg', caption: 'Chhatrapati Sambhaji Nagar City & Tourism Capital' },
+      { src: '/img/Keyword Based Image/Keyword Based Image-44.jpg', caption: 'Force Urbania Luxury Van for Long Distance Outstation Tours' },
+      { src: '/img/Keyword Based Image/Keyword Based Image-11.jpg', caption: '32 & 50 Seater Luxury AC Coaches for Group Tours' },
+      { src: '/img/Keyword Based Image/Keyword Based Image-01.jpg', caption: '17 Seater Tempo Traveller for Family Sightseeing' }
+    ],
+    distance: '235 km from Pune via Ahmednagar Highway / Samruddhi Mahamarg (~4.5 to 5 Hours)',
+    duration: '2 Days / 1 Night (Ellora & City) OR 3 Days / 2 Nights (Ajanta + Ellora + City)',
+    bestTime: 'October to March (Pleasant winter sightseeing season and Ajanta-Ellora Festival)',
+    startingPackage: 'Starting at ₹32/km (Urbania) | ₹22/km (Tempo Traveller) | ₹45/km (Bus)',
+    intro: 'Chhatrapati Sambhaji Nagar (formerly Aurangabad) is Maharashtra’s official tourism capital, globally renowned for its awe-inspiring UNESCO World Heritage monuments—the rock-cut architectural marvels of Ellora Caves and the ancient Buddhist frescoes of Ajanta Caves. From the monolithic rock-cut Kailasa Temple and the medieval impregnability of Daulatabad (Devgiri) Fort to the delicate Mughal architecture of Bibi Ka Maqbara ("Taj of Deccan") and the sacred 12th Shiva Jyotirlinga at Grishneshwar, this historic city is an unforgettable family holiday and educational destination. Shree Travels provides premium Force Urbania (Starting at ₹32/km), Maharaja Tempo Travellers, and AC tourist coaches with expert drivers who know every highway bypass, monument timing, and local parking zone.',
+    localPlaces: [
+      {
+        name: '1. UNESCO Ellora Caves (Verul) & The Monolithic Kailasa Rock Temple',
+        tag: 'Cave 16 Kailasa Temple • 30 km from City • Closed on Tuesdays',
+        desc: 'Spanning over 1,500 years of rock engineering across 34 monasteries and temples, Ellora Caves harmoniously blends Buddhist, Hindu, and Jain cave architecture. Cave 16—the world-famous Kailasa Temple—is the largest monolithic rock-cut monument in human history, sculpted top-to-bottom from a single colossal basalt cliff without scaffolding.'
+      },
+      {
+        name: '2. UNESCO Ajanta Caves (Ancient Buddhist Frescoes & Cave Sanctuaries)',
+        tag: 'Horseshoe Gorge • 100 km from City • Closed on Mondays',
+        desc: 'Dating back between the 2nd century BCE and 6th century CE, the 30 rock-cut caves at Ajanta are carved into a dramatic horseshoe-shaped cliff above the Waghur River. Famous for the world’s finest surviving ancient Buddhist murals, Jataka tale paintings, and massive reclining Buddha statues (Cave 26).'
+      },
+      {
+        name: '3. Daulatabad (Devgiri) Fort & Chand Minar',
+        tag: 'Impregnable Hill Citadel • 15 km from City',
+        desc: 'One of the most powerful and invincible medieval forts in India, built atop a conical pyramidal hill with concentric defensive ramparts, a water-filled moat, the dark subterranean labyrinth (Andhari) booby-trap maze, and the soaring 210-foot pink-ochre Chand Minar minaret with panoramic Sahyadri views.'
+      },
+      {
+        name: '4. Bibi Ka Maqbara ("The Taj of the Deccan")',
+        tag: 'Mughal Architectural Marvel • Within City',
+        desc: 'Commissioned by Mughal Prince Azam Shah in 1668 in memory of his mother Dilras Banu Begum (Rabia-ud-Daurani), Bibi Ka Maqbara bears striking resemblance to the Taj Mahal at Agra with its gleaming marble dome, four minarets, lush Charbagh garden walkways, and reflective water fountains.'
+      },
+      {
+        name: '5. Shri Grishneshwar Jyotirlinga Mandir (Verul)',
+        tag: '12th Holy Shiva Jyotirlinga • Adjacent to Ellora Caves',
+        desc: 'The last and 12th sacred Jyotirlinga of Lord Shiva mentioned in the Shiva Purana. Reconstructed with beautiful red basalt stone carvings by Rajmata Ahilyabai Holkar of Indore, Grishneshwar is a deeply peaceful spiritual pilgrimage site easily visited right alongside Ellora Caves.'
+      },
+      {
+        name: '6. Panchakki (Historic 17th Century Hydraulic Water Mill)',
+        tag: 'Medieval Engineering Wonder • In City',
+        desc: 'Built in 1744 by Sufi Saint Baba Shah Musafir, Panchakki utilized an ingenious underground earthen water siphon pipe from mountain springs 8 km away to power a huge stone grinding mill for grinding grain for Sufi disciples and pilgrims.'
+      },
+      {
+        name: '7. Bhadra Maruti Mandir (Khuldabad)',
+        tag: 'Rare Sleeping Maruti Temple • Near Ellora',
+        desc: 'Located at historic Khuldabad, this is one of only two temples in India where Lord Hanuman is depicted in a reclining (Bhav-Samadhi sleeping) posture. It is a traditional gathering stop for all pilgrims visiting Grishneshwar.'
+      },
+      {
+        name: '8. Paithan Jayakwadi Dam & Sant Eknath Maharaj Samadhi',
+        tag: 'Sant Bhumi & Paithani Silk Weaving Hub • 50 km from City',
+        desc: 'Famous as the spiritual home of Sant Eknath Maharaj on the banks of Godavari River, Paithan is world-renowned for traditional handloom silk Paithani sarees, Dnyaneshwar Udyan (modeled after Brindavan Gardens), and Jayakwadi Bird Sanctuary.'
+      }
+    ],
+    itinerary: [
+      {
+        day: 'Day 1: Pune Pickup → Ahmednagar → Sambhaji Nagar Sightseeing',
+        plan: '6:00 AM doorstep pickup in Pune/PCMC. Smooth drive down Pune-Nagar Highway (stop for breakfast at Shirur/Supa). Arrive at Chhatrapati Sambhaji Nagar by 11:30 AM, hotel check-in. Afternoon visit to the iconic Bibi Ka Maqbara and the historic Panchakki water mill. Late afternoon drive to Daulatabad Fort for sunset and panoramic views.'
+      },
+      {
+        day: 'Day 2: Full-Day Ajanta Caves Excursion (World Heritage Day)',
+        plan: '7:30 AM early departure towards Ajanta Caves (100 km / 2 hours). Spend 4 to 5 hours exploring Caves 1, 2, 9, 10, 16, 17, and the grand Reclining Buddha in Cave 26 with an authorized MTDC guide. Evening drive back to Sambhaji Nagar; shop for authentic Paithani sarees and Himroo shawls in the local markets.'
+      },
+      {
+        day: 'Day 3: Grishneshwar Jyotirlinga → Ellora Caves (Kailasa Monolith) → Pune Return',
+        plan: 'Morning 8:00 AM check-out. Take morning abhishek and darshan at Shri Grishneshwar Jyotirlinga, visit Bhadra Maruti at Khuldabad. Spend 3 to 4 hours admiring Cave 16 (Kailasa Monolith) and Jain/Buddhist cave groups at Ellora. Post-lunch start return journey to Pune via Samruddhi Mahamarg or Nagar highway, reaching Pune comfortably by 9:00 PM.'
+      }
+    ],
+    faqs: [
+      [
+        'What are the open and closed days for Ajanta Caves and Ellora Caves?',
+        'Please note the monument weekly off days: UNESCO Ajanta Caves are CLOSED on MONDAYS, while UNESCO Ellora Caves are CLOSED on TUESDAYS! We always plan your tour itinerary so you visit on open days with zero hassle.'
+      ],
+      [
+        'What is the vehicle fare for Pune to Chhatrapati Sambhaji Nagar tour?',
+        'Our official tariff for outstation hire: Force Urbania (10, 13 & 17 Seater) is flat ₹32/km (minimum 300 km/day). A 13/17-Seater Tempo Traveller is ₹22/km (Non-AC) or ₹25/km (AC). A 32-Seater Luxury Bus is ₹45/km. Minimum billing is 300 km per day. Fastag toll and parking are paid at actuals.'
+      ],
+      [
+        'Can Force Urbania or Tempo Traveller pick us up directly from Pune Airport or our home in Pune?',
+        'Yes! Shree Travels provides 24/7 doorstep pickup across all areas of Pune and PCMC (Kothrud, Hinjewadi, Wakad, Baner, Kharadi, Hadapsar, Viman Nagar, Pune Lohegaon Airport, Pimpri-Chinchwad) with luggage assistance and clean AC interiors.'
+      ]
+    ]
   }
 };
 
@@ -801,6 +892,8 @@ const TourPackagePage = ({ tourSlug }) => {
                     src={tour.heroImage}
                     alt={tour.h1}
                     className="img-fluid w-100 d-block"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                   {tour.heroImage && tour.heroImage.includes('Keyword Based Image') && (
                     <div className="fleet-verified-tag">

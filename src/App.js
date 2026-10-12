@@ -110,6 +110,9 @@ const App = () => {
               <Route path="/ashtavinayak-darshan-bus-hire-pune" element={<TourPackagePage />} />
               <Route path="/bhimashankar-5-jyotirlinga-darshan-pune" element={<TourPackagePage />} />
               <Route path="/sade-teen-shakti-peeth-darshan-pune" element={<TourPackagePage />} />
+              <Route path="/pune-to-sambhaji-nagar-tour" element={<TourPackagePage />} />
+              <Route path="/pune-to-sambhaji-nagar-tour-package" element={<TourPackagePage />} />
+              <Route path="/pune-to-aurangabad-tour" element={<Navigate to="/pune-to-sambhaji-nagar-tour" replace />} />
               <Route path="/pune-to-konkan-darshan-bus-hire" element={<Navigate to="/pune-to-konkan-darshan" replace />} />
 
               {/* All 92 Dedicated Footer Keyword Vehicle & Route Landing Pages */}

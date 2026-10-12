@@ -173,6 +173,8 @@ const ForceUrbania = () => {
                   src="/img/urbania/ub-1.jpeg" 
                   alt="Force Urbania On Rent in Pune - 10, 13 and 17 Seater Luxury AC Van" 
                   className="img-fluid w-100 d-block" 
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
             </div>

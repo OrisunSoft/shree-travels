@@ -38,8 +38,8 @@ const OurNetwork = ({ isEmbedded = false }) => {
     {
       name: "Sambhaji Nagar",
       image: "/img/city-fleet/sambhaji-nagar.jpg",
-      description: "Chhatrapati Sambhaji Nagar, historical hub for world-famous UNESCO Ellora & Ajanta Caves, Grishneshwar Jyotirlinga, Daulatabad Fort, and Samruddhi Mahamarg tours.",
-      link: "/bhimashankar-5-jyotirlinga-darshan-pune"
+      description: "Chhatrapati Sambhaji Nagar tourism hub, globally famous for UNESCO World Heritage Ajanta & Ellora Caves, Kailasa Temple, Daulatabad Fort, Bibi Ka Maqbara, and Grishneshwar Jyotirlinga.",
+      link: "/pune-to-sambhaji-nagar-tour"
     }
   ];
 
@@ -86,6 +86,8 @@ const OurNetwork = ({ isEmbedded = false }) => {
                       src={city.image} 
                       className="w-100 h-100 object-fit-cover" 
                       alt={`${city.name} City Network - Shree Travels`} 
+                      loading="lazy"
+                      decoding="async"
                       onError={(e) => { e.target.src = '/img/bus-luxury.jpeg'; }}
                     />
                     <span 

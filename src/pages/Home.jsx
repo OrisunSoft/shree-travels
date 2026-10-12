@@ -111,7 +111,8 @@ const Home = () => {
     { title: "Ashtavinayak Darshan", subtitle: "All 8 Swayambhu Ganpati Temples", rate: "From ₹14,400", img: "/img/Keyword Based Image/Keyword Based Image-29.jpg", link: "/ashtavinayak-darshan-bus-hire-pune" },
     { title: "Bhimashankar & 5 Jyotirlinga", subtitle: "Trimbakeshwar, Ellora, Parli & Aundha", rate: "From ₹7,200", img: "/img/Keyword Based Image/Keyword Based Image-63.jpg", link: "/bhimashankar-5-jyotirlinga-darshan-pune" },
     { title: "Sade Teen Shakti Peeth", subtitle: "Kolhapur, Tuljapur, Mahurgad & Vani", rate: "Starting at ₹22/km", img: "/img/Keyword Based Image/Keyword Based Image-25.jpg", link: "/sade-teen-shakti-peeth-darshan-pune" },
-    { title: "Pune to Mumbai Darshan", subtitle: "Gateway of India, Sea Link & Siddhivinayak", rate: "From ₹9,000", img: "/img/Keyword Based Image/Keyword Based Image-27.jpg", link: "/pune-to-mumbai-darshan" }
+    { title: "Pune to Mumbai Darshan", subtitle: "Gateway of India, Sea Link & Siddhivinayak", rate: "From ₹9,000", img: "/img/Keyword Based Image/Keyword Based Image-27.jpg", link: "/pune-to-mumbai-darshan" },
+    { title: "Pune to Sambhaji Nagar Tour", subtitle: "Ajanta & Ellora Caves, Grishneshwar & Daulatabad", rate: "Starting at ₹32/km", img: "/img/city-fleet/sambhaji-nagar.jpg", link: "/pune-to-sambhaji-nagar-tour" }
   ];
 
   return (
@@ -266,12 +267,12 @@ const Home = () => {
           <div className="marquee-track">
             {corporateLogos.map((src, index) => (
               <div className="marquee-logo-box" key={`logo-set1-${index}`}>
-                <img src={encodeURI(src)} width="140" height="54" alt={`Corporate Client ${index + 1}`} />
+                <img src={encodeURI(src)} width="140" height="54" alt={`Corporate Client ${index + 1}`} loading="lazy" decoding="async" />
               </div>
             ))}
             {corporateLogos.map((src, index) => (
               <div className="marquee-logo-box" key={`logo-set2-${index}`} aria-hidden="true">
-                <img src={encodeURI(src)} width="140" height="54" alt="" />
+                <img src={encodeURI(src)} width="140" height="54" alt="" loading="lazy" decoding="async" />
               </div>
             ))}
           </div>
@@ -310,6 +311,8 @@ const Home = () => {
                   alt={item.label}
                   className="w-100 object-fit-cover"
                   style={{ height: '240px' }}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="position-absolute bottom-0 start-0 w-100 p-3" style={{ background: 'linear-gradient(to top, rgba(15, 23, 42, 0.94), transparent)' }}>
                   <span className="text-white fw-semibold small px-3 py-1 rounded-pill d-inline-flex align-items-center mb-1" style={{ backgroundColor: '#ff7700' }}>

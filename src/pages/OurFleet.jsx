@@ -113,6 +113,8 @@ const OurFleet = () => {
                     className="card-img-top" 
                     alt={`${vehicle.name} rental in Pune`} 
                     style={{ height: '240px', objectFit: 'cover' }} 
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="card-body p-4 d-flex flex-column">
                     <h3 className="h5 fw-bold mb-1">{vehicle.name}</h3>

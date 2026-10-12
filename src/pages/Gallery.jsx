@@ -66,6 +66,7 @@ const Gallery = ({ isEmbedded = false }) => {
                       sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Shree Travels ${photo.seat}-seater bus #${idx + 1} - Fleet Photo`} 
                       loading="lazy"
+                      decoding="async"
                       className="w-100 h-100 object-fit-cover" 
                       style={{ transition: 'transform 0.5s ease' }}
                       onMouseOver={e => e.currentTarget.style.transform = 'scale(1.08)'}

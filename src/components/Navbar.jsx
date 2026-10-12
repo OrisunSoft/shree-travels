@@ -327,13 +327,13 @@ const Navbar = () => {
         
         {/* DESKTOP LOGO - Hidden on Mobile */}
         <Link className="navbar-brand d-none d-lg-flex align-items-center me-3" to="/" onClick={closeNavbar}>
-          <img src="/img/Logo/shree.png" alt="Shree Travels Logo" style={{ maxHeight: '68px' }} />
+          <img src="/img/Logo/shree.png" alt="Shree Travels Logo" width="165" height="68" fetchPriority="high" decoding="async" style={{ maxHeight: '68px', width: 'auto' }} />
         </Link>
 
         {/* MOBILE HEADER - Logo, Socials, WhatsApp Enquiry Logo & Hamburger */}
         <div className="d-flex justify-content-between align-items-center w-100 d-lg-none">
           <Link className="navbar-brand m-0" to="/" onClick={closeNavbar}>
-            <img src="/img/Logo/shree.png" alt="Shree Travels Logo" style={{ maxHeight: '52px' }} />
+            <img src="/img/Logo/shree.png" alt="Shree Travels Logo" width="126" height="52" fetchPriority="high" decoding="async" style={{ maxHeight: '52px', width: 'auto' }} />
           </Link>
           
           <div className="d-flex align-items-center gap-1 gap-sm-2">

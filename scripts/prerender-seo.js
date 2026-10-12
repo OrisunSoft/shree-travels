@@ -95,6 +95,12 @@ const ROUTE_META = {
     title: 'Pune Sade Teen Shakti Peeth Bus On Rent | Kolhapur, Tuljapur, Mahurgad & Saptashrungi',
     description: 'Book Pune to Sade Teen Shakti Peeth Yatra Bus, Force Urbania (@ ₹32/km) or Tempo Traveller (@ ₹22/km) covering Mahalaxmi Kolhapur, Tulja Bhavani Tuljapur, Renuka Mata Mahurgad & Saptashrungi Vani.',
     image: `${SITE_URL}/img/Keyword%20Based%20Image/Keyword%20Based%20Image-25.jpg`
+  },
+  '/pune-to-sambhaji-nagar-tour': {
+    h1: 'Pune to Chhatrapati Sambhaji Nagar Tour Package – Ajanta & Ellora Caves, Urbania & Bus Hire',
+    title: 'Pune to Sambhaji Nagar Tour Package, Ajanta Ellora Bus Hire | Shree Travels',
+    description: 'Book Pune to Chhatrapati Sambhaji Nagar tour packages with Shree Travels. Hire Force Urbania (Starting at ₹32/km), Tempo Traveller & Buses for UNESCO Ajanta & Ellora Caves, Kailasa Temple, Daulatabad Fort & Bibi Ka Maqbara.',
+    image: `${SITE_URL}/img/city-fleet/sambhaji-nagar.jpg`
   }
 };
 
@@ -247,8 +253,7 @@ function run() {
 
     const staticSeoArticle = `<article style="max-width:1140px;margin:0 auto;padding:24px 16px;font-family:sans-serif"><h1>${escapeHtml(meta.h1)}</h1><p>${escapeHtml(meta.description)}</p><p>Official Shree Travels Pune Tariff: Force Urbania (10, 13 &amp; 17 Seater) @ flat ₹32/km | 13 &amp; 17 Seater Tempo Traveller @ ₹22/km (Non-AC) &amp; ₹25/km (AC) | 20 Seater @ ₹25/km (Non-AC) &amp; ₹28/km (AC) | 26 Seater @ ₹32/km (Non-AC) &amp; ₹37/km (AC) | 32 Seater Bus @ ₹35/km (Non-AC) &amp; ₹50/km (AC) | 35 Seater Bus @ ₹38/km (Non-AC) &amp; ₹50/km (AC) | 45/49 Seater Bus @ ₹50/km | 53 Seater Volvo/Benz Special @ ₹80/km. Please note that toll, parking, and border tax charges are extra. Head Office: Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud, Pune, Maharashtra 411038. 24/7 Dispatch: +91 7620411277, WhatsApp: +91 78757 74499.</p><nav><a href="/urbania-on-rent-in-pune">Urbania on Rent in Pune</a> | <a href="/13-seater-urbania-on-rent-pune">13 Seater Urbania on Rent in Pune</a> | <a href="/17-seater-urbania-on-rent-pune">17 Seater Urbania on Rent in Pune</a> | <a href="/tempo-traveller-on-rent-in-pune">Tempo Traveller on Rent in Pune</a> | <a href="/bus-on-rent-in-pune">Bus on Rent in Pune</a> | <a href="/32-seater-bus-on-rent-in-pune">32 Seater Bus on Rent in Pune</a> | <a href="/pune-to-mumbai-cab">Pune to Mumbai Cab</a> | <a href="/pune-airport-cab">Pune Airport Cab</a></nav></article>`;
 
-    // Inject static crawlable HTML inside #root (replaced automatically when React mounts) AND inside <noscript>
-    html = html.replace('<div id="root"></div>', `<div id="root">${staticSeoArticle}</div>`);
+    // Inject static crawlable HTML inside <noscript> only so visitors never experience a flash of raw unstyled HTML
     html = html.replace(/<noscript>.*?<\/noscript>/s, `<noscript>${staticSeoArticle}</noscript>`);
 
     if (routePath === '/') {

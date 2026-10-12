@@ -1649,6 +1649,8 @@ const KeywordLandingPage = ({ keywordKey }) => {
                     src={data.heroImage}
                     alt={data.h1}
                     className="img-fluid w-100 d-block"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                   {(isNonPune || (data.heroImage && data.heroImage.includes('Keyword Based Image'))) && (
                     <div className="fleet-verified-tag">
