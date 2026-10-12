@@ -6,49 +6,40 @@ import SEO from '../components/SEO';
 const OurNetwork = ({ isEmbedded = false }) => {
   const cities = [
     {
-      name: "Delhi",
-      image: "/img/Our Network Images/Our Network Images-01.jpg",
-      description: "Delhi, the capital city of India, is known for its rich history, vibrant culture, and architectural marvels. From the historic Red Fort to the bustling markets of Chandni Chowk, Delhi offers a blend of the old and the new."
+      name: "Pune",
+      image: "/img/Our Network Images/Our Network Images-06.jpg",
+      description: "Pune, our central headquarters and main dispatch hub, connects you seamlessly to IT corridors, cultural landmarks, wedding lawns, and scenic Sahyadri getaways with luxury Force Urbania, Tempo Travellers, and buses.",
+      link: "/book-taxi"
     },
     {
       name: "Mumbai",
       image: "/img/Our Network Images/Our Network Images-02.jpg",
-      description: "Mumbai, the financial capital of India, is renowned for its bustling streets, vibrant nightlife, and iconic landmarks like the Gateway of India. It is the heart of Bollywood and offers a unique blend of modernity and tradition."
+      description: "Mumbai, the financial capital, renowned for iconic landmarks like the Gateway of India. We offer 24/7 CSMIA airport transfers, BKC corporate commuting, and outstation charters via the Mumbai-Pune Expressway.",
+      link: "/rent/mumbai/bus"
     },
     {
-      name: "Bangalore",
-      image: "/img/Our Network Images/Our Network Images-03.jpg",
-      description: "Bangalore, also known as Bengaluru, is the tech hub of India. It is known for its pleasant weather, greenery, and thriving IT industry. The city offers a mix of modernity and traditional charm, with numerous parks and historical sites."
+      name: "Lonavla",
+      image: "/img/city-fleet/lonavla-waterpark.jpg",
+      description: "Lonavala & Khandala hill station gateway, providing premium buses and Force Urbania for resort picnics, Wet N Joy waterpark trips, Karla Caves, and Pawna Lake camping.",
+      link: "/pune-to-lonavala-bus-hire"
     },
     {
-      name: "Hyderabad",
-      image: "/img/Our Network Images/Our Network Images-04.jpg",
-      description: "Hyderabad, known as the City of Pearls, is famous for its historical sites, including the Charminar and Golconda Fort. It is also renowned for its unique cuisine, particularly the Hyderabadi Biryani, and its growing IT sector."
+      name: "Mahabaleshwar",
+      image: "/img/city-fleet/mahabaleshwar.jpg",
+      description: "Mahabaleshwar & Panchgani queen of hill stations, featuring ghat-expert chauffeurs for family vacations, Venna Lake boating, Mapro Garden, Arthur Seat, and Pratapgad Fort tours.",
+      link: "/pune-to-mahabaleshwar-bus-hire"
     },
     {
-      name: "Chennai",
-      image: "/img/Our Network Images/Our Network Images-05.jpg",
-      description: "Chennai, located on the southeastern coast, is known for its beautiful beaches, historic temples, and vibrant culture. It is a major cultural and economic hub with a rich tradition of music, dance, and cuisine."
+      name: "Shirdi",
+      image: "/img/city-fleet/shirdi-saibaba.jpg",
+      description: "Shirdi Sai Baba holy pilgrimage hub, offering comfortable AC Tempo Travellers and luxury coaches for VIP Samadhi Mandir darshan, Shani Shingnapur, and Nashik Trimbakeshwar circuits.",
+      link: "/rent/shirdi/bus"
     },
     {
-      name: "Pune",
-      image: "/img/Our Network Images/Our Network Images-06.jpg",
-      description: "Pune, known as the Oxford of the East, is famous for its educational institutions and pleasant climate. It is a major cultural and industrial hub with a growing IT sector and numerous historical landmarks."
-    },
-    {
-      name: "Jaipur",
-      image: "/img/Our Network Images/Our Network Images-07.jpg",
-      description: "Jaipur, the Pink City, is renowned for its beautiful palaces, forts, and vibrant bazaars. It is a major tourist destination with attractions like the Hawa Mahal and Amber Fort, offering a glimpse into Rajasthan’s royal heritage."
-    },
-    {
-      name: "Ahmedabad",
-      image: "/img/Our Network Images/Our Network Images-08.jpg",
-      description: "Ahmedabad, a city in Gujarat, is known for its rich history, vibrant culture, and beautiful architecture. It is a major center for textiles and offers attractions like the Sabarmati Ashram and the Ahmedabad Heritage Walk."
-    },
-    {
-      name: "Kolkata",
-      image: "/img/Our Network Images/Our Network Images-09.jpg",
-      description: "Kolkata, the cultural capital of India, is known for its colonial architecture, literary heritage, and vibrant festivals. It offers a unique blend of tradition and modernity with its bustling markets and artistic scene."
+      name: "Sambhaji Nagar",
+      image: "/img/city-fleet/sambhaji-nagar.jpg",
+      description: "Chhatrapati Sambhaji Nagar, historical hub for world-famous UNESCO Ellora & Ajanta Caves, Grishneshwar Jyotirlinga, Daulatabad Fort, and Samruddhi Mahamarg tours.",
+      link: "/bhimashankar-5-jyotirlinga-darshan-pune"
     }
   ];
 
@@ -58,9 +49,9 @@ const OurNetwork = ({ isEmbedded = false }) => {
     <>
       {!isEmbedded && (
         <SEO 
-          title="Bus & Force Urbania Rent in Pune @ 30 Rs/Km"
-          description="Explore Shree Travels' nationwide network across Delhi, Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, Jaipur, and Ahmedabad. Reliable vehicle rentals everywhere."
-          keywords="Shree Travels network, Nationwide bus rental India, Delhi Mumbai Bangalore bus hire, Pune travel agency network"
+          title="Our Network – Luxury Urbania & Bus Rental in Pune, Mumbai, Lonavla & Shirdi"
+          description="Explore Shree Travels' network across Pune, Mumbai, Lonavla, Mahabaleshwar, Shirdi, and Sambhaji Nagar. 24/7 reliable vehicle dispatch, luxury Urbania, and outstation tour packages."
+          keywords="Shree Travels network, Pune Mumbai Lonavala bus rental, Mahabaleshwar Shirdi Sambhaji Nagar vehicle hire, Urbania on rent Pune"
           path="/our-network"
           breadcrumbs={[
             { name: "Home", url: "/" },
@@ -76,7 +67,7 @@ const OurNetwork = ({ isEmbedded = false }) => {
             Our Nationwide <span style={{ color: '#ff7700' }}>Network</span>
           </HeadingTag>
           <p className="text-muted lead fs-6 fs-md-5 max-w-75 mx-auto mb-0">
-            Providing reliable transport services and vehicle rentals across major metropolitan cities and cultural hubs in India.
+            Providing reliable transport services, luxury Force Urbania, Tempo Travellers, and buses across major metropolitan, hill station, and pilgrimage hubs.
           </p>
         </div>
       </section>
@@ -115,7 +106,7 @@ const OurNetwork = ({ isEmbedded = false }) => {
                     </div>
                     
                     <Link 
-                      to="/book-taxi" 
+                      to={city.link || "/book-taxi"} 
                       className="btn btn-outline-dark w-100 fw-semibold rounded-pill py-2 text-decoration-none d-inline-flex align-items-center justify-content-center"
                     >
                       Book in {city.name} <FaArrowRight className="ms-2" size={12} />
@@ -138,8 +129,8 @@ const OurNetwork = ({ isEmbedded = false }) => {
               Get instant confirmation for your bus, Force Urbania, or Tempo Traveller rentals across any of our operating cities.
             </p>
             <div className="d-flex justify-content-center gap-3 flex-wrap">
-              <a href="tel:+917875774499" className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center" style={{ backgroundColor: '#ff7700' }}>
-                <FaPhoneAlt className="me-2" /> Call: 7875774499
+              <a href="tel:+917620411277" className="btn btn-lg text-white fw-bold px-4 py-3 rounded-pill shadow-sm d-inline-flex align-items-center" style={{ backgroundColor: '#ff7700' }}>
+                <FaPhoneAlt className="me-2" /> Call: +91 76204 11277
               </a>
               <Link to="/contact" className="btn btn-lg btn-outline-light fw-bold px-4 py-3 rounded-pill">
                 Contact Office
