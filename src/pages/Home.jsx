@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaBus,
@@ -23,6 +23,15 @@ import OurNetwork from './OurNetwork';
 const GOOGLE_BUSINESS_PROFILE = "https://share.google/p6WieDC55DgKtuLN6";
 
 const Home = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // 11.3 MB Hero Video streams strictly on desktop screens (>= 768px) to protect mobile speed and save mobile bandwidth
+    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+      setIsDesktop(true);
+    }
+  }, []);
+
   const homeFaqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -128,7 +137,7 @@ const Home = () => {
 
       <style>
         {`
-          .hero-video-container { position: relative; width: 100%; min-height: 68vh; overflow: hidden; background-color: #0f172a; }
+          .hero-video-container { position: relative; width: 100%; min-height: 68vh; overflow: hidden; background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 100%); }
           .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: 0; }
           .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.58) 100%); z-index: 1; }
           .hero-content { position: relative; z-index: 2; height: 100%; }
@@ -183,15 +192,18 @@ const Home = () => {
 
       {/* 1. Hero Section */}
       <section className="hero-video-container d-flex align-items-center">
-        <video 
-          autoPlay muted loop playsInline 
-          loading="lazy" preload="none" 
-          poster="/img/video-poster.jpg" 
-          className="hero-video"
-        >
-          <source src="/img/video.webm" type="video/webm" />
-          <source src="/img/video.mp4" type="video/mp4" />
-        </video>
+        {isDesktop && (
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            preload="auto" 
+            className="hero-video"
+          >
+            <source src="/img/video.mp4" type="video/mp4" />
+          </video>
+        )}
 
         <div className="hero-overlay"></div>
 

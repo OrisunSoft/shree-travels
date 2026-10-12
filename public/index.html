@@ -33,16 +33,22 @@
     <!-- Preconnect & Resource Hints for Speed Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-    <link rel="preload" as="image" href="%PUBLIC_URL%/img/Logo/shree.png" />
-    <link rel="preload" as="image" href="%PUBLIC_URL%/img/force-ub.jpg" />
+    <link rel="preload" as="image" href="%PUBLIC_URL%/img/Logo/shree.png" fetchpriority="high" />
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Plus Jakarta Sans (Non-blocking async load with display=swap) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
 
-    <!-- FontAwesome for Icons (Non-blocking with async load) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+    <!-- Critical Instant-Paint Styles -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
 
     <!-- Web Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
