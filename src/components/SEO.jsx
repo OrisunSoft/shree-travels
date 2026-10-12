@@ -129,13 +129,6 @@ const SEO = ({
     areaServed: [
       'Pune', 'Hinjewadi', 'Kharadi', 'Wakad', 'Baner', 'Hadapsar', 'Pimpri-Chinchwad', 'Kothrud', 'Mumbai', 'Lonavala', 'Shirdi', 'Nashik', 'Maharashtra'
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '348',
-      bestRating: '5',
-      worstRating: '1'
-    },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

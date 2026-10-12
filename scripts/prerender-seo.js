@@ -140,7 +140,7 @@ function buildJsonLd(routePath, meta) {
       {
         '@type': 'AutoRental',
         '@id': `${SITE_URL}/#organization`,
-        name: 'Shree Travels – Urbania on Rent in Pune | Tempo Traveller & Bus Rental',
+        name: 'Shree Travels',
         url: SITE_URL,
         logo: `${SITE_URL}/img/Logo/shree.png`,
         image: meta.image,
@@ -155,17 +155,15 @@ function buildJsonLd(routePath, meta) {
           postalCode: '411038',
           addressCountry: 'IN'
         },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 18.5018,
+          longitude: 73.8077
+        },
         contactPoint: [
           { '@type': 'ContactPoint', telephone: '+91-7620411277', contactType: 'customer service', areaServed: 'IN' },
           { '@type': 'ContactPoint', telephone: '+91-7875774499', contactType: 'reservations', areaServed: 'IN' }
         ],
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '348',
-          bestRating: '5',
-          worstRating: '1'
-        },
         sameAs: [
           'https://www.facebook.com/profile.php?id=100063648079773',
           'https://www.instagram.com/shreetravelspune10/',
@@ -240,9 +238,11 @@ function run() {
       .replace(/<meta\s+property="og:title"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:title" content="${escapeHtml(meta.title)}" />`)
       .replace(/<meta\s+property="og:description"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:description" content="${escapeHtml(meta.description)}" />`)
       .replace(/<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:url" content="${escapeHtml(canonicalUrl)}" />`)
-      .replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${escapeHtml(meta.image)}" />`);
+      .replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/i, `<meta property="og:image" content="${escapeHtml(meta.image)}" />`)
+      // Strip any previously existing JSON-LD scripts to guarantee zero duplicate schemas
+      .replace(/<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '');
 
-    const headInjection = `<meta name="robots" content="index, follow, max-image-preview:large" /><script type="application/ld+json">${jsonLd}</script></head>`;
+    const headInjection = `<meta name="robots" content="index, follow, max-image-preview:large" /><script type="application/ld+json" data-rh="true">${jsonLd}</script></head>`;
     html = html.replace('</head>', headInjection);
 
     const staticSeoArticle = `<article style="max-width:1140px;margin:0 auto;padding:24px 16px;font-family:sans-serif"><h1>${escapeHtml(meta.h1)}</h1><p>${escapeHtml(meta.description)}</p><p>Official Shree Travels Pune Tariff: Force Urbania (10, 13 &amp; 17 Seater) @ flat ₹32/km | 13 &amp; 17 Seater Tempo Traveller @ ₹22/km (Non-AC) &amp; ₹25/km (AC) | 20 Seater @ ₹25/km (Non-AC) &amp; ₹28/km (AC) | 26 Seater @ ₹32/km (Non-AC) &amp; ₹37/km (AC) | 32 Seater Bus @ ₹35/km (Non-AC) &amp; ₹50/km (AC) | 35 Seater Bus @ ₹38/km (Non-AC) &amp; ₹50/km (AC) | 45/49 Seater Bus @ ₹50/km | 53 Seater Volvo/Benz Special @ ₹80/km. Please note that toll, parking, and border tax charges are extra. Head Office: Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud, Pune, Maharashtra 411038. 24/7 Dispatch: +91 7620411277, WhatsApp: +91 78757 74499.</p><nav><a href="/urbania-on-rent-in-pune">Urbania on Rent in Pune</a> | <a href="/13-seater-urbania-on-rent-pune">13 Seater Urbania on Rent in Pune</a> | <a href="/17-seater-urbania-on-rent-pune">17 Seater Urbania on Rent in Pune</a> | <a href="/tempo-traveller-on-rent-in-pune">Tempo Traveller on Rent in Pune</a> | <a href="/bus-on-rent-in-pune">Bus on Rent in Pune</a> | <a href="/32-seater-bus-on-rent-in-pune">32 Seater Bus on Rent in Pune</a> | <a href="/pune-to-mumbai-cab">Pune to Mumbai Cab</a> | <a href="/pune-airport-cab">Pune Airport Cab</a></nav></article>`;

@@ -20,11 +20,6 @@ const ForceUrbania = () => {
       offerCount: '4',
       availability: 'https://schema.org/InStock',
       url: 'https://shreetravels.in/force-urbania-on-rent-pune'
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "128"
     }
   };
 
