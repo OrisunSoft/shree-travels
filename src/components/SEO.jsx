@@ -184,7 +184,7 @@ const SEO = ({
       ]
     },
     sameAs: [
-      'https://www.facebook.com/profile.php?id=100063648079773',
+      'https://www.facebook.com/share/1LrnNuFgJj/',
       'https://www.instagram.com/shreetravelspune10/',
       'https://share.google/p6WieDC55DgKtuLN6',
     ],

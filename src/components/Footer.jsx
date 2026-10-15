@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row g-4">
           
           {/* Column 1: Brand & About */}
-          <div className="col-lg-4 col-md-6">
+          <div className="col-lg-3 col-md-6 col-12">
             <Link to="/">
               <img 
                 src="/img/Logo/shree.png" 
@@ -18,11 +18,11 @@ const Footer = () => {
                 className="mb-3 footer-logo" 
               />
             </Link>
-            <p className="footer-text pe-lg-4">
+            <p className="footer-text pe-lg-2">
               Explore luxury Urbania and premium bus rentals in Pune. Your trusted travel partner for corporate events, family trips, and outstation tours across Maharashtra.
             </p>
             <div className="d-flex gap-2 mt-3">
-              <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1LrnNuFgJj/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="col-lg-2 col-md-6 col-6">
+          <div className="col-lg-2 col-md-3 col-6">
             <h5 className="footer-heading mb-4 fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
               <li className="mb-2"><Link to="/about-us" className="footer-link">About Us</Link></li>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Legal & Support */}
-          <div className="col-lg-3 col-md-6 col-6">
+          <div className="col-lg-2 col-md-3 col-6">
             <h5 className="footer-heading mb-4 fw-bold">Popular Tours</h5>
             <ul className="list-unstyled">
               <li className="mb-2"><Link to="/pune-to-mahabaleshwar-bus-hire" className="footer-link">Pune to Mahabaleshwar</Link></li>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: Contact Info */}
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-3 col-md-6 col-12">
             <h5 className="footer-heading mb-4 fw-bold">Get In Touch (24/7)</h5>
             <ul className="list-unstyled contact-info">
               <li className="mb-3 d-flex align-items-start contact-item">
@@ -98,6 +98,36 @@ const Footer = () => {
                 <span>Office no 201, Dodke Palazzo, near mahatma society, Pramathesh Housing Society, Jijai Nagar, Kothrud, Pune, Maharashtra 411038</span>
               </li>
             </ul>
+          </div>
+
+          {/* Column 5: Office Location Map */}
+          <div className="col-lg-2 col-md-6 col-12">
+            <h5 className="footer-heading mb-4 fw-bold">Office Location</h5>
+            <div className="footer-map-container">
+              <div className="footer-map-frame shadow-sm">
+                <iframe 
+                  title="Shree Travels Kothrud Pune Office Location Map"
+                  src="https://maps.google.com/maps?q=Dodke+Palazzo,+Kothrud,+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a 
+                href="https://share.google/p6WieDC55DgKtuLN6" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="footer-map-directions mt-2 d-inline-flex align-items-center gap-1"
+                aria-label="Open Shree Travels location in Google Maps"
+              >
+                <i className="fas fa-directions text-warning"></i>
+                <span>Open in Google Maps</span>
+                <i className="fas fa-external-link-alt ms-1" style={{ fontSize: '0.7rem' }}></i>
+              </a>
+            </div>
           </div>
         </div>
 

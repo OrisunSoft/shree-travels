@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaBus,
@@ -25,12 +25,12 @@ import OurNetwork from './OurNetwork';
 const GOOGLE_BUSINESS_PROFILE = "https://share.google/p6WieDC55DgKtuLN6";
 
 const Home = () => {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
-    // 11.3 MB Hero Video streams strictly on desktop screens (>= 768px) to protect mobile speed and save mobile bandwidth
-    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-      setIsDesktop(true);
+    // Ensure hero video autoplays and loops seamlessly across mobile and desktop
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
     }
   }, []);
 
@@ -139,9 +139,9 @@ const Home = () => {
 
       <style>
         {`
-          .hero-video-container { position: relative; width: 100%; min-height: 68vh; overflow: hidden; background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 100%); }
-          .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: 0; }
-          .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.58) 100%); z-index: 1; }
+          .hero-video-container { position: relative; width: 100%; min-height: 68vh; overflow: hidden; background: #0f172a; }
+          .hero-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: 100%; height: 100%; transform: translate(-50%, -50%) scale(1.16); transform-origin: center center; object-fit: cover; z-index: 0; pointer-events: none; }
+          .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.52) 100%); z-index: 1; pointer-events: none; }
           .hero-content { position: relative; z-index: 2; height: 100%; }
           .text-shadow-custom { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75); }
           .btn-hover-animate { transition: all 0.25s ease; }
@@ -176,7 +176,8 @@ const Home = () => {
           .accordion-button:focus { box-shadow: none; }
 
           @media (max-width: 767.98px) {
-            .hero-video-container { min-height: 65vh; }
+            .hero-video-container { min-height: 72vh; }
+            .hero-video { transform: translate(-50%, -50%) scale(1.22); }
             .hero-content { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .hero-title-responsive { font-size: 1.65rem !important; line-height: 1.3 !important; }
             .hero-badge-responsive { font-size: 0.72rem !important; padding: 0.4rem 0.8rem !important; }
@@ -194,18 +195,22 @@ const Home = () => {
 
       {/* 1. Hero Section */}
       <section className="hero-video-container d-flex align-items-center">
-        {isDesktop && (
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline 
-            preload="auto" 
-            className="hero-video"
-          >
-            <source src="/img/video.mp4" type="video/mp4" />
-          </video>
-        )}
+        <video 
+          ref={videoRef}
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          webkit-playsinline="true"
+          preload="auto" 
+          className="hero-video"
+          onEnded={(e) => {
+            e.target.currentTime = 0;
+            e.target.play().catch(() => {});
+          }}
+        >
+          <source src="/img/hero-video.mp4" type="video/mp4" />
+        </video>
 
         <div className="hero-overlay"></div>
 

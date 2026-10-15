@@ -348,7 +348,7 @@ const Navbar = () => {
           <div className="d-flex align-items-center gap-1 gap-sm-2">
             {/* Social Icons Pill (FB, Instagram, Google) */}
             <div className="mobile-social-pill d-flex align-items-center">
-              <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1LrnNuFgJj/" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Facebook">
                 <FaFacebook size={16} style={{ color: '#1877F2' }} />
               </a>
               <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="social-link d-flex align-items-center justify-content-center" aria-label="Instagram">
@@ -752,7 +752,7 @@ const Navbar = () => {
               <div className="text-center mt-3">
                 <p className="small text-muted mb-2 fw-semibold">Connect with Shree Travels</p>
                 <div className="d-flex justify-content-center align-items-center gap-3">
-                  <a href="https://www.facebook.com/profile.php?id=100063648079773" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Facebook">
+                  <a href="https://www.facebook.com/share/1LrnNuFgJj/" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Facebook">
                     <FaFacebook size={18} style={{ color: '#1877F2' }} />
                   </a>
                   <a href="https://www.instagram.com/shreetravelspune10/" target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light rounded-circle shadow-sm d-inline-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px' }} aria-label="Instagram">
